@@ -1,0 +1,30 @@
+id: wikijs
+name: Wiki.js
+category: Wiki
+repo: https://github.com/requarks/wiki
+images:
+- requarks/wiki
+- ghcr.io/requarks/wiki
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - graph.requarks.io
+  sends: Fetches latest file/locale/version updates
+  frequency: periodic
+  optout:
+    config: 'offline: true in config.yml'
+  sources:
+  - https://docs.requarks.io/install/config
+- type: telemetry
+  default: 'on'
+  destinations:
+  - graph.requarks.io
+  sends: Anonymous telemetry (version, platform) controlled from the admin area
+  frequency: periodic
+  optout:
+    ui: Administration > Utilities > Telemetry > disable
+    config: 'offline: true also prevents outbound requests'
+  sources:
+  - https://docs.requarks.io/install/config
+verified: '2026-11-14'

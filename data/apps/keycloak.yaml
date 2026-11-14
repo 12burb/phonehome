@@ -1,0 +1,12 @@
+id: keycloak
+name: Keycloak
+category: Identity
+repo: https://github.com/keycloak/keycloak
+images:
+- quay.io/keycloak/keycloak
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Akeycloak%2Fkeycloak+telemetry&type=code
+- https://github.com/search?q=repo%3Akeycloak%2Fkeycloak+posthog&type=code
+notes: No vendor telemetry. The "telemetry" options are OpenTelemetry exporters that send only to endpoints you configure.

@@ -1,0 +1,23 @@
+id: netdata
+name: Netdata Agent
+category: Monitoring
+repo: https://github.com/netdata/netdata
+images:
+- netdata/netdata
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - app.posthog.com
+  - posthog.netdata.cloud
+  sends: Start/stop/crash/fatal events with version, build info, OS, kernel, container info; dashboard product-usage events
+    via PostHog
+  frequency: on start, stop, fatal; dashboard interactions
+  optout:
+    env:
+    - DO_NOT_TRACK=1
+    config: Create the file .opt-out-from-anonymous-statistics in the Netdata config directory (e.g. /etc/netdata)
+    cli: netdata-installer.sh --disable-telemetry
+  sources:
+  - https://learn.netdata.cloud/docs/netdata-agent/configuration/anonymous-telemetry-events
+verified: '2026-11-14'

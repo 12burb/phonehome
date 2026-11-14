@@ -1,0 +1,19 @@
+id: homarr
+name: Homarr
+category: Dashboard
+repo: https://github.com/homarr-labs/homarr
+images:
+- ghcr.io/homarr-labs/homarr
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - hog.homarr.dev
+  sends: 'PostHog analytics: instance id, version, counts of boards/apps/widgets/integrations (no personal data per docs)'
+  frequency: first eligible start, then at most every 7 days
+  optout:
+    ui: Management > Settings > Analytics > Help us improve Homarr (off)
+  sources:
+  - https://homarr.dev/docs/management/settings/
+  - https://github.com/homarr-labs/homarr/blob/dev/packages/analytics/src/client.ts
+verified: '2026-11-14'

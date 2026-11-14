@@ -1,0 +1,20 @@
+id: dozzle
+name: Dozzle
+category: Monitoring
+repo: https://github.com/amir20/dozzle
+images:
+- amir20/dozzle
+verified: '2026-11-14'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - b.dozzle.dev
+  sends: 'Anonymous beacon: version, OS/arch, container count, auth mode and feature flags'
+  frequency: on start and periodically
+  optout:
+    env:
+    - DOZZLE_NO_ANALYTICS=true
+    cli: --no-analytics
+  sources:
+  - https://github.com/amir20/dozzle/blob/master/docs/guide/analytics.md

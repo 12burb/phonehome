@@ -1,0 +1,12 @@
+id: homepage
+name: Homepage (gethomepage)
+category: Dashboard
+repo: https://github.com/gethomepage/homepage
+images:
+- ghcr.io/gethomepage/homepage
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Agethomepage%2Fhomepage+telemetry&type=code
+- https://github.com/search?q=repo%3Agethomepage%2Fhomepage+posthog&type=code
+notes: No analytics found. Widgets you configure talk to their own services.

@@ -1,0 +1,31 @@
+id: sonarr
+name: Sonarr / Radarr / Lidarr / Prowlarr / Readarr
+category: Media
+repo: https://github.com/Sonarr/Sonarr
+images:
+- lscr.io/linuxserver/sonarr
+- lscr.io/linuxserver/radarr
+- lscr.io/linuxserver/lidarr
+- lscr.io/linuxserver/prowlarr
+- hotio/sonarr
+- hotio/radarr
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - services.sonarr.tv
+  - radarr.servarr.com
+  sends: Anonymous usage data and Sentry error reports (Send Anonymous Usage Data setting)
+  frequency: continuous
+  optout:
+    ui: Settings > General > Analytics > Send Anonymous Usage Data (off)
+    env:
+    - SONARR__LOG__ANALYTICSENABLED=false
+    - RADARR__LOG__ANALYTICSENABLED=false
+    - LIDARR__LOG__ANALYTICSENABLED=false
+    - PROWLARR__LOG__ANALYTICSENABLED=false
+    config: <AnalyticsEnabled>False</AnalyticsEnabled> in config.xml
+  sources:
+  - https://wiki.servarr.com/sonarr/environment-variables
+  - https://wiki.servarr.com/sonarr/settings#analytics
+verified: '2026-11-14'

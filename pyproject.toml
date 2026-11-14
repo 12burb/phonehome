@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phonehome"
+version = "0.1.0"
+description = "Does your self-hosted app phone home? Verified registry of telemetry and opt-outs, blocklists, and a docker-compose audit."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = ["PyYAML>=6"]
+
+[project.scripts]
+phonehome = "phonehome.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/12burb/phonehome"
+
+[tool.setuptools]
+packages = ["phonehome"]
+
+[tool.setuptools.package-data]
+phonehome = []

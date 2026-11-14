@@ -1,0 +1,52 @@
+
+## analytics.strapi.io repo:strapi/strapi 14
+ - strapi/strapi docs/docs/packages/core/admin/features/nps.md
+    > ## Where data is submitted The data is sent to this endpoint: `https://analytics.strapi.io/submit-nps`. ## Hooks
+ - strapi/strapi packages/core/strapi/src/cli/utils/telemetry.ts
+    > import { generateInstallId, env } from '@strapi/utils'; export const sendEvent = async (event: string, uuid: string, installId?: any) => { const analyticsUrl = env('STRAPI_ANALYTICS_URL', 'https://analytics.strapi.io'); try { await fetch(`${analyticsUrl}/api/v2/track`, { method: 'POST',
+ - strapi/strapi packages/cli/create-strapi-app/src/utils/usage.ts
+    > return; } const analyticsUrl = process.env.STRAPI_ANALYTICS_URL || 'https://analytics.strapi.io'; try { return fetch(`${analyticsUrl}/api/v2/track`, {
+
+## telemetry.coder.com repo:coder/coder language:Go 1
+ - coder/coder codersdk/deployment.go
+    > Flag: "telemetry-url", Env: "CODER_TELEMETRY_URL", Hidden: true, Default: "https://telemetry.coder.com", Value: &c.Telemetry.URL, Group: &deploymentGroupTelemetry, YAML: "url",
+
+## telemetry.payloadcms.com repo:payloadcms/payload 1
+ - payloadcms/payload packages/payload/src/utilities/telemetry/index.ts
+    > return } await fetch('https://telemetry.payloadcms.com/events', { body: JSON.stringify({ ...baseEvent, ...event }), headers: { 'Content-Type': 'application/json',
+
+## scarf.sh repo:langflow-ai/langflow language:Python 0
+
+## posthog.com repo:Stirling-Tools/Stirling-PDF language:Java 0
+
+## update.traefik.io repo:traefik/traefik 2
+ - traefik/traefik pkg/version/version.go
+    > return } updateURL := "https://update.traefik.io/" client, err := github.NewClient(github.WithURLs(&updateURL, nil)) if err != nil {
+ - traefik/traefik docs/content/contributing/data-collection.md
+    > ## Version Check (`checkNewVersion`) – Opt-out Traefik periodically contacts `update.traefik.io` to determine whether a newer version is available. When this request is made, Traefik shares the **running version** and the **public IP** of the instance. The IP is used to build global usage statistics
+
+## updates.getoutline.com repo:outline/outline 1
+ - outline/outline server/utils/updates.ts
+    > import packageInfo from "../../package.json"; import fetch from "./fetch"; const UPDATES_URL = "https://updates.getoutline.com"; const UPDATES_KEY = "UPDATES_KEY"; /**
+
+## segment repo:appsmithorg/appsmith path:app/server/appsmith-server/src/main/resources None
+  MSG API rate limit exceeded for installation ID 177897821. If you reach out to GitHub Support for help, please include the request ID 8D84:191611:722F68:B75CE1:6AF8CD36 and timestamp 2026-11-14 21:05:59 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
+
+## posthog repo:netdata/netdata path:src/daemon None
+  MSG API rate limit exceeded for installation ID 177897821. If you reach out to GitHub Support for help, please include the request ID 0849:3996AA:722204:B750D6:6AF8CD3E and timestamp 2026-11-14 21:06:06 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
+
+## telemetry repo:ToolJet/ToolJet path:server/src/services filename:telemetry None
+  MSG API rate limit exceeded for installation ID 177897821. If you reach out to GitHub Support for help, please include the request ID FD48:358545:72C3B4:B83F42:6AF8CD45 and timestamp 2026-11-14 21:06:13 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
+
+## nocodb.com repo:nocodb/nocodb path:packages/nocodb/src/utils None
+  MSG API rate limit exceeded for installation ID 177897821. If you reach out to GitHub Support for help, please include the request ID 9466:383FEB:70E15E:B5E73D:6AF8CD4C and timestamp 2026-11-14 21:06:20 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
+
+## telemetry.n8n.io repo:n8n-io/n8n language:TypeScript 6
+ - n8n-io/n8n packages/@n8n/config/src/configs/diagnostics.config.ts
+    > @Env('N8N_DIAGNOSTICS_CONFIG_FRONTEND') frontendConfig: string = '1zPn9bgWPzlQc0p8Gj1uiK6DOTn;https://telemetry.n8n.io';
+    > @Env('N8N_DIAGNOSTICS_CONFIG_BACKEND') backendConfig: string = '1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io';
+ - n8n-io/n8n packages/core/src/observability/tracing/span-sampling.ts
+    > /^\/mcp-test(\/|$)/, // test MCP webhook (endpoints.mcpTest default) ]; const TELEMETRY_HOSTNAME = 'telemetry.n8n.io'; /** Whether an incoming request path should be skipped before a server span is created. */ export function shouldIgnoreIncomingRequest(urlPath: string): boolean {
+ - n8n-io/n8n packages/core/src/observability/tracing/__tests__/span-sampling.test.ts
+    > }); describe('shouldIgnoreOutgoingRequest', () => { it.each(['https://telemetry.n8n.io/v1/batch', 'https://telemetry.n8n.io:443/v1/track?foo=bar'])( 'ignores outbound telemetry call %s', (url) => { expect(shouldIgnoreOutgoingRequest(url)).toBe(true);
+DONE

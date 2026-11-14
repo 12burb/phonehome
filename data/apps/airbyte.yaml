@@ -1,0 +1,23 @@
+id: airbyte
+name: Airbyte
+category: Data
+repo: https://github.com/airbytehq/airbyte
+images:
+- airbyte/server
+- airbyte/webapp
+- airbyte/worker
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - api.segment.io
+  sends: UI and server usage events (Segment)
+  frequency: continuous
+  optout:
+    env:
+    - TRACKING_STRATEGY=logging
+    config: 'values.yaml: global.tracking.strategy: logging'
+    ui: User settings > Cookie Preferences (UI only)
+  sources:
+  - https://docs.airbyte.com/platform/operator-guides/telemetry
+verified: '2026-11-14'

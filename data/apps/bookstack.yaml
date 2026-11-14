@@ -1,0 +1,22 @@
+id: bookstack
+name: BookStack
+category: Wiki
+repo: https://github.com/BookStackApp/BookStack
+images:
+- lscr.io/linuxserver/bookstack
+- solidnerd/bookstack
+calls:
+- type: external_asset
+  default: 'on'
+  destinations:
+  - gravatar.com
+  - embed.diagrams.net
+  sends: MD5 hash of user emails to Gravatar for avatars; diagrams.net loaded in the editor
+  frequency: on page load
+  optout:
+    env:
+    - DISABLE_EXTERNAL_SERVICES=true
+    - AVATAR_URL=https://seccdn.libravatar.org/avatar/${hash}?s=${size}&d=identicon (self-chosen provider)
+  sources:
+  - https://raw.githubusercontent.com/BookStackApp/BookStack/development/.env.example.complete
+verified: '2026-11-14'

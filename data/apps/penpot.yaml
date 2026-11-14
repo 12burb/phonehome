@@ -1,0 +1,20 @@
+id: penpot
+name: Penpot
+category: Design
+repo: https://github.com/penpot/penpot
+images:
+- penpotapp/backend
+- penpotapp/frontend
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - telemetry.penpot.app
+  sends: Anonymous instance telemetry when the enable-telemetry flag is set
+  frequency: periodic
+  optout:
+    config: Do not include enable-telemetry in PENPOT_FLAGS (remove it from the docker-compose example)
+  sources:
+  - https://help.penpot.app/technical-guide/configuration/
+notes: 'Opt-in: the official docker-compose example adds enable-telemetry to PENPOT_FLAGS, so check your compose file.'
+verified: '2026-11-14'

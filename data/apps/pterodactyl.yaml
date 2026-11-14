@@ -1,0 +1,23 @@
+id: pterodactyl
+name: Pterodactyl Panel
+category: Game servers
+repo: https://github.com/pterodactyl/panel
+images:
+- ghcr.io/pterodactyl/panel
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.pterodactyl.io
+  sends: Panel version, PHP version, drivers, node versions/OS, counts of servers, users, backups, eggs, mounts
+  frequency: daily
+  optout:
+    cli: php artisan p:telemetry (interactive toggle)
+    config: pterodactyl.telemetry.enabled = false
+    env:
+    - PTERODACTYL_TELEMETRY_ENABLED=false
+  sources:
+  - https://raw.githubusercontent.com/pterodactyl/panel/1.0-develop/app/Services/Telemetry/TelemetryCollectionService.php
+  - https://raw.githubusercontent.com/pterodactyl/panel/1.0-develop/app/Console/Kernel.php
+  - https://raw.githubusercontent.com/pterodactyl/panel/1.0-develop/config/pterodactyl.php
+verified: '2026-11-14'

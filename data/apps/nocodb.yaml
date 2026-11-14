@@ -1,0 +1,18 @@
+id: nocodb
+name: NocoDB
+category: Spreadsheet / DB
+repo: https://github.com/nocodb/nocodb
+images:
+- nocodb/nocodb
+calls:
+- type: telemetry
+  default: 'on'
+  destinations: []
+  sends: Anonymous usage data
+  frequency: continuous
+  optout:
+    env:
+    - NC_DISABLE_TELE=true
+  sources:
+  - https://docs.nocodb.com/getting-started/self-hosted/environment-variables/
+verified: '2026-11-14'

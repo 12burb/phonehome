@@ -1,0 +1,19 @@
+id: tooljet
+name: ToolJet
+category: Low-code
+repo: https://github.com/ToolJet/ToolJet
+images:
+- tooljet/tooljet
+- tooljet/tooljet-ce
+calls:
+- type: telemetry
+  default: 'on'
+  destinations: []
+  sends: User count updates
+  frequency: every 24h
+  optout:
+    env:
+    - DISABLE_TOOLJET_TELEMETRY=true
+  sources:
+  - https://docs.tooljet.com/docs/setup/env-vars
+verified: '2026-11-14'

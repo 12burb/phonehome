@@ -1,0 +1,20 @@
+id: loki
+name: Grafana Loki
+category: Monitoring
+repo: https://github.com/grafana/loki
+images:
+- grafana/loki
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - stats.grafana.org
+  sends: Anonymous usage report (cluster size, config shape)
+  frequency: periodic
+  optout:
+    config: "analytics:\n  reporting_enabled: false"
+    cli: -reporting.enabled=false
+  sources:
+  - https://grafana.com/docs/loki/latest/configure/
+notes: Grafana Tempo and Mimir use the same analytics block.
+verified: '2026-11-14'

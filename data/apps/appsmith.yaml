@@ -1,0 +1,22 @@
+id: appsmith
+name: Appsmith
+category: Low-code
+repo: https://github.com/appsmithorg/appsmith
+images:
+- appsmith/appsmith-ce
+- appsmith/appsmith-ee
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - api.segment.io
+  - app.posthog.com
+  sends: Anonymous usage data
+  frequency: continuous
+  optout:
+    env:
+    - APPSMITH_DISABLE_TELEMETRY=true
+    ui: Admin Settings > General > Share anonymous usage data
+  sources:
+  - https://docs.appsmith.com/getting-started/setup/environment-variables
+verified: '2026-11-14'

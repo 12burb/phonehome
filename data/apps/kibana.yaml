@@ -1,0 +1,20 @@
+id: kibana
+name: Kibana
+category: Monitoring
+repo: https://github.com/elastic/kibana
+images:
+- kibana
+- docker.elastic.co/kibana/kibana
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.elastic.co
+  sends: Cluster statistics and usage collection
+  frequency: periodic
+  optout:
+    config: 'telemetry.optIn: false (and telemetry.allowChangingOptInStatus: false to lock it)'
+    ui: Stack Management > Advanced Settings > Usage collection
+  sources:
+  - https://www.elastic.co/guide/en/kibana/current/telemetry-settings-kbn.html
+verified: '2026-11-14'

@@ -1,0 +1,19 @@
+id: calcom
+name: Cal.com
+category: Scheduling
+repo: https://github.com/calcom/cal.com
+images:
+- calcom/cal.com
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.cal.com
+  sends: Anonymous usage
+  frequency: continuous
+  optout:
+    env:
+    - CALCOM_TELEMETRY_DISABLED=1
+  sources:
+  - https://raw.githubusercontent.com/calcom/cal.com/main/.env.example
+verified: '2026-11-14'

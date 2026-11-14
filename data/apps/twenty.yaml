@@ -1,0 +1,29 @@
+id: twenty
+name: Twenty CRM
+category: CRM
+repo: https://github.com/twentyhq/twenty
+images:
+- twentycrm/twenty
+calls:
+- type: telemetry
+  default: 'off'
+  destinations: []
+  sends: Nothing unless ANALYTICS_ENABLED=true (then events go to your own ClickHouse)
+  frequency: '-'
+  optout:
+    env:
+    - ANALYTICS_ENABLED=false
+  sources:
+  - https://github.com/twentyhq/twenty/blob/main/packages/twenty-server/src/engine/core-modules/twenty-config/config-variables.ts
+- type: external_asset
+  default: 'on'
+  destinations:
+  - twenty-icons.com
+  sends: Company logos are fetched from the Twenty icons service by domain name
+  frequency: on page load
+  optout:
+    env:
+    - ALLOW_REQUESTS_TO_TWENTY_ICONS=false
+  sources:
+  - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-server/.env.example
+verified: '2026-11-14'

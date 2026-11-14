@@ -1,0 +1,20 @@
+id: dagster
+name: Dagster
+category: Data
+repo: https://github.com/dagster-io/dagster
+images:
+- dagster/dagster-k8s
+- dagster/dagster-celery-k8s
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - dagster.io
+  sends: Non-identifiable frontend and backend usage (frontend script loaded from dagster.io/oss-telemetry.js)
+  frequency: continuous
+  optout:
+    config: "telemetry:\n  enabled: false in $DAGSTER_HOME/dagster.yaml"
+  sources:
+  - https://raw.githubusercontent.com/dagster-io/dagster/master/docs/docs/about/telemetry.md
+  block: false
+verified: '2026-11-14'

@@ -1,0 +1,20 @@
+id: directus
+name: Directus
+category: CMS / Backend
+repo: https://github.com/directus/directus
+images:
+- directus/directus
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.directus.com
+  sends: Usage data about the environment (installation count, version, size of user base)
+  frequency: periodic
+  optout:
+    env:
+    - TELEMETRY=false
+  sources:
+  - https://docs.directus.io/self-hosted/config-options.html
+notes: Docs state whether telemetry can be disabled depends on your license.
+verified: '2026-11-14'

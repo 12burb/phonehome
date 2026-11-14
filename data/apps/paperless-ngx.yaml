@@ -1,0 +1,12 @@
+id: paperless-ngx
+name: Paperless-ngx
+category: Documents
+repo: https://github.com/paperless-ngx/paperless-ngx
+images:
+- ghcr.io/paperless-ngx/paperless-ngx
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Apaperless-ngx%2Fpaperless-ngx+telemetry&type=code
+- https://github.com/search?q=repo%3Apaperless-ngx%2Fpaperless-ngx+posthog&type=code
+notes: No telemetry found in the Python backend.

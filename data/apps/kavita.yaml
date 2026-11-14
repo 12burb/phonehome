@@ -1,0 +1,21 @@
+id: kavita
+name: Kavita
+category: Media
+repo: https://github.com/Kareadita/Kavita
+images:
+- jvmilazz0/kavita
+- lscr.io/linuxserver/kavita
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - stats.kavitareader.com
+  sends: Anonymous server statistics (version, OS, library counts, feature flags) when AllowStatCollection is on
+  frequency: periodic
+  optout:
+    ui: Admin > Settings > General > Allow Anonymous Usage Collection (off)
+  sources:
+  - https://github.com/Kareadita/Kavita/blob/develop/Kavita.Database/Seed.cs
+  - https://github.com/Kareadita/Kavita/blob/develop/Kavita.Services/StatsService.cs
+  - https://github.com/Kareadita/Kavita/blob/develop/Kavita.Common/Configuration.cs
+verified: '2026-11-14'

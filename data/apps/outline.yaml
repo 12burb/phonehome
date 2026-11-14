@@ -1,0 +1,20 @@
+id: outline
+name: Outline
+category: Wiki
+repo: https://github.com/outline/outline
+images:
+- outlinewiki/outline
+- docker.getoutline.com/outlinewiki/outline
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - updates.getoutline.com
+  sends: Anonymized statistics sent while checking for updates
+  frequency: periodic
+  optout:
+    env:
+    - ENABLE_UPDATES=false
+  sources:
+  - https://raw.githubusercontent.com/outline/outline/main/.env.sample
+verified: '2026-11-14'

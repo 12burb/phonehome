@@ -1,0 +1,30 @@
+id: traefik
+name: Traefik
+category: Reverse proxy
+repo: https://github.com/traefik/traefik
+images:
+- traefik
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - update.traefik.io
+  sends: Running version and the public IP of the instance (used by Traefik Labs for usage statistics)
+  frequency: periodic
+  optout:
+    config: "global:\n  checkNewVersion: false"
+    cli: --global.checkNewVersion=false
+  sources:
+  - https://doc.traefik.io/traefik/contributing/data-collection/
+  - https://github.com/traefik/traefik/blob/master/docs/content/contributing/data-collection.md
+- type: telemetry
+  default: 'off'
+  destinations:
+  - collect.traefik.io
+  sends: Anonymised configuration only if sendAnonymousUsage is explicitly enabled
+  frequency: periodic
+  optout:
+    config: "global:\n  sendAnonymousUsage: false"
+  sources:
+  - https://doc.traefik.io/traefik/contributing/data-collection/
+verified: '2026-11-14'

@@ -1,0 +1,36 @@
+id: mattermost
+name: Mattermost
+category: Chat
+repo: https://github.com/mattermost/mattermost
+images:
+- mattermost/mattermost-team-edition
+- mattermost/mattermost-enterprise-edition
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - pdat.matterlytics.com
+  sends: 'Diagnostics and error reporting: server/plugin config and usage counters, error reports; also enables the NPS survey
+    plugin'
+  frequency: daily
+  optout:
+    env:
+    - MM_LOGSETTINGS_ENABLEDIAGNOSTICS=false
+    config: 'LogSettings.EnableDiagnostics: false in config.json'
+    ui: System Console > Environment > Logging > Enable Diagnostics and Error Reporting
+  sources:
+  - https://raw.githubusercontent.com/mattermost/mattermost/master/server/public/model/config.go
+  - https://docs.mattermost.com/configure/logging-configuration-settings.html
+- type: update_check
+  default: 'on'
+  destinations:
+  - securityupdatecheck.mattermost.com
+  sends: Version, server ID, user/team counts for security fix alerts
+  frequency: daily
+  optout:
+    env:
+    - MM_SERVICESETTINGS_ENABLESECURITYFIXALERT=false
+    config: 'ServiceSettings.EnableSecurityFixAlert: false'
+  sources:
+  - https://raw.githubusercontent.com/mattermost/mattermost/master/server/public/model/config.go
+verified: '2026-11-14'

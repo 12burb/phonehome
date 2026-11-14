@@ -1,0 +1,17 @@
+id: payload
+name: Payload CMS
+category: CMS / Backend
+repo: https://github.com/payloadcms/payload
+images: []
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.payloadcms.com
+  sends: Anonymous usage data (version, DB adapter, collection counts)
+  frequency: periodic
+  optout:
+    config: 'telemetry: false in payload.config'
+  sources:
+  - https://payloadcms.com/docs/configuration/overview
+verified: '2026-11-14'

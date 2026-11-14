@@ -1,0 +1,19 @@
+id: flowise
+name: Flowise
+category: AI
+repo: https://github.com/FlowiseAI/Flowise
+images:
+- flowiseai/flowise
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - app.posthog.com
+  sends: Anonymous usage telemetry (PostHog)
+  frequency: continuous
+  optout:
+    env:
+    - DISABLE_FLOWISE_TELEMETRY=true
+  sources:
+  - https://raw.githubusercontent.com/FlowiseAI/Flowise/main/docker/.env.example
+verified: '2026-11-14'

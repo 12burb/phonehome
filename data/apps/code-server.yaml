@@ -1,0 +1,18 @@
+id: code-server
+name: code-server
+category: Dev tooling
+repo: https://github.com/coder/code-server
+images:
+- codercom/code-server
+- linuxserver/code-server
+calls:
+- type: telemetry
+  default: 'on'
+  destinations: []
+  sends: VS Code-style telemetry used to improve code-server
+  frequency: continuous
+  optout:
+    cli: --disable-telemetry
+  sources:
+  - https://coder.com/docs/code-server/FAQ
+verified: '2026-11-14'

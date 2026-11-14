@@ -1,0 +1,13 @@
+id: tandoor
+name: Tandoor Recipes
+category: Recipes
+repo: https://github.com/TandoorRecipes/recipes
+images:
+- vabene1111/recipes
+- ghcr.io/tandoorrecipes/recipes
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3ATandoorRecipes%2Frecipes+telemetry&type=code
+- https://github.com/search?q=repo%3ATandoorRecipes%2Frecipes+posthog&type=code
+notes: No telemetry found.

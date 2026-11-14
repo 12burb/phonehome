@@ -1,0 +1,21 @@
+id: grist
+name: Grist
+category: Spreadsheet / DB
+repo: https://github.com/gristlabs/grist-core
+images:
+- gristlabs/grist
+- gristlabs/grist-oss
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - telemetry.getgrist.com
+  sends: Nothing by default; limited or full telemetry only when GRIST_TELEMETRY_LEVEL is set
+  frequency: periodic when enabled
+  optout:
+    env:
+    - GRIST_TELEMETRY_LEVEL=off
+  sources:
+  - https://support.getgrist.com/telemetry/
+notes: Clean by default; the admin panel offers to turn telemetry on.
+verified: '2026-11-14'

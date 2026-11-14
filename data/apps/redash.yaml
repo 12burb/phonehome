@@ -1,0 +1,19 @@
+id: redash
+name: Redash
+category: BI
+repo: https://github.com/getredash/redash
+images:
+- redash/redash
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - version.redash.io
+  sends: Current version to check for newer releases
+  frequency: periodic
+  optout:
+    env:
+    - REDASH_VERSION_CHECK=false
+  sources:
+  - https://redash.io/help/open-source/admin-guide/env-vars-settings
+verified: '2026-11-14'

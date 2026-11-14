@@ -1,0 +1,43 @@
+id: syncthing
+name: Syncthing
+category: File sync
+repo: https://github.com/syncthing/syncthing
+images:
+- syncthing/syncthing
+- linuxserver/syncthing
+calls:
+- type: crash_report
+  default: 'on'
+  destinations:
+  - crash.syncthing.net
+  sends: Crash/panic reports
+  frequency: on crash
+  optout:
+    config: <crashReportingEnabled>false</crashReportingEnabled> in config.xml
+    ui: Settings > General > Enable Crash Reporting
+  sources:
+  - https://docs.syncthing.net/users/config.html
+- type: telemetry
+  default: prompt
+  destinations:
+  - data.syncthing.net
+  sends: Anonymous usage report (version, OS, folder/device counts, features)
+  frequency: periodic after acceptance
+  optout:
+    config: <urAccepted>-1</urAccepted> in config.xml
+    ui: Settings > General > Anonymous Usage Reporting
+  sources:
+  - https://docs.syncthing.net/users/config.html
+- type: cloud_feature
+  default: 'on'
+  destinations:
+  - discovery.syncthing.net
+  - relays.syncthing.net
+  sends: Device ID and addresses for global discovery; relay traffic when direct connection fails
+  frequency: continuous
+  optout:
+    config: <globalAnnounceEnabled>false</globalAnnounceEnabled>, <relaysEnabled>false</relaysEnabled>
+    ui: Settings > Connections > Global Discovery / Enable Relaying
+  sources:
+  - https://docs.syncthing.net/users/config.html
+verified: '2026-11-14'

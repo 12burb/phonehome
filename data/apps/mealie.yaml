@@ -1,0 +1,13 @@
+id: mealie
+name: Mealie
+category: Recipes
+repo: https://github.com/mealie-recipes/mealie
+images:
+- ghcr.io/mealie-recipes/mealie
+- hkotel/mealie
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Amealie-recipes%2Fmealie+telemetry&type=code
+- https://github.com/search?q=repo%3Amealie-recipes%2Fmealie+posthog&type=code
+notes: No telemetry found. Recipe import fetches the URLs you give it.

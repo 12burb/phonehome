@@ -1,0 +1,21 @@
+id: home-assistant
+name: Home Assistant
+category: Home automation
+repo: https://github.com/home-assistant/core
+images:
+- ghcr.io/home-assistant/home-assistant
+- homeassistant/home-assistant
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - analytics-api.home-assistant.io
+  sends: 'Nothing unless you opt in; opt-in levels: basic, usage, statistics, diagnostics'
+  frequency: daily when enabled
+  optout:
+    ui: Settings > System > Analytics
+  sources:
+  - https://www.home-assistant.io/integrations/analytics/
+notes: Opt-in during onboarding. Version and alert checks still contact version.home-assistant.io and alerts.home-assistant.io
+  unless those integrations are removed from default_config.
+verified: '2026-11-14'

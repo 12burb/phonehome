@@ -1,0 +1,21 @@
+id: sonarqube
+name: SonarQube Server (Community Build)
+category: Dev tooling
+repo: https://github.com/SonarSource/sonarqube
+images:
+- sonarqube
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.sonarsource.com
+  sends: Anonymous statistics about the instance (no source code or IPs per the vendor); metrics endpoint as well
+  frequency: daily
+  optout:
+    config: sonar.telemetry.enable=false in conf/sonar.properties
+    env:
+    - SONAR_TELEMETRY_ENABLE=false
+  sources:
+  - https://raw.githubusercontent.com/SonarSource/sonarqube/master/sonar-application/src/main/assembly/conf/sonar.properties
+  - https://github.com/SonarSource/sonarqube/blob/master/server/sonar-process/src/main/java/org/sonar/process/ProcessProperties.java
+verified: '2026-11-14'

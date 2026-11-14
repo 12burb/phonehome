@@ -1,0 +1,22 @@
+id: gitea
+name: Gitea
+category: Git forge
+repo: https://github.com/go-gitea/gitea
+images:
+- gitea/gitea
+- docker.gitea.com/gitea
+calls:
+- type: external_asset
+  default: 'on'
+  destinations:
+  - gravatar.com
+  sends: Hashed user emails to Gravatar for avatars
+  frequency: on page load
+  optout:
+    config: '[picture] DISABLE_GRAVATAR = true, or [server] OFFLINE_MODE = true'
+    env:
+    - GITEA__picture__DISABLE_GRAVATAR=true
+  sources:
+  - https://raw.githubusercontent.com/go-gitea/gitea/main/custom/conf/app.example.ini
+notes: No usage telemetry. Forgejo shares the same settings.
+verified: '2026-11-14'

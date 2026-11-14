@@ -1,0 +1,19 @@
+id: langflow
+name: Langflow
+category: AI
+repo: https://github.com/langflow-ai/langflow
+images:
+- langflowai/langflow
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - langflow.gateway.scarf.sh
+  sends: Anonymous product usage telemetry
+  frequency: continuous
+  optout:
+    env:
+    - DO_NOT_TRACK=true
+  sources:
+  - https://docs.langflow.org/environment-variables
+verified: '2026-11-14'

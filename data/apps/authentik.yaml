@@ -1,0 +1,33 @@
+id: authentik
+name: authentik
+category: Identity
+repo: https://github.com/goauthentik/authentik
+images:
+- ghcr.io/goauthentik/server
+- beryju/authentik
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - version.goauthentik.io
+  sends: Current version to check for updates
+  frequency: periodic
+  optout:
+    env:
+    - AUTHENTIK_DISABLE_UPDATE_CHECK=true
+  sources:
+  - https://docs.goauthentik.io/install-config/configuration/
+- type: crash_report
+  default: 'off'
+  destinations:
+  - sentry.io
+  sends: Error reports and anonymous performance data when enabled
+  frequency: on error
+  optout:
+    env:
+    - AUTHENTIK_ERROR_REPORTING__ENABLED=false
+  sources:
+  - https://docs.goauthentik.io/install-config/configuration/
+  block: false
+notes: Error reporting is opt-in (default false) but is offered during initial setup.
+verified: '2026-11-14'

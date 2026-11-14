@@ -1,0 +1,33 @@
+id: umami
+name: Umami
+category: Analytics
+repo: https://github.com/umami-software/umami
+images:
+- ghcr.io/umami-software/umami
+- umamisoftware/umami
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - i.umami.is
+  sends: Telemetry pixel loaded by the admin UI plus a build event
+  frequency: on admin page load and on build
+  optout:
+    env:
+    - DISABLE_TELEMETRY=1
+    - PRIVATE_MODE=1 (also disables the pixel)
+  sources:
+  - https://github.com/umami-software/umami/blob/master/src/lib/config.ts
+  - https://raw.githubusercontent.com/umami-software/umami/master/src/lib/constants.ts
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.umami.is
+  sends: Version for update notices
+  frequency: periodic
+  optout:
+    env:
+    - DISABLE_UPDATES=1
+  sources:
+  - https://github.com/umami-software/umami/blob/master/src/lib/config.ts
+verified: '2026-11-14'

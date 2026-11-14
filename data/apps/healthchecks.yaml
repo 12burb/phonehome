@@ -1,0 +1,13 @@
+id: healthchecks
+name: Healthchecks
+category: Monitoring
+repo: https://github.com/healthchecks/healthchecks
+images:
+- healthchecks/healthchecks
+- lscr.io/linuxserver/healthchecks
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Ahealthchecks%2Fhealthchecks+telemetry&type=code
+- https://github.com/search?q=repo%3Ahealthchecks%2Fhealthchecks+posthog&type=code
+notes: No telemetry found.

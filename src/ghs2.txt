@@ -1,0 +1,97 @@
+
+## stats.kavitareader.com repo:Kareadita/Kavita 2
+ - Kareadita/Kavita README.md
+    > <a href="https://hosted.weblate.org/engage/kavita/"> <img src="https://hosted.weblate.org/widgets/kavita/-/ui/svg-badge.svg" alt="Translation status" /> </a> <img src="https://img.shields.io/endpoint?url=https://stats.kavitareader.com/api/ui/shield-badge"/> </div>
+ - Kareadita/Kavita Kavita.Common/Configuration.cs
+    > private static readonly string AppSettingsFilename = Path.Join("config", GetAppSettingFilename()); public static readonly string KavitaPlusApiUrl = GetKavitaPlusApiUrl(); public const string StatsApiUrl = "https://stats.kavitareader.com"; private static string GetKavitaPlusApiUrl()
+
+## analytics repo:homarr-labs/homarr path:packages/db/schema 0
+
+## telemetry repo:portainer/portainer path:app/react 0
+
+## ALLOW_REQUESTS_TO_TWENTY_ICONS repo:twentyhq/twenty language:TypeScript 4
+ - twentyhq/twenty packages/twenty-server/src/engine/core-modules/search/services/search.service.ts
+    > ); } case FieldMetadataType.LINKS: { if (!this.twentyConfigService.get('ALLOW_REQUESTS_TO_TWENTY_ICONS')) { return ''; }
+ - twentyhq/twenty packages/twenty-server/src/engine/core-modules/twenty-config/config-variables.ts
+    > "Enable or disable requests to twenty-icons to get companies' icons", type: ConfigVariableType.BOOLEAN, }) ALLOW_REQUESTS_TO_TWENTY_ICONS = true; @ConfigVariablesMetadata({ group: ConfigVariablesGroup.MICROSOFT_AUTH,
+ - twentyhq/twenty packages/twenty-server/src/engine/core-modules/client-config/services/client-config.service.ts
+    > ), isEmailingDomainInDemoMode, allowRequestsToTwentyIcons: this.twentyConfigService.get( 'ALLOW_REQUESTS_TO_TWENTY_ICONS', ), calendarBookingPageId: isNonEmptyString(calendarBookingPageId) ? calendarBookingPageId
+
+## ENABLE_VERSION_UPDATE_CHECK repo:open-webui/open-webui path:backend/open_webui/routers 0
+
+## CHATWOOT_HUB_URL repo:chatwoot/chatwoot 3
+ - chatwoot/chatwoot spec/enterprise/lib/chatwoot_hub_spec.rb
+    > it 'uses the static hub url outside development for enterprise edition' do with_modified_env CHATWOOT_HUB_URL: 'https://custom.example.com' do allow(Rails).to receive(:env).and_return(ActiveSupport::StringInquirer.new('production'))
+    > it 'uses CHATWOOT_HUB_URL in development for enterprise edition' do with_modified_env CHATWOOT_HUB_URL: 'https://custom.example.com' do
+ - chatwoot/chatwoot enterprise/lib/enterprise/chatwoot_hub.rb
+    > end def base_url return ENV.fetch('CHATWOOT_HUB_URL', ENTERPRISE_BASE_URL) if Rails.env.development? ENTERPRISE_BASE_URL end
+ - chatwoot/chatwoot deployment/setup_20.04.sh
+    > pg_pass=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 15 ; echo '') CHATWOOT_HUB_URL="https://hub.2.chatwoot.com/events"
+    > # Globals: # CHATWOOT_HUB_URL # Arguments:
+
+## EnableDiagnostics repo:mattermost/mattermost path:server/public/model/config.go 0
+
+## useUpdateCheck repo:TryGhost/Ghost path:ghost/core/core/server 0
+
+## DOZZLE_NO_ANALYTICS repo:amir20/dozzle 13
+ - amir20/dozzle docs/guide/analytics.md
+    > Pass `--no-analytics` or set `DOZZLE_NO_ANALYTICS=true`. No beacon requests will be made.
+    > environment: DOZZLE_NO_ANALYTICS: "true" ```
+ - amir20/dozzle docs/fr/guide/analytics.md
+    > Passez `--no-analytics` ou définissez `DOZZLE_NO_ANALYTICS=true`. Aucune requête de balise ne sera envoyée.
+    > environment: DOZZLE_NO_ANALYTICS: "true" ```
+ - amir20/dozzle docs/zh/guide/analytics.md
+    > 传入 `--no-analytics` 或设置 `DOZZLE_NO_ANALYTICS=true`，就不会发出任何信标请求。
+    > environment: DOZZLE_NO_ANALYTICS: "true" ```
+
+## telemetry repo:dani-garcia/vaultwarden 0
+
+## telemetry repo:jellyfin/jellyfin language:C# 0
+
+## telemetry repo:paperless-ngx/paperless-ngx language:Python 0
+
+## posthog repo:gethomepage/homepage 0
+
+## telemetry repo:usememos/memos language:Go None
+  MSG API rate limit exceeded for installation ID 177897821. If you reach out to GitHub Support for help, please include the request ID CAEA:264CAC:720210:B76885:6AF8CD36 and timestamp 2026-11-14 21:05:58 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
+
+## telemetry repo:miniflux/v2 None
+  MSG API rate limit exceeded for installation ID 177897821. If you reach out to GitHub Support for help, please include the request ID E1D5:ED1B6:715830:B68CC5:6AF8CD3D and timestamp 2026-11-14 21:06:05 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
+
+## telemetry repo:advplyr/audiobookshelf language:JavaScript None
+  MSG API rate limit exceeded for installation ID 177897821. If you reach out to GitHub Support for help, please include the request ID C5FA:186E5A:6FCDAC:B4DD2A:6AF8CD44 and timestamp 2026-11-14 21:06:12 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
+
+## report_stats repo:element-hq/synapse path:docs/usage/configuration/config_documentation.md None
+  MSG API rate limit exceeded for installation ID 177897821. If you reach out to GitHub Support for help, please include the request ID 21CC:1B844F:70E1FF:B62F53:6AF8CD4B and timestamp 2026-11-14 21:06:19 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
+
+## usage_ping_enabled repo:gitlabhq/gitlabhq filename:gitlab.rb 0
+
+## telemetry repo:mealie-recipes/mealie language:Python 0
+
+## telemetry repo:TandoorRecipes/recipes language:Python 0
+
+## telemetry repo:keycloak/keycloak language:Java 48
+ - keycloak/keycloak model/infinispan/src/main/java/org/keycloak/jgroups/protocol/OPEN_TELEMETRY.java
+    > /** * Provides Open Telemetry (https://opentelemetry.io/) tracing for JGroups. It should be placed just above the * transport.<br/>
+    > index++; TracerHeader hdr = msg.getHeader(OPEN_TELEMETRY_ID); if (hdr != null) {
+ - keycloak/keycloak quarkus/config-api/src/main/java/org/keycloak/config/TelemetryOptions.java
+    > public static final Option<String> TELEMETRY_ENDPOINT = new OptionBuilder<>("telemetry-endpoint", String.class) .category(OptionCategory.TELEMETRY)
+    > public static final Option<LoggingOptions.Level> TELEMETRY_LOGS_LEVEL = new OptionBuilder<>("telemetry-logs-level", LoggingOptions.Level.class) .category(OptionCategory.TELEMETRY)
+ - keycloak/keycloak operator/src/main/java/org/keycloak/operator/crds/v2beta1/deployment/spec/TelemetrySpec.java
+    > @JsonPropertyDescription("OpenTelemetry protocol used for the telemetry data (default 'grpc'). For more information, check the OpenTelemetry guide.") private String protocol;
+    > @JsonPropertyDescription("OpenTelemetry resource attributes present in the exported telemetry data to characterize the telemetry producer.") private Map<String, String> resourceAttributes;
+
+## telemetry repo:juanfont/headscale language:Go 0
+
+## telemetry repo:binwiederhier/ntfy language:Go 1
+ - binwiederhier/ntfy payments/payments.go
+    > // PriceRecurringInterval is an alias for stripe.PriceRecurringInterval type PriceRecurringInterval stripe.PriceRecurringInterval // Setup sets the Stripe secret key and disables telemetry func Setup(stripeSecretKey string) { stripe.EnableTelemetry = false // Whoa! stripe.Key = stripeSecretKey
+
+## telemetry repo:healthchecks/healthchecks language:Python 0
+
+## telemetry repo:actualbudget/actual language:TypeScript 2
+ - actualbudget/actual packages/loot-core/src/server/sync/replay.ts
+    > db.transaction(replay); } catch (e) { // Possibly-transient abort: nothing was dropped, everything retries // on the next load — telemetry only, no user notification captureException(e instanceof Error ? e : new Error(String(e))); return; }
+ - actualbudget/actual packages/component-library/.storybook/main.ts
+    > ], framework: getAbsolutePath('@storybook/react-vite'), core: { disableTelemetry: true, }, staticDirs: ['./public'], async viteFinal(config) {
+DONE

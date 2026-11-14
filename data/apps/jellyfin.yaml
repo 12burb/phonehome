@@ -1,0 +1,14 @@
+id: jellyfin
+name: Jellyfin
+category: Media
+repo: https://github.com/jellyfin/jellyfin
+images:
+- jellyfin/jellyfin
+- lscr.io/linuxserver/jellyfin
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Ajellyfin%2Fjellyfin+telemetry&type=code
+- https://github.com/search?q=repo%3Ajellyfin%2Fjellyfin+posthog&type=code
+notes: No usage telemetry found. Plugin catalogue and metadata providers (TMDb, OMDb, MusicBrainz) are contacted only when
+  those features are used.

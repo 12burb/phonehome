@@ -1,0 +1,19 @@
+id: windmill
+name: Windmill
+category: Automation
+repo: https://github.com/windmill-labs/windmill
+images:
+- ghcr.io/windmill-labs/windmill
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - stats.windmill.dev
+  sends: 'Anonymous usage: job counts, user counts, workspace counts, version'
+  frequency: daily
+  optout:
+    ui: Instance settings > Disable telemetry
+  sources:
+  - https://www.windmill.dev/docs/advanced/instance_settings
+notes: Enterprise Edition requires telemetry for license compliance (can only be minimised).
+verified: '2026-11-14'

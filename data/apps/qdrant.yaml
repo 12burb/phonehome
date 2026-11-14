@@ -1,0 +1,21 @@
+id: qdrant
+name: Qdrant
+category: Database
+repo: https://github.com/qdrant/qdrant
+images:
+- qdrant/qdrant
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.qdrant.io
+  sends: Usage statistics (version, collection/vector counts, hardware)
+  frequency: periodic
+  optout:
+    env:
+    - QDRANT__TELEMETRY_DISABLED=true
+    config: 'telemetry_disabled: true in config.yaml'
+  sources:
+  - https://raw.githubusercontent.com/qdrant/qdrant/master/config/config.yaml
+  - https://qdrant.tech/documentation/guides/telemetry/
+verified: '2026-11-14'

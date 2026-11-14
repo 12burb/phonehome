@@ -1,0 +1,33 @@
+id: immich
+name: Immich
+category: Photos
+repo: https://github.com/immich-app/immich
+images:
+- ghcr.io/immich-app/immich-server
+- ghcr.io/immich-app/immich-machine-learning
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.github.com
+  sends: Request to GitHub releases API to detect new versions
+  frequency: periodic
+  optout:
+    ui: Administration > Settings > Version Check (off)
+  sources:
+  - https://raw.githubusercontent.com/immich-app/immich/main/docs/docs/administration/system-settings.md
+  block: false
+- type: external_asset
+  default: 'on'
+  destinations:
+  - tiles.immich.cloud
+  - static.immich.cloud
+  sends: Map tiles and default map style are loaded from Immich-run servers when the map is opened
+  frequency: on map use
+  optout:
+    ui: Administration > Settings > Map & GPS > custom style URL, or disable the map
+  sources:
+  - https://raw.githubusercontent.com/immich-app/immich/main/docs/docs/administration/system-settings.md
+notes: The machine-learning image bundled Microsoft ONNX Runtime with telemetry enabled (Reddit, Nov 2026); the current Dockerfile
+  builds ONNX Runtime with --no_telemetry. Immich itself has no usage telemetry.
+verified: '2026-11-14'

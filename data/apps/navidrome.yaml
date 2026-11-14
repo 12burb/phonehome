@@ -1,0 +1,23 @@
+id: navidrome
+name: Navidrome
+category: Media
+repo: https://github.com/navidrome/navidrome
+images:
+- deluan/navidrome
+- ghcr.io/navidrome/navidrome
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - insights.navidrome.org
+  sends: 'Anonymous insights: version, OS/arch, library size, enabled features, player and plugin usage'
+  frequency: every 24h (first after 30 min)
+  optout:
+    env:
+    - ND_ENABLEINSIGHTSCOLLECTOR=false
+    - ND_ENABLEEXTERNALSERVICES=false (also disables Last.fm, Deezer, ListenBrainz and external album art)
+    config: EnableInsightsCollector = false in navidrome.toml
+  sources:
+  - https://raw.githubusercontent.com/navidrome/navidrome/master/conf/configuration.go
+  - https://github.com/navidrome/navidrome/blob/master/consts/consts.go
+verified: '2026-11-14'

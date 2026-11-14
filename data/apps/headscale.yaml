@@ -1,0 +1,12 @@
+id: headscale
+name: Headscale
+category: Networking
+repo: https://github.com/juanfont/headscale
+images:
+- headscale/headscale
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Ajuanfont%2Fheadscale+telemetry&type=code
+- https://github.com/search?q=repo%3Ajuanfont%2Fheadscale+posthog&type=code
+notes: No telemetry found in the Go server.

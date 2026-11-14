@@ -1,0 +1,35 @@
+id: nextcloud
+name: Nextcloud Server
+category: Files
+repo: https://github.com/nextcloud/server
+images:
+- nextcloud
+- nextcloud/all-in-one
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - updates.nextcloud.com
+  - apps.nextcloud.com
+  sends: Version and PHP/DB info to the updater server; app store catalogue fetch
+  frequency: periodic
+  optout:
+    config: '''updatechecker'' => false, ''appstoreenabled'' => false, or ''has_internet_connection'' => false in config.php'
+  sources:
+  - https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html
+  block: false
+- type: cloud_feature
+  default: 'on'
+  destinations:
+  - lookup.nextcloud.com
+  - push-notifications.nextcloud.com
+  sends: Lookup server for federated sharing (profile data only if you opt to publish); push proxy if notify_push/Talk is
+    used
+  frequency: on use
+  optout:
+    config: '''lookup_server'' => '''' in config.php'
+  sources:
+  - https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html
+  block: false
+notes: No usage telemetry; the Survey app is opt-in.
+verified: '2026-11-14'

@@ -1,0 +1,20 @@
+id: anythingllm
+name: AnythingLLM
+category: AI
+repo: https://github.com/Mintplex-Labs/anything-llm
+images:
+- mintplexlabs/anythingllm
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - app.posthog.com
+  sends: Anonymous usage telemetry (PostHog)
+  frequency: continuous
+  optout:
+    env:
+    - DISABLE_TELEMETRY=true
+  sources:
+  - https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/docker/.env.example
+  - https://docs.anythingllm.com/configuration
+verified: '2026-11-14'

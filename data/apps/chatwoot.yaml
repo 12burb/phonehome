@@ -1,0 +1,20 @@
+id: chatwoot
+name: Chatwoot
+category: Support
+repo: https://github.com/chatwoot/chatwoot
+images:
+- chatwoot/chatwoot
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - hub.2.chatwoot.com
+  sends: 'Anonymised metadata: aggregated counts of users, accounts, labels, canned responses etc., version, installation
+    id'
+  frequency: periodic
+  optout:
+    env:
+    - DISABLE_TELEMETRY=true
+  sources:
+  - https://developers.chatwoot.com/self-hosted/telemetry
+verified: '2026-11-14'

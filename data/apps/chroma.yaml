@@ -1,0 +1,23 @@
+id: chroma
+name: Chroma
+category: Database
+repo: https://github.com/chroma-core/chroma
+images:
+- chromadb/chroma
+- ghcr.io/chroma-core/chroma
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - us.i.posthog.com
+  - app.posthog.com
+  sends: Anonymized product telemetry via PostHog (events such as collection creation, counts, version)
+  frequency: continuous
+  optout:
+    env:
+    - ANONYMIZED_TELEMETRY=False
+    config: Settings(anonymized_telemetry=False)
+  sources:
+  - https://raw.githubusercontent.com/chroma-core/chroma/main/chromadb/config.py
+  - https://docs.trychroma.com/docs/overview/telemetry
+verified: '2026-11-14'

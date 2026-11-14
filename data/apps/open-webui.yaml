@@ -1,0 +1,35 @@
+id: open-webui
+name: Open WebUI
+category: AI
+repo: https://github.com/open-webui/open-webui
+images:
+- ghcr.io/open-webui/open-webui
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.github.com
+  sends: Checks the latest release for the update banner
+  frequency: periodic
+  optout:
+    env:
+    - ENABLE_VERSION_UPDATE_CHECK=false
+    - OFFLINE_MODE=true (also sets HF_HUB_OFFLINE)
+  sources:
+  - https://raw.githubusercontent.com/open-webui/open-webui/main/backend/open_webui/env.py
+  block: false
+- type: cloud_feature
+  default: 'on'
+  destinations:
+  - api.openwebui.com
+  - openwebui.com
+  sends: Community features (model/prompt/tool sharing, custom branding lookups) contact openwebui.com when used
+  frequency: on use
+  optout:
+    env:
+    - OFFLINE_MODE=true
+    - ENABLE_COMMUNITY_SHARING=false
+  sources:
+  - https://github.com/open-webui/open-webui/blob/main/backend/open_webui/config.py
+notes: No usage telemetry found in the server; the Scarf/analytics pixel exists only in the hosted docs site.
+verified: '2026-11-14'

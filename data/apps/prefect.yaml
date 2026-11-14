@@ -1,0 +1,20 @@
+id: prefect
+name: Prefect Server
+category: Data
+repo: https://github.com/PrefectHQ/prefect
+images:
+- prefecthq/prefect
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - sens-o-matic.prefect.io
+  sends: Anonymous data (flow run counts, package version) on server startup
+  frequency: on startup
+  optout:
+    env:
+    - PREFECT_SERVER_ANALYTICS_ENABLED=false
+    config: server.analytics_enabled = false
+  sources:
+  - https://docs.prefect.io/v3/develop/settings-ref
+verified: '2026-11-14'

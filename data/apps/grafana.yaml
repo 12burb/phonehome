@@ -1,0 +1,36 @@
+id: grafana
+name: Grafana
+category: Monitoring
+repo: https://github.com/grafana/grafana
+images:
+- grafana/grafana
+- grafana/grafana-oss
+- grafana/grafana-enterprise
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - stats.grafana.org
+  sends: Counters of running instances, versions, dashboards and errors; no IP addresses per docs
+  frequency: every 24h
+  optout:
+    env:
+    - GF_ANALYTICS_REPORTING_ENABLED=false
+    config: '[analytics] reporting_enabled = false'
+  sources:
+  - https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/#analytics
+- type: update_check
+  default: 'on'
+  destinations:
+  - grafana.com
+  sends: Grafana version; also checks plugin updates
+  frequency: periodic
+  optout:
+    env:
+    - GF_ANALYTICS_CHECK_FOR_UPDATES=false
+    - GF_ANALYTICS_CHECK_FOR_PLUGIN_UPDATES=false
+    config: '[analytics] check_for_updates = false / check_for_plugin_updates = false'
+  sources:
+  - https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/#analytics
+  block: false
+verified: '2026-11-14'

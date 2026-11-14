@@ -1,0 +1,18 @@
+id: uptime-kuma
+name: Uptime Kuma
+category: Monitoring
+repo: https://github.com/louislam/uptime-kuma
+images:
+- louislam/uptime-kuma
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - uptime.kuma.pet
+  sends: Plain GET for the latest version (no instance data)
+  frequency: every 48h
+  optout:
+    ui: Settings > About > Show update if available (checkUpdate)
+  sources:
+  - https://raw.githubusercontent.com/louislam/uptime-kuma/master/server/check-version.js
+verified: '2026-11-14'

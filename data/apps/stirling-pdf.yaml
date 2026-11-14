@@ -1,0 +1,23 @@
+id: stirling-pdf
+name: Stirling-PDF
+category: Documents
+repo: https://github.com/Stirling-Tools/Stirling-PDF
+images:
+- stirlingtools/stirling-pdf
+- frooodle/s-pdf
+calls:
+- type: telemetry
+  default: prompt
+  destinations:
+  - eu.i.posthog.com
+  - app.posthog.com
+  - static.scarf.sh
+  sends: PostHog product analytics and a Scarf tracking pixel once analytics is enabled; admin is prompted on first launch
+  frequency: continuous
+  optout:
+    config: 'system.enableAnalytics: false in settings.yml (enablePosthog/enableScarf also available)'
+    env:
+    - SYSTEM_ENABLEANALYTICS=false
+  sources:
+  - https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/app/core/src/main/resources/settings.yml.template
+verified: '2026-11-14'

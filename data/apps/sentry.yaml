@@ -1,0 +1,20 @@
+id: sentry
+name: Sentry (self-hosted)
+category: Monitoring
+repo: https://github.com/getsentry/self-hosted
+images:
+- getsentry/sentry
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - sentry.io
+  sends: 'Beacon: install ID, version, admin email, counts of users/projects/events, config flags'
+  frequency: hourly task + minute ping
+  optout:
+    config: SENTRY_BEACON = False in sentry.conf.py
+  sources:
+  - https://raw.githubusercontent.com/getsentry/sentry/master/src/sentry/conf/server.py
+  - https://develop.sentry.dev/self-hosted/configuration/
+  block: false
+verified: '2026-11-14'

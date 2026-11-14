@@ -1,0 +1,34 @@
+id: n8n
+name: n8n
+category: Automation
+repo: https://github.com/n8n-io/n8n
+images:
+- n8nio/n8n
+- docker.n8n.io/n8nio/n8n
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.n8n.io
+  sends: Selected anonymous telemetry from frontend and backend
+  frequency: continuous
+  optout:
+    env:
+    - N8N_DIAGNOSTICS_ENABLED=false
+  sources:
+  - https://docs.n8n.io/hosting/configuration/environment-variables/deployment/
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.n8n.io
+  sends: Version information for update and security notifications; also fetches workflow templates and personalisation
+  frequency: periodic
+  optout:
+    env:
+    - N8N_VERSION_NOTIFICATIONS_ENABLED=false
+    - N8N_TEMPLATES_ENABLED=false
+    - N8N_PERSONALIZATION_ENABLED=false
+  sources:
+  - https://docs.n8n.io/hosting/configuration/environment-variables/deployment/
+notes: Disabling diagnostics also disables Ask AI in the Code node.
+verified: '2026-11-14'

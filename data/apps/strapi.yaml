@@ -1,0 +1,21 @@
+id: strapi
+name: Strapi
+category: CMS / Backend
+repo: https://github.com/strapi/strapi
+images:
+- strapi/strapi
+- naskio/strapi
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - analytics.strapi.io
+  sends: Anonymous usage data (project UUID, versions, feature usage)
+  frequency: periodic
+  optout:
+    env:
+    - STRAPI_TELEMETRY_DISABLED=true
+    config: Remove the uuid key from package.json "strapi" section
+  sources:
+  - https://docs.strapi.io/cms/configurations/environment
+verified: '2026-11-14'

@@ -1,0 +1,19 @@
+id: jenkins
+name: Jenkins
+category: CI/CD
+repo: https://github.com/jenkinsci/jenkins
+images:
+- jenkins/jenkins
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - usage.jenkins.io
+  sends: Anonymous usage statistics (version, plugins, executors, OS)
+  frequency: periodic
+  optout:
+    ui: Manage Jenkins > System > Usage Statistics (uncheck)
+    cli: -Dhudson.model.UsageStatistics.disabled=true
+  sources:
+  - https://www.jenkins.io/doc/book/managing/system-configuration/
+verified: '2026-11-14'
