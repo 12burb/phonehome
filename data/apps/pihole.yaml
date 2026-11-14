@@ -1,0 +1,13 @@
+id: pihole
+name: Pi-hole
+category: Networking
+repo: https://github.com/pi-hole/pi-hole
+images:
+- pihole/pihole
+verified: '2026-11-14'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Api-hole%2Fpi-hole+telemetry&type=code
+- https://raw.githubusercontent.com/pi-hole/docker-pi-hole/master/README.md
+notes: No telemetry found. Gravity updates download the blocklists you configure; version checks query GitHub for the update
+  notice in the admin UI.

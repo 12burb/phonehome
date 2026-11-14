@@ -1,0 +1,23 @@
+id: synapse
+name: Matrix Synapse
+category: Chat
+repo: https://github.com/element-hq/synapse
+images:
+- matrixdotorg/synapse
+- ghcr.io/element-hq/synapse
+verified: '2026-11-14'
+calls:
+- type: telemetry
+  default: prompt
+  destinations:
+  - matrix.org
+  sends: Homeserver usage statistics (user/room counts, version) if report_stats is true; the value is chosen when generating
+    the config
+  frequency: 5 min after start, then every 3h
+  optout:
+    config: 'report_stats: false in homeserver.yaml'
+    env:
+    - SYNAPSE_REPORT_STATS=no (docker generate step)
+  sources:
+  - https://raw.githubusercontent.com/element-hq/synapse/develop/docs/usage/configuration/config_documentation.md
+notes: Defaults to false when the key is absent; the Docker image requires you to choose yes/no at config generation.

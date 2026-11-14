@@ -1,0 +1,22 @@
+id: gitlab
+name: GitLab (self-managed)
+category: Git forge
+repo: https://gitlab.com/gitlab-org/gitlab
+images:
+- gitlab/gitlab-ce
+- gitlab/gitlab-ee
+verified: '2026-11-14'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - version.gitlab.com
+  sends: 'Service Ping: weekly payload of instance usage metrics (counts of projects, users, features used, version); also
+    used for version checks'
+  frequency: weekly
+  optout:
+    config: gitlab_rails['usage_ping_enabled'] = false in gitlab.rb
+    ui: Admin > Settings > Metrics and profiling > Usage statistics > Enable Service Ping (off)
+  sources:
+  - https://docs.gitlab.com/administration/settings/usage_statistics/
+notes: 'Docs: for free self-managed instances all usage statistics are opt-out (on by default).'
