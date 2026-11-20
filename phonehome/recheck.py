@@ -23,11 +23,23 @@ def stable_url(url):
     return f"https://raw.githubusercontent.com/{m.group(1)}/{m.group(2)}/{m.group(3)}" if m else url
 
 
-def fetch(url):
+def fetch(url, _hops=0):
     url = stable_url(url)
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; phonehome-recheck/1; +https://github.com/12burb/phonehome)"})
-    with _opener.open(req, timeout=40) as r:
-        body = r.read().decode("utf-8", "ignore")
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; phonehome-recheck/1; +https://github.com/12burb/phonehome)"
+        },
+    )
+    try:
+        with _opener.open(req, timeout=40) as r:
+            body = r.read().decode("utf-8", "ignore")
+    except urllib.error.HTTPError as e:
+        # Some doc sites answer 308 with a relative Location that urllib refuses to follow.
+        loc = e.headers.get("Location") if e.code in (301, 302, 307, 308) else None
+        if loc and _hops < 5:
+            return fetch(urllib.parse.urljoin(url, loc), _hops + 1)
+        raise
     body = re.sub(r"<script.*?</script>|<style.*?</style>", "", body, flags=re.S)
     text = html.unescape(re.sub(r"<[^>]+>", " ", body))
     return text

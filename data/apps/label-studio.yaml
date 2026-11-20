@@ -1,0 +1,21 @@
+id: label-studio
+name: Label Studio
+category: ML
+repo: https://github.com/HumanSignal/label-studio
+images:
+- heartexlabs/label-studio
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - tele.labelstud.io
+  sends: 'Context logs for API requests: endpoint, method, status, timing, counts and environment info (payload bodies are
+    filtered)'
+  frequency: per request, in background
+  optout:
+    env:
+    - COLLECT_ANALYTICS=false
+  sources:
+  - https://raw.githubusercontent.com/HumanSignal/label-studio/develop/label_studio/core/settings/base.py
+  - https://raw.githubusercontent.com/HumanSignal/label-studio/develop/label_studio/core/utils/contextlog.py
