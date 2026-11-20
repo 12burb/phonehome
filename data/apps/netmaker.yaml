@@ -1,0 +1,22 @@
+id: netmaker
+name: Netmaker
+category: Networking
+repo: https://github.com/gravitl/netmaker
+images:
+- gravitl/netmaker
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - app.posthog.com
+  block: false
+  sends: PostHog event (embedded public key) with counts of nodes, hosts, servers, external clients, users and networks, node
+    OS/Docker/K8s breakdown, version, Pro/trial status
+  frequency: periodic background job
+  optout:
+    env:
+    - TELEMETRY=off
+  sources:
+  - https://raw.githubusercontent.com/gravitl/netmaker/master/servercfg/serverconf.go
+  - https://raw.githubusercontent.com/gravitl/netmaker/master/logic/telemetry.go

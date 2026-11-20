@@ -1,0 +1,25 @@
+id: temporal
+name: Temporal Server
+category: Workflow
+repo: https://github.com/temporalio/temporal
+images:
+- temporalio/server
+- temporalio/auto-setup
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - version-info.temporal.io
+  sends: POST /check with product, server version, arch, OS, database type, cluster id, timestamp and the names/versions of
+    connected SDKs
+  frequency: on start, then every 24 hours
+  optout:
+    env:
+    - TEMPORAL_VERSION_CHECK_DISABLED=1
+    config: 'frontend.enableServerVersionCheck: false (dynamic config)'
+  sources:
+  - https://raw.githubusercontent.com/temporalio/temporal/main/common/dynamicconfig/constants.go
+  - https://raw.githubusercontent.com/temporalio/temporal/main/service/frontend/version_checker.go
+  - https://raw.githubusercontent.com/temporalio/temporal/main/common/versioninfo/caller.go
+  - https://raw.githubusercontent.com/temporalio/temporal/main/common/versioninfo/request.go
