@@ -1,0 +1,23 @@
+id: woodpecker
+name: Woodpecker CI
+category: CI/CD
+repo: https://github.com/woodpecker-ci/woodpecker
+images:
+- woodpeckerci/woodpecker-server
+- woodpeckerci/woodpecker-agent
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - woodpecker-ci.org
+  block: false
+  sends: Admin web UI fetches version.json (browser IP/user agent only; no instance data in the request)
+  frequency: when an admin opens the web UI
+  optout:
+    env:
+    - WOODPECKER_DISABLE_VERSION_CHECK=true
+    cli: --skip-version-check
+  sources:
+  - https://raw.githubusercontent.com/woodpecker-ci/woodpecker/main/cmd/server/flags.go
+  - https://raw.githubusercontent.com/woodpecker-ci/woodpecker/main/web/src/compositions/useVersion.ts
