@@ -1,0 +1,21 @@
+id: mailu
+name: Mailu
+category: Email
+repo: https://github.com/Mailu/Mailu
+images:
+- ghcr.io/mailu/admin
+- mailu/admin
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - stats.mailu.io
+  sends: DNS lookup of <date>.<random instance id>.stats.mailu.io so the project can count running instances; no HTTP payload
+  frequency: on admin start
+  optout:
+    env:
+    - DISABLE_STATISTICS=True
+  sources:
+  - https://raw.githubusercontent.com/Mailu/Mailu/master/core/admin/mailu/configuration.py
+  - https://raw.githubusercontent.com/Mailu/Mailu/master/core/admin/mailu/manage.py

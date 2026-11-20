@@ -1,0 +1,23 @@
+id: dolt
+name: Dolt
+category: Database
+repo: https://github.com/dolthub/dolt
+images:
+- dolthub/dolt-sql-server
+- dolthub/dolt
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - eventsapi.dolthub.com
+  sends: Command/usage events (command name, version, platform, anonymous id) flushed in the background
+  frequency: after each command
+  optout:
+    cli: dolt config --global --add metrics.disabled true
+    env:
+    - DOLT_DISABLE_EVENT_FLUSH=1
+  sources:
+  - https://raw.githubusercontent.com/dolthub/dolt/main/go/libraries/events/emitter.go
+  - https://raw.githubusercontent.com/dolthub/dolt/main/go/cmd/dolt/dolt.go
+  - https://raw.githubusercontent.com/dolthub/dolt/main/go/cmd/dolt/commands/send_metrics.go
