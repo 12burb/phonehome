@@ -1,0 +1,26 @@
+id: element-web
+name: Element Web
+category: Chat
+repo: https://github.com/element-hq/element-web
+images:
+- vectorim/element-web
+- ghcr.io/element-hq/element-web
+verified: '2026-11-20'
+calls:
+- type: cloud_feature
+  default: 'on'
+  destinations:
+  - scalar.vector.im
+  - vector.im
+  - meet.element.io
+  block: false
+  sends: 'With the sample config, browsers contact Element-run services: the Scalar integration manager (widgets/bots), the
+    vector.im identity server (3PID lookup when used) and meet.element.io for Jitsi calls'
+  frequency: when those features are used
+  optout:
+    config: In config.json remove or replace integrations_ui_url, integrations_rest_url, integrations_widgets_urls, m.identity_server
+      and jitsi.preferred_domain
+  sources:
+  - https://raw.githubusercontent.com/element-hq/element-web/develop/apps/web/config.sample.json
+  - https://raw.githubusercontent.com/element-hq/element-web/develop/docs/config.md
+notes: PostHog analytics is only active if a posthog block is added to config.json; the sample config has none.
