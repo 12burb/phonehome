@@ -1,0 +1,19 @@
+id: documenso
+name: Documenso
+category: Documents
+repo: https://github.com/documenso/documenso
+images:
+- documenso/documenso
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations: []
+  sends: App version, installation ID and node ID (no personal data per the vendor)
+  frequency: periodic
+  optout:
+    env:
+    - DOCUMENSO_DISABLE_TELEMETRY=true
+    - NEXT_PUBLIC_POSTHOG_KEY= (empty disables PostHog in the UI)
+  sources:
+  - https://raw.githubusercontent.com/documenso/documenso/main/.env.example

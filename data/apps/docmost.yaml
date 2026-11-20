@@ -1,0 +1,18 @@
+id: docmost
+name: Docmost
+category: Wiki
+repo: https://github.com/docmost/docmost
+images:
+- docmost/docmost
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations: []
+  sends: Anonymous usage telemetry (DISABLE_TELEMETRY defaults to false in .env.example)
+  frequency: periodic
+  optout:
+    env:
+    - DISABLE_TELEMETRY=true
+  sources:
+  - https://raw.githubusercontent.com/docmost/docmost/main/.env.example

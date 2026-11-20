@@ -1,0 +1,18 @@
+id: formbricks
+name: Formbricks
+category: Forms
+repo: https://github.com/formbricks/formbricks
+images:
+- ghcr.io/formbricks/formbricks
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations: []
+  sends: Usage statistics sent to Formbricks; cannot be disabled while an Enterprise licence is active
+  frequency: periodic
+  optout:
+    env:
+    - TELEMETRY_DISABLED=1
+  sources:
+  - https://raw.githubusercontent.com/formbricks/formbricks/main/.env.example
