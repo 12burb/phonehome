@@ -1,0 +1,22 @@
+id: automatisch
+name: Automatisch
+category: Automation
+repo: https://github.com/automatisch/automatisch
+images:
+- automatischio/automatisch
+- ghcr.io/automatisch/automatisch
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.automatisch.io
+  sends: 'RudderStack events keyed by organization id and instance id for step/flow/execution/connection lifecycle: internal
+    ids, flow name, app key, step type and status, timestamps, test-run flag'
+  frequency: per event
+  optout:
+    env:
+    - TELEMETRY_ENABLED=false
+  sources:
+  - https://raw.githubusercontent.com/automatisch/automatisch/main/packages/backend/src/config/app.js
+  - https://raw.githubusercontent.com/automatisch/automatisch/main/packages/backend/src/helpers/telemetry/index.js
