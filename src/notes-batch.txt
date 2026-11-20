@@ -932,3 +932,12 @@ $config['updatecheckperiod'] = 7;
     > Configuration for application update checks """ CHECK_UPDATE_URL: str = Field( description="URL to check for application updates", default="https://updates.dify.ai", )
  - langgenius/dify docker/envs/core-services/api-worker.defaults
     > # LANG=C.UTF-8 # LC_ALL=C.UTF-8 # PYTHONIOENCODING=utf-8 # CHECK_UPDATE_URL=https://updates.dify.ai # OPENAI_API_BASE=https://api.openai.com/v1 # Nacos remote settings source HTTP timeouts (seco
+## dify system.py
+3:import httpx
+18:    current_version: str = Field(..., description="Current application version")
+43:    check_update_url = dify_config.CHECK_UPDATE_URL
+50:    if not check_update_url:
+54:        response = httpx.get(
+55:            check_update_url,
+56:            params={"current_version": query.current_version},
+57:            timeout=httpx.Timeout(timeout=10.0, connect=3.0),

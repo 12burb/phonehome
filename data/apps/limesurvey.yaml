@@ -1,0 +1,20 @@
+id: limesurvey
+name: LimeSurvey
+category: Forms
+repo: https://github.com/LimeSurvey/LimeSurvey
+images:
+- martialblog/limesurvey
+- adamcharnock/limesurvey
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - comfortupdate.limesurvey.org
+  sends: Installed version and build for the ComfortUpdate check
+  frequency: every 7 days (updatecheckperiod)
+  optout:
+    config: $config['updatecheckperiod'] = 0; in application/config/config.php
+  sources:
+  - https://raw.githubusercontent.com/LimeSurvey/LimeSurvey/master/application/config/config-defaults.php
+  - https://raw.githubusercontent.com/LimeSurvey/LimeSurvey/master/application/config/updater_version.php
