@@ -1,0 +1,21 @@
+id: growthbook
+name: GrowthBook
+category: Feature flags
+repo: https://github.com/growthbook/growthbook
+images:
+- growthbook/growthbook
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - t.growthbook.io
+  sends: 'Jitsu product events from the web UI: hashed org and user ids, IP address, user agent, page path with masked hostname,
+    event names'
+  frequency: per UI action
+  optout:
+    env:
+    - DISABLE_TELEMETRY=true
+  sources:
+  - https://raw.githubusercontent.com/growthbook/growthbook/main/packages/back-end/src/util/secrets.ts
+  - https://raw.githubusercontent.com/growthbook/growthbook/main/packages/front-end/services/track.ts

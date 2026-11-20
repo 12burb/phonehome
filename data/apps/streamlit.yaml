@@ -1,0 +1,22 @@
+id: streamlit
+name: Streamlit
+category: Data apps
+repo: https://github.com/streamlit/streamlit
+images: []
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - data.streamlit.io
+  sends: Browser fetches a metrics config from data.streamlit.io and then posts anonymous usage events (page loads, widget/command
+    usage, version) to the destinations it lists
+  frequency: per session / per event
+  optout:
+    config: browser.gatherUsageStats = false in .streamlit/config.toml
+    env:
+    - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+    cli: --browser.gatherUsageStats=false
+  sources:
+  - https://raw.githubusercontent.com/streamlit/streamlit/develop/lib/streamlit/config.py
+  - https://raw.githubusercontent.com/streamlit/streamlit/develop/frontend/app/src/MetricsManager.ts

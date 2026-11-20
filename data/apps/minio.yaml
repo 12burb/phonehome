@@ -1,0 +1,24 @@
+id: minio
+name: MinIO
+category: Storage
+repo: https://github.com/minio/minio
+images:
+- minio/minio
+- quay.io/minio/minio
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - subnet.min.io
+  sends: 'SUBNET callhome: cluster health/diagnostics report (versions, config, drive and node info) when enabled'
+  frequency: every 24h when enabled
+  optout:
+    env:
+    - MINIO_CALLHOME_ENABLE=off
+    cli: mc admin config set ALIAS callhome enable=off
+  sources:
+  - https://raw.githubusercontent.com/minio/minio/master/internal/config/callhome/callhome.go
+  - https://raw.githubusercontent.com/minio/minio/master/cmd/callhome.go
+  - https://raw.githubusercontent.com/minio/minio/master/internal/config/subnet/config.go
+notes: Callhome is off unless the operator registers with SUBNET.
