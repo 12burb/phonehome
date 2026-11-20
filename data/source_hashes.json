@@ -1159,6 +1159,10 @@
   "fp": "7fb7b68f24f239b5",
   "lines": 2
  },
+ "https://raw.githubusercontent.com/portainer/portainer/develop/api/cli/cli.go": {
+  "fp": "becdb7ffe327aad6",
+  "lines": 8
+ },
  "https://raw.githubusercontent.com/pretix/pretix/master/src/pretix/base/services/update_check.py": {
   "fp": "a1ab13833faab16b",
   "lines": 3
