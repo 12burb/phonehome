@@ -1,0 +1,13 @@
+id: lemmy
+name: Lemmy
+category: Social
+repo: https://github.com/LemmyNet/lemmy
+images:
+- dessalines/lemmy
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/LemmyNet/lemmy/main/config/defaults.hjson
+- https://github.com/search?q=repo%3ALemmyNet%2Flemmy+telemetry&type=code
+- https://github.com/search?q=repo%3ALemmyNet%2Flemmy+posthog&type=code
+notes: No telemetry found; federation traffic only.

@@ -1,0 +1,16 @@
+id: jitsi
+name: Jitsi Meet (Docker)
+category: Video conferencing
+repo: https://github.com/jitsi/docker-jitsi-meet
+images:
+- jitsi/web
+- jitsi/prosody
+- jitsi/jicofo
+- jitsi/jvb
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/jitsi/docker-jitsi-meet/master/env.example
+- https://github.com/search?q=repo%3Ajitsi%2Fdocker-jitsi-meet+telemetry&type=code
+- https://github.com/search?q=repo%3Ajitsi%2Fdocker-jitsi-meet+posthog&type=code
+notes: Analytics integrations (rtcstats, Amplitude, Google Analytics) are all commented out/off by default.

@@ -1,0 +1,13 @@
+id: akaunting
+name: Akaunting
+category: Finance
+repo: https://github.com/akaunting/akaunting
+images:
+- docker.io/akaunting/akaunting
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/akaunting/akaunting/master/.env.example
+- https://github.com/search?q=repo%3Aakaunting%2Fakaunting+telemetry&type=code
+- https://github.com/search?q=repo%3Aakaunting%2Fakaunting+posthog&type=code
+notes: No telemetry variables found. App marketplace features contact akaunting.com when used.

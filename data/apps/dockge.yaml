@@ -1,0 +1,13 @@
+id: dockge
+name: Dockge
+category: Docker management
+repo: https://github.com/louislam/dockge
+images:
+- louislam/dockge
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml
+- https://github.com/search?q=repo%3Alouislam%2Fdockge+telemetry&type=code
+- https://github.com/search?q=repo%3Alouislam%2Fdockge+posthog&type=code
+notes: No telemetry found.

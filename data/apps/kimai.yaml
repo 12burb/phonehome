@@ -1,0 +1,13 @@
+id: kimai
+name: Kimai
+category: Time tracking
+repo: https://github.com/kimai/kimai
+images:
+- kimai/kimai2
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/kimai/kimai/main/.env.dist
+- https://github.com/search?q=repo%3Akimai%2Fkimai+telemetry&type=code
+- https://github.com/search?q=repo%3Akimai%2Fkimai+posthog&type=code
+notes: No telemetry found.

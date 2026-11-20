@@ -1,0 +1,17 @@
+id: netbird
+name: NetBird Management
+category: Networking
+repo: https://github.com/netbirdio/netbird
+images:
+- netbirdio/management
+- netbirdio/signal
+- netbirdio/dashboard
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/netbirdio/netbird/main/management/cmd/management.go
+- https://raw.githubusercontent.com/netbirdio/netbird/main/management/server/telemetry/app_metrics.go
+- https://github.com/search?q=repo%3Anetbirdio%2Fnetbird+telemetry&type=code
+- https://github.com/search?q=repo%3Anetbirdio%2Fnetbird+posthog&type=code
+notes: Management metrics are Prometheus/OpenTelemetry on a local port; no vendor endpoint found. Downloads the GeoLite database
+  unless --disable-geolite-update.

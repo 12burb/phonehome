@@ -1,0 +1,13 @@
+id: komga
+name: Komga
+category: Media
+repo: https://github.com/gotson/komga
+images:
+- gotson/komga
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/gotson/komga/master/komga/src/main/resources/application.yml
+- https://github.com/search?q=repo%3Agotson%2Fkomga+telemetry&type=code
+- https://github.com/search?q=repo%3Agotson%2Fkomga+posthog&type=code
+notes: No telemetry found.

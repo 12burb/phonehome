@@ -1,0 +1,20 @@
+id: kopia
+name: Kopia
+category: Backup
+repo: https://github.com/kopia/kopia
+images:
+- kopia/kopia
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.github.com
+  block: false
+  sends: Fetches the latest GitHub release every 7 days, starting 24h after first use
+  frequency: every 7 days
+  optout:
+    env:
+    - KOPIA_CHECK_FOR_UPDATES=false
+  sources:
+  - https://raw.githubusercontent.com/kopia/kopia/master/cli/update_check.go

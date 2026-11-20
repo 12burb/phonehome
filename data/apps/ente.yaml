@@ -1,0 +1,13 @@
+id: ente
+name: Ente (self-hosted)
+category: Photos
+repo: https://github.com/ente-io/ente
+images:
+- ghcr.io/ente-io/server
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/ente-io/ente/main/server/configurations/local.yaml
+- https://github.com/search?q=repo%3Aente-io%2Fente+telemetry&type=code
+- https://github.com/search?q=repo%3Aente-io%2Fente+posthog&type=code
+notes: No telemetry found in the server configuration.

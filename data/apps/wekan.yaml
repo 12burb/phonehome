@@ -1,0 +1,15 @@
+id: wekan
+name: WeKan
+category: Kanban
+repo: https://github.com/wekan/wekan
+images:
+- wekanteam/wekan
+- ghcr.io/wekan/wekan
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/wekan/wekan/main/docker-compose.yml
+- https://github.com/search?q=repo%3Awekan%2Fwekan+telemetry&type=code
+- https://github.com/search?q=repo%3Awekan%2Fwekan+posthog&type=code
+notes: No vendor telemetry; Matomo integration is optional and points at your own server. The bundled FerretDB has telemetry
+  disabled in the compose file.

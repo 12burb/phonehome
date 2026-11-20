@@ -1,0 +1,13 @@
+id: invoiceninja
+name: Invoice Ninja
+category: Finance
+repo: https://github.com/invoiceninja/invoiceninja
+images:
+- invoiceninja/invoiceninja
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/invoiceninja/invoiceninja/v5-stable/.env.example
+- https://github.com/search?q=repo%3Ainvoiceninja%2Finvoiceninja+telemetry&type=code
+- https://github.com/search?q=repo%3Ainvoiceninja%2Finvoiceninja+posthog&type=code
+notes: No telemetry variables found in .env.example.

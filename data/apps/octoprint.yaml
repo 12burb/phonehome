@@ -1,0 +1,20 @@
+id: octoprint
+name: OctoPrint
+category: 3D printing
+repo: https://github.com/OctoPrint/OctoPrint
+images:
+- octoprint/octoprint
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: prompt
+  destinations:
+  - tracking.octoprint.org
+  sends: Anonymous unique id with startup, 15-minute ping, daily pong, print job, printer firmware, plugin, OS/Python and
+    browser/OS events; the setup wizard asks before enabling
+  frequency: every 15 min when enabled
+  optout:
+    ui: Settings > Anonymous Usage Tracking (off)
+    config: 'plugins.tracking.enabled: false in config.yaml'
+  sources:
+  - https://raw.githubusercontent.com/OctoPrint/OctoPrint/master/src/octoprint/plugins/tracking/__init__.py

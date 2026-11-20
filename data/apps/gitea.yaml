@@ -18,5 +18,15 @@ calls:
     - GITEA__picture__DISABLE_GRAVATAR=true
   sources:
   - https://raw.githubusercontent.com/go-gitea/gitea/main/custom/conf/app.example.ini
+- type: update_check
+  default: 'on'
+  destinations:
+  - dl.gitea.com
+  sends: Fetches version.json to compare with the running version
+  frequency: weekly
+  optout:
+    config: '[cron.update_checker] ENABLED = false in app.ini'
+  sources:
+  - https://raw.githubusercontent.com/go-gitea/gitea/main/custom/conf/app.example.ini
 notes: No usage telemetry. Forgejo shares the same settings.
 verified: '2026-11-14'

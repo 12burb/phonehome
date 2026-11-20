@@ -1,0 +1,14 @@
+id: audiobookshelf
+name: Audiobookshelf
+category: Media
+repo: https://github.com/advplyr/audiobookshelf
+images:
+- ghcr.io/advplyr/audiobookshelf
+- advplyr/audiobookshelf
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/advplyr/audiobookshelf/master/readme.md
+- https://github.com/search?q=repo%3Aadvplyr%2Faudiobookshelf+telemetry&type=code
+- https://github.com/search?q=repo%3Aadvplyr%2Faudiobookshelf+posthog&type=code
+notes: No telemetry found; metadata lookups go to the providers you pick.

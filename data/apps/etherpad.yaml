@@ -1,0 +1,13 @@
+id: etherpad
+name: Etherpad
+category: Collaboration
+repo: https://github.com/ether/etherpad-lite
+images:
+- etherpad/etherpad
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/ether/etherpad-lite/develop/settings.json.template
+- https://github.com/search?q=repo%3Aether%2Fetherpad-lite+telemetry&type=code
+- https://github.com/search?q=repo%3Aether%2Fetherpad-lite+posthog&type=code
+notes: No telemetry found in the settings template.

@@ -1,0 +1,13 @@
+id: owncast
+name: Owncast
+category: Streaming
+repo: https://github.com/owncast/owncast
+images:
+- owncast/owncast
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/owncast/owncast/develop/README.md
+- https://github.com/search?q=repo%3Aowncast%2Fowncast+telemetry&type=code
+- https://github.com/search?q=repo%3Aowncast%2Fowncast+posthog&type=code
+notes: No telemetry found.

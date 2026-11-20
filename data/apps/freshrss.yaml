@@ -1,0 +1,21 @@
+id: freshrss
+name: FreshRSS
+category: RSS
+repo: https://github.com/FreshRSS/FreshRSS
+images:
+- freshrss/freshrss
+- linuxserver/freshrss
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - update.freshrss.org
+  sends: Version for the self-update check
+  frequency: periodic
+  optout:
+    config: '''disable_update'' => true in config.php'
+    env:
+    - FRESHRSS_INSTALL=--disable_update
+  sources:
+  - https://raw.githubusercontent.com/FreshRSS/FreshRSS/edge/config.default.php

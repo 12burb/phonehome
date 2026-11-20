@@ -1,0 +1,13 @@
+id: zitadel
+name: ZITADEL
+category: Auth
+repo: https://github.com/zitadel/zitadel
+images:
+- ghcr.io/zitadel/zitadel
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/zitadel/zitadel/main/cmd/defaults.yaml
+- https://github.com/search?q=repo%3Azitadel%2Fzitadel+telemetry&type=code
+- https://github.com/search?q=repo%3Azitadel%2Fzitadel+posthog&type=code
+notes: OpenTelemetry trace/metric exporters are "none" by default and only ever go to endpoints you configure.

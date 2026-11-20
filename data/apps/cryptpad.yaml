@@ -1,0 +1,13 @@
+id: cryptpad
+name: CryptPad
+category: Collaboration
+repo: https://github.com/cryptpad/cryptpad
+images:
+- cryptpad/cryptpad
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/cryptpad/cryptpad/main/config/config.example.js
+- https://github.com/search?q=repo%3Acryptpad%2Fcryptpad+telemetry&type=code
+- https://github.com/search?q=repo%3Acryptpad%2Fcryptpad+posthog&type=code
+notes: No telemetry options in the example config.

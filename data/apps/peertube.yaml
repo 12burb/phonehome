@@ -1,0 +1,13 @@
+id: peertube
+name: PeerTube
+category: Video
+repo: https://github.com/Chocobozzz/PeerTube
+images:
+- chocobozzz/peertube
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/Chocobozzz/PeerTube/develop/config/default.yaml
+- https://github.com/search?q=repo%3AChocobozzz%2FPeerTube+telemetry&type=code
+- https://github.com/search?q=repo%3AChocobozzz%2FPeerTube+posthog&type=code
+notes: No telemetry; OpenTelemetry metrics/tracing are off and self-configured, the P2P tracker is local.

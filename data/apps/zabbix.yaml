@@ -1,0 +1,14 @@
+id: zabbix
+name: Zabbix Server
+category: Monitoring
+repo: https://github.com/zabbix/zabbix
+images:
+- zabbix/zabbix-server-pgsql
+- zabbix/zabbix-server-mysql
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/zabbix/zabbix/master/conf/zabbix_server.conf
+- https://github.com/search?q=repo%3Azabbix%2Fzabbix+telemetry&type=code
+- https://github.com/search?q=repo%3Azabbix%2Fzabbix+posthog&type=code
+notes: No vendor telemetry; "TelemetryProvider" is a ClickHouse storage option for your own data.

@@ -1,0 +1,13 @@
+id: snipe-it
+name: Snipe-IT
+category: Asset management
+repo: https://github.com/grokability/snipe-it
+images:
+- snipe/snipe-it
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/grokability/snipe-it/master/.env.example
+- https://github.com/search?q=repo%3Agrokability%2Fsnipe-it+telemetry&type=code
+- https://github.com/search?q=repo%3Agrokability%2Fsnipe-it+posthog&type=code
+notes: No telemetry variables found.

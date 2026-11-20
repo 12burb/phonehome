@@ -1,0 +1,29 @@
+id: forgejo
+name: Forgejo
+category: Git hosting
+repo: https://codeberg.org/forgejo/forgejo
+images:
+- codeberg.org/forgejo/forgejo
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - release.forgejo.org
+  sends: DNS TXT lookup of the latest version (no HTTP request)
+  frequency: weekly
+  optout:
+    config: '[cron.update_checker] ENABLED = false in app.ini'
+  sources:
+  - https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/custom/conf/app.example.ini
+- type: external_asset
+  default: 'on'
+  destinations:
+  - gravatar.com
+  block: false
+  sends: Email hashes for avatars unless disabled or in offline mode
+  frequency: on avatar load
+  optout:
+    config: '[picture] DISABLE_GRAVATAR = true, or [server] OFFLINE_MODE = true'
+  sources:
+  - https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/custom/conf/app.example.ini

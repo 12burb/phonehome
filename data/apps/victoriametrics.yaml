@@ -1,0 +1,13 @@
+id: victoriametrics
+name: VictoriaMetrics
+category: Monitoring
+repo: https://github.com/VictoriaMetrics/VictoriaMetrics
+images:
+- victoriametrics/victoria-metrics
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/master/README.md
+- https://github.com/search?q=repo%3AVictoriaMetrics%2FVictoriaMetrics+telemetry&type=code
+- https://github.com/search?q=repo%3AVictoriaMetrics%2FVictoriaMetrics+posthog&type=code
+notes: No telemetry found.

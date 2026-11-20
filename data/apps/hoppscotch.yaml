@@ -1,0 +1,13 @@
+id: hoppscotch
+name: Hoppscotch
+category: Dev tools
+repo: https://github.com/hoppscotch/hoppscotch
+images:
+- hoppscotch/hoppscotch
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/hoppscotch/hoppscotch/main/.env.example
+- https://github.com/search?q=repo%3Ahoppscotch%2Fhoppscotch+telemetry&type=code
+- https://github.com/search?q=repo%3Ahoppscotch%2Fhoppscotch+posthog&type=code
+notes: No telemetry variables in the self-host .env.example.

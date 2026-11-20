@@ -1,0 +1,24 @@
+id: supertokens
+name: SuperTokens Core
+category: Auth
+repo: https://github.com/supertokens/supertokens-core
+images:
+- registry.supertokens.io/supertokens/supertokens-postgresql
+- supertokens/supertokens-postgresql
+- supertokens/supertokens-mysql
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - api.supertokens.com
+  sends: Telemetry id, core version, user count and plugin info
+  frequency: daily cron
+  optout:
+    env:
+    - DISABLE_TELEMETRY=true
+    config: 'disable_telemetry: true in config.yaml'
+  sources:
+  - https://raw.githubusercontent.com/supertokens/supertokens-core/master/src/main/java/io/supertokens/cronjobs/telemetry/Telemetry.java
+  - https://raw.githubusercontent.com/supertokens/supertokens-core/master/src/main/java/io/supertokens/config/CoreConfig.java
+  - https://raw.githubusercontent.com/supertokens/supertokens-core/master/config.yaml
