@@ -1,0 +1,14 @@
+id: openproject
+name: OpenProject
+category: Project management
+repo: https://github.com/opf/openproject
+images:
+- openproject/openproject
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/opf/openproject/dev/config/configuration.yml.example
+- https://github.com/search?q=repo%3Aopf%2Fopenproject+telemetry&type=code
+- https://github.com/search?q=repo%3Aopf%2Fopenproject+posthog&type=code
+notes: No telemetry found in the configuration example. Enterprise token validation contacts OpenProject only if you add a
+  token.

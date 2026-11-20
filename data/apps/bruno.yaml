@@ -1,0 +1,12 @@
+id: bruno
+name: Bruno
+category: Dev tools
+repo: https://github.com/usebruno/bruno
+images: []
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/usebruno/bruno/main/readme.md
+- https://github.com/search?q=repo%3Ausebruno%2Fbruno+telemetry&type=code
+- https://github.com/search?q=repo%3Ausebruno%2Fbruno+posthog&type=code
+notes: Desktop API client; README states no telemetry/cloud sync. Not a server app.

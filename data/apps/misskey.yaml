@@ -1,0 +1,13 @@
+id: misskey
+name: Misskey
+category: Social
+repo: https://github.com/misskey-dev/misskey
+images:
+- misskey/misskey
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/misskey-dev/misskey/develop/.config/example.yml
+- https://github.com/search?q=repo%3Amisskey-dev%2Fmisskey+telemetry&type=code
+- https://github.com/search?q=repo%3Amisskey-dev%2Fmisskey+posthog&type=code
+notes: No telemetry; Sentry is optional and off unless you configure a DSN.

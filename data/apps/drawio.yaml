@@ -1,0 +1,14 @@
+id: drawio
+name: draw.io (Docker)
+category: Diagrams
+repo: https://github.com/jgraph/docker-drawio
+images:
+- jgraph/drawio
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/jgraph/docker-drawio/dev/README.md
+- https://github.com/search?q=repo%3Ajgraph%2Fdocker-drawio+telemetry&type=code
+- https://github.com/search?q=repo%3Ajgraph%2Fdocker-drawio+posthog&type=code
+notes: No telemetry found; cloud-storage integrations are disabled unless you configure OAuth client IDs, and ?offline=1 disables
+  them fully.

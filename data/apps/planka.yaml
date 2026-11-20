@@ -1,0 +1,13 @@
+id: planka
+name: PLANKA
+category: Kanban
+repo: https://github.com/plankanban/planka
+images:
+- ghcr.io/plankanban/planka
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/plankanban/planka/master/docker-compose.yml
+- https://github.com/search?q=repo%3Aplankanban%2Fplanka+telemetry&type=code
+- https://github.com/search?q=repo%3Aplankanban%2Fplanka+posthog&type=code
+notes: No telemetry found in the compose configuration.

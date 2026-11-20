@@ -1,0 +1,14 @@
+id: authelia
+name: Authelia
+category: Auth
+repo: https://github.com/authelia/authelia
+images:
+- authelia/authelia
+- ghcr.io/authelia/authelia
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/authelia/authelia/master/config.template.yml
+- https://github.com/search?q=repo%3Aauthelia%2Fauthelia+telemetry&type=code
+- https://github.com/search?q=repo%3Aauthelia%2Fauthelia+posthog&type=code
+notes: No telemetry; its "telemetry" section is a local Prometheus metrics endpoint.

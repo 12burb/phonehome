@@ -1,0 +1,13 @@
+id: lychee
+name: Lychee
+category: Photos
+repo: https://github.com/LycheeOrg/Lychee
+images:
+- lycheeorg/lychee
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/LycheeOrg/Lychee/master/.env.example
+- https://github.com/search?q=repo%3ALycheeOrg%2FLychee+telemetry&type=code
+- https://github.com/search?q=repo%3ALycheeOrg%2FLychee+posthog&type=code
+notes: No telemetry variables found in .env.example.

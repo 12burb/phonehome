@@ -1,0 +1,14 @@
+id: netbox
+name: NetBox
+category: Infrastructure
+repo: https://github.com/netbox-community/netbox
+images:
+- netboxcommunity/netbox
+- docker.io/netboxcommunity/netbox
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/netbox-community/netbox/main/netbox/netbox/configuration_example.py
+- https://github.com/search?q=repo%3Anetbox-community%2Fnetbox+telemetry&type=code
+- https://github.com/search?q=repo%3Anetbox-community%2Fnetbox+posthog&type=code
+notes: RELEASE_CHECK_URL is None by default, so no update check unless you set it.

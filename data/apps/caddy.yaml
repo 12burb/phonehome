@@ -1,0 +1,13 @@
+id: caddy
+name: Caddy
+category: Reverse proxy
+repo: https://github.com/caddyserver/caddy
+images:
+- caddy
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/caddyserver/caddy/master/README.md
+- https://github.com/search?q=repo%3Acaddyserver%2Fcaddy+telemetry&type=code
+- https://github.com/search?q=repo%3Acaddyserver%2Fcaddy+posthog&type=code
+notes: No telemetry (removed in v2). Contacts ACME CAs only for the certificates you request.

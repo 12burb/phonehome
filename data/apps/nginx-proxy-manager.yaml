@@ -1,0 +1,13 @@
+id: nginx-proxy-manager
+name: Nginx Proxy Manager
+category: Reverse proxy
+repo: https://github.com/NginxProxyManager/nginx-proxy-manager
+images:
+- jc21/nginx-proxy-manager
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/NginxProxyManager/nginx-proxy-manager/develop/README.md
+- https://github.com/search?q=repo%3ANginxProxyManager%2Fnginx-proxy-manager+telemetry&type=code
+- https://github.com/search?q=repo%3ANginxProxyManager%2Fnginx-proxy-manager+posthog&type=code
+notes: No telemetry found. Contacts Let's Encrypt only for certificates you request.
