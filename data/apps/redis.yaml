@@ -1,0 +1,13 @@
+id: redis
+name: Redis / Valkey
+category: Database
+repo: https://github.com/redis/redis
+images:
+- redis
+- valkey/valkey
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/redis/redis/unstable/redis.conf
+- https://github.com/search?q=repo%3Aredis%2Fredis+telemetry&type=code
+notes: No telemetry, update check or external call in the server configuration.

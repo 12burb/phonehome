@@ -1,0 +1,19 @@
+id: leantime
+name: Leantime
+category: Project management
+repo: https://github.com/Leantime/leantime
+images:
+- leantime/leantime
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.leantime.io
+  sends: 'Daily anonymous usage summary: entity counts and versions'
+  frequency: daily
+  optout:
+    env:
+    - LEAN_ALLOW_TELEMETRY=false
+  sources:
+  - https://raw.githubusercontent.com/Leantime/leantime/master/config/sample.env
