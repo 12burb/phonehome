@@ -1,0 +1,21 @@
+id: dify
+name: Dify
+category: AI
+repo: https://github.com/langgenius/dify
+images:
+- langgenius/dify-api
+- langgenius/dify-web
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - updates.dify.ai
+  sends: Current Dify version (current_version query parameter)
+  frequency: when the console checks the version
+  optout:
+    env:
+    - CHECK_UPDATE_URL=
+  sources:
+  - https://raw.githubusercontent.com/langgenius/dify/main/api/controllers/console/system.py
+  - https://raw.githubusercontent.com/langgenius/dify/main/api/configs/feature/__init__.py
