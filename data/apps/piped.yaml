@@ -1,0 +1,13 @@
+id: piped
+name: Piped
+category: Privacy frontends
+repo: https://github.com/TeamPiped/Piped
+images:
+- 1337kavin/piped
+- 1337kavin/piped-frontend
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3ATeamPiped%2FPiped+telemetry&type=code
+- https://github.com/search?q=repo%3ATeamPiped%2FPiped+analytics&type=code
+notes: No telemetry code found. Based on a code search of the upstream repo, not a network capture.

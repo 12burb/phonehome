@@ -1,0 +1,12 @@
+id: cadvisor
+name: cAdvisor
+category: Monitoring
+repo: https://github.com/google/cadvisor
+images:
+- gcr.io/cadvisor/cadvisor
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Agoogle%2Fcadvisor+telemetry&type=code
+- https://github.com/search?q=repo%3Agoogle%2Fcadvisor+analytics&type=code
+notes: No phone-home code found. Based on a code search of the upstream repo, not a network capture.

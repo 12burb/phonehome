@@ -1,0 +1,13 @@
+id: mosquitto
+name: Eclipse Mosquitto
+category: Messaging
+repo: https://github.com/eclipse-mosquitto/mosquitto
+images:
+- eclipse-mosquitto
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Aeclipse-mosquitto%2Fmosquitto+telemetry&type=code
+- https://github.com/search?q=repo%3Aeclipse-mosquitto%2Fmosquitto+analytics&type=code
+notes: No phone-home code found; "telemetry" only appears in documentation references. Based on a code search of the upstream
+  repo, not a network capture.

@@ -1,0 +1,12 @@
+id: openhab
+name: openHAB
+category: Home automation
+repo: https://github.com/openhab/openhab-core
+images:
+- openhab/openhab
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Aopenhab%2Fopenhab-core+telemetry&type=code
+- https://github.com/search?q=repo%3Aopenhab%2Fopenhab-core+analytics&type=code
+notes: No telemetry code found in openhab-core. Based on a code search of the upstream repo, not a network capture.

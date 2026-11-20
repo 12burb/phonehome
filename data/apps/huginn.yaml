@@ -1,0 +1,12 @@
+id: huginn
+name: Huginn
+category: Automation
+repo: https://github.com/huginn/huginn
+images:
+- ghcr.io/huginn/huginn
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Ahuginn%2Fhuginn+telemetry&type=code
+- https://github.com/search?q=repo%3Ahuginn%2Fhuginn+analytics&type=code
+notes: No telemetry code found. Based on a code search of the upstream repo, not a network capture.

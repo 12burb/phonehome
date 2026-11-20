@@ -1,0 +1,12 @@
+id: jellystat
+name: Jellystat
+category: Media
+repo: https://github.com/CyferShepard/Jellystat
+images:
+- cyfershepard/jellystat
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3ACyferShepard%2FJellystat+telemetry&type=code
+- https://github.com/search?q=repo%3ACyferShepard%2FJellystat+analytics&type=code
+notes: No telemetry code found. Based on a code search of the upstream repo, not a network capture.

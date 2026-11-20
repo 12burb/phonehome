@@ -1,0 +1,13 @@
+id: garage
+name: Garage
+category: Storage
+repo: https://github.com/deuxfleurs-org/garage
+images:
+- dxflrs/garage
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Adeuxfleurs-org%2Fgarage+telemetry&type=code
+- https://github.com/search?q=repo%3Adeuxfleurs-org%2Fgarage+analytics&type=code
+notes: Only operator-configured OpenTelemetry/Prometheus endpoints; no vendor telemetry found. Based on a code search of the
+  upstream repo, not a network capture.

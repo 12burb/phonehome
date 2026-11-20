@@ -1,0 +1,12 @@
+id: redlib
+name: Redlib
+category: Privacy frontends
+repo: https://github.com/redlib-org/redlib
+images:
+- quay.io/redlib/redlib
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Aredlib-org%2Fredlib+telemetry&type=code
+- https://github.com/search?q=repo%3Aredlib-org%2Fredlib+analytics&type=code
+notes: No telemetry code found. Based on a code search of the upstream repo, not a network capture.

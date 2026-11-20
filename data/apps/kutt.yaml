@@ -1,0 +1,12 @@
+id: kutt
+name: Kutt
+category: URL shortener
+repo: https://github.com/kutt-it/kutt
+images:
+- kutt/kutt
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Akutt-it%2Fkutt+telemetry&type=code
+- https://github.com/search?q=repo%3Akutt-it%2Fkutt+analytics&type=code
+notes: No telemetry code found. Based on a code search of the upstream repo, not a network capture.

@@ -1,0 +1,13 @@
+id: thanos
+name: Thanos
+category: Monitoring
+repo: https://github.com/thanos-io/thanos
+images:
+- quay.io/thanos/thanos
+- thanosio/thanos
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Athanos-io%2Fthanos+telemetry&type=code
+- https://github.com/search?q=repo%3Athanos-io%2Fthanos+phone&type=code
+notes: No phone-home code found. Based on a code search of the upstream repo, not a network capture.

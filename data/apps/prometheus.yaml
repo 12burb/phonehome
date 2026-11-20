@@ -1,0 +1,12 @@
+id: prometheus
+name: Prometheus
+category: Monitoring
+repo: https://github.com/prometheus/prometheus
+images:
+- prom/prometheus
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Aprometheus%2Fprometheus+telemetry&type=code
+- https://github.com/search?q=repo%3Aprometheus%2Fprometheus+%22usage+statistics%22&type=code
+notes: No usage-statistics or phone-home code found. Based on a code search of the upstream repo, not a network capture.

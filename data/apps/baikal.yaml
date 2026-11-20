@@ -1,0 +1,12 @@
+id: baikal
+name: Baïkal
+category: Calendar
+repo: https://github.com/sabre-io/Baikal
+images:
+- ckulka/baikal
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Asabre-io%2FBaikal+telemetry&type=code
+- https://github.com/search?q=repo%3Asabre-io%2FBaikal+analytics&type=code
+notes: No telemetry code found. Based on a code search of the upstream repo, not a network capture.

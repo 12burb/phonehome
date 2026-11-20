@@ -1,0 +1,13 @@
+id: photoview
+name: Photoview
+category: Photos
+repo: https://github.com/photoview/photoview
+images:
+- photoview/photoview
+- viktorstrate/photoview
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Aphotoview%2Fphotoview+telemetry&type=code
+- https://github.com/search?q=repo%3Aphotoview%2Fphotoview+analytics&type=code
+notes: No telemetry code found. Based on a code search of the upstream repo, not a network capture.

@@ -1,0 +1,12 @@
+id: radicale
+name: Radicale
+category: Calendar
+repo: https://github.com/Kozea/Radicale
+images:
+- tomsquest/docker-radicale
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3AKozea%2FRadicale+telemetry&type=code
+- https://github.com/search?q=repo%3AKozea%2FRadicale+analytics&type=code
+notes: No telemetry code found. Based on a code search of the upstream repo, not a network capture.

@@ -1,0 +1,12 @@
+id: nats
+name: NATS Server
+category: Messaging
+repo: https://github.com/nats-io/nats-server
+images:
+- nats
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Anats-io%2Fnats-server+telemetry&type=code
+- https://github.com/search?q=repo%3Anats-io%2Fnats-server+phone+home&type=code
+notes: No phone-home or usage-reporting code found. Based on a code search of the upstream repo, not a network capture.
