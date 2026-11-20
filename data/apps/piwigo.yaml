@@ -11,7 +11,7 @@ calls:
   destinations:
   - piwigo.org
   block: false
-  sends: Fetches piwigo.org/download/latest_version (with a random cache-buster) to compare against the installed version;
+  sends: Fetches piwigo.org/download/all_versions.php (with a random cache-buster) to compare against the installed version;
     no instance data in the request
   frequency: every 24 h, only when the gallery is visited
   optout:
@@ -19,3 +19,4 @@ calls:
   sources:
   - https://raw.githubusercontent.com/Piwigo/Piwigo/master/include/config_default.inc.php
   - https://github.com/Piwigo/Piwigo/blob/master/include/page_tail.php
+  - https://github.com/Piwigo/Piwigo/blob/master/admin/include/updates.class.php
