@@ -1,0 +1,22 @@
+id: nomad
+name: Nomad
+category: Infrastructure
+repo: https://github.com/hashicorp/nomad
+images:
+- hashicorp/nomad
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - checkpoint-api.hashicorp.com
+  sends: Product, version, OS/arch and an anonymous signature via HashiCorp Checkpoint, used for version and security bulletins
+  frequency: every 24 hours
+  optout:
+    config: disable_update_check = true in the agent configuration
+    env:
+    - CHECKPOINT_DISABLE=1
+  sources:
+  - https://raw.githubusercontent.com/hashicorp/nomad/main/command/agent/config.go
+  - https://raw.githubusercontent.com/hashicorp/nomad/main/command/agent/command.go
+  - https://raw.githubusercontent.com/hashicorp/go-checkpoint/master/check.go

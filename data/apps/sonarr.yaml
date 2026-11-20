@@ -15,7 +15,10 @@ calls:
   destinations:
   - services.sonarr.tv
   - radarr.servarr.com
-  sends: Anonymous usage data and Sentry error reports (Send Anonymous Usage Data setting)
+  - lidarr.servarr.com
+  - prowlarr.servarr.com
+  sends: Anonymous usage data and Sentry error reports (Send Anonymous Usage Data setting); update requests carry version,
+    OS, architecture, runtime version and database type
   frequency: continuous
   optout:
     ui: Settings > General > Analytics > Send Anonymous Usage Data (off)
@@ -28,4 +31,9 @@ calls:
   sources:
   - https://wiki.servarr.com/sonarr/environment-variables
   - https://wiki.servarr.com/sonarr/settings#analytics
-verified: '2026-11-14'
+  - https://raw.githubusercontent.com/Radarr/Radarr/develop/src/NzbDrone.Core/Configuration/ConfigFileProvider.cs
+  - https://raw.githubusercontent.com/Radarr/Radarr/develop/src/NzbDrone.Common/Cloud/RadarrCloudRequestBuilder.cs
+  - https://raw.githubusercontent.com/Radarr/Radarr/develop/src/NzbDrone.Core/Update/UpdatePackageProvider.cs
+  - https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/src/NzbDrone.Common/Cloud/ProwlarrCloudRequestBuilder.cs
+  - https://raw.githubusercontent.com/Lidarr/Lidarr/develop/src/NzbDrone.Common/Cloud/LidarrCloudRequestBuilder.cs
+verified: '2026-11-20'

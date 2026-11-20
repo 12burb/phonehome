@@ -1,0 +1,22 @@
+id: consul
+name: Consul
+category: Infrastructure
+repo: https://github.com/hashicorp/consul
+images:
+- hashicorp/consul
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - checkpoint-api.hashicorp.com
+  sends: Product, version, OS/arch and an anonymous signature via HashiCorp Checkpoint, used for version and security bulletins
+  frequency: every 24 hours
+  optout:
+    config: disable_update_check = true in the agent configuration
+    env:
+    - CHECKPOINT_DISABLE=1
+  sources:
+  - https://raw.githubusercontent.com/hashicorp/consul/main/agent/config/runtime.go
+  - https://raw.githubusercontent.com/hashicorp/consul/main/agent/config/builder.go
+  - https://raw.githubusercontent.com/hashicorp/go-checkpoint/master/check.go
