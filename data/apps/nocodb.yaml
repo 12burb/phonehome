@@ -14,5 +14,5 @@ calls:
     env:
     - NC_DISABLE_TELE=true
   sources:
-  - https://docs.nocodb.com/getting-started/self-hosted/environment-variables/
+  - https://nocodb.com/docs/self-hosting/environment-variables
 verified: '2026-11-14'
