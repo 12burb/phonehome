@@ -1,0 +1,32 @@
+id: coolify
+name: Coolify
+category: PaaS
+repo: https://github.com/coollabsio/coolify
+images:
+- ghcr.io/coollabsio/coolify
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - undead.coolify.io
+  sends: Alive signal with instance app id and version
+  frequency: on init/restart
+  optout:
+    ui: Settings > Advanced > Do not track (enable)
+    config: instance_settings.do_not_track = true (DB default false)
+  sources:
+  - https://raw.githubusercontent.com/coollabsio/coolify/v4.x/app/Console/Commands/Init.php
+  - https://raw.githubusercontent.com/coollabsio/coolify/v4.x/database/migrations/2023_03_20_112814_create_instance_settings_table.php
+- type: update_check
+  default: 'on'
+  destinations:
+  - cdn.coollabs.io
+  sends: Downloads versions.json for Coolify, helper and Traefik version checks and auto-update
+  frequency: hourly
+  optout:
+    ui: Settings > Updates > Auto update (off); version check frequency setting
+    config: is_auto_update_enabled=false, update_check_frequency
+  sources:
+  - https://raw.githubusercontent.com/coollabsio/coolify/v4.x/bootstrap/helpers/versions.php
+  - https://raw.githubusercontent.com/coollabsio/coolify/v4.x/app/Jobs/CheckHelperImageJob.php

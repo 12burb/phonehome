@@ -1,0 +1,13 @@
+id: jellyseerr
+name: Jellyseerr
+category: Media
+repo: https://github.com/fallenbagel/jellyseerr
+images:
+- fallenbagel/jellyseerr
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/fallenbagel/jellyseerr/develop/README.md
+- https://github.com/search?q=repo%3Afallenbagel%2Fjellyseerr+telemetry&type=code
+- https://github.com/search?q=repo%3Afallenbagel%2Fjellyseerr+posthog&type=code
+notes: No telemetry found. It talks to TMDB and your Plex/Jellyfin/*arr servers for its core function.

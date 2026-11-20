@@ -1,0 +1,19 @@
+id: supabase
+name: Supabase (self-hosted)
+category: Backend
+repo: https://github.com/supabase/supabase
+images:
+- supabase/studio
+- supabase/postgres
+- supabase/gotrue
+- postgrest/postgrest
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/supabase/supabase/master/apps/studio/lib/telemetry.tsx
+- https://raw.githubusercontent.com/supabase/supabase/master/apps/studio/lib/constants/index.ts
+- https://raw.githubusercontent.com/supabase/supabase/master/docker/.env.example
+- https://github.com/search?q=repo%3Asupabase%2Fsupabase+telemetry&type=code
+- https://github.com/search?q=repo%3Asupabase%2Fsupabase+posthog&type=code
+notes: Studio PostHog/Sentry telemetry is gated on NEXT_PUBLIC_IS_PLATFORM=true, which the self-hosted compose does not set.
+  The "analytics" service in the compose is Logflare for your own logs.

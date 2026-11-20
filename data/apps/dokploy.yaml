@@ -1,0 +1,13 @@
+id: dokploy
+name: Dokploy
+category: PaaS
+repo: https://github.com/Dokploy/dokploy
+images:
+- dokploy/dokploy
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/Dokploy/dokploy/canary/packages/server/src/utils/tracking/posthog.ts
+- https://github.com/search?q=repo%3ADokploy%2Fdokploy+telemetry&type=code
+- https://github.com/search?q=repo%3ADokploy%2Fdokploy+posthog&type=code
+notes: PostHog key is only used when IS_CLOUD is set; self-hosted instances send nothing (getPostHogKey returns null).

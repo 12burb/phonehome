@@ -1,0 +1,14 @@
+id: ollama
+name: Ollama
+category: AI
+repo: https://github.com/ollama/ollama
+images:
+- ollama/ollama
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/ollama/ollama/main/docs/faq.mdx
+- https://github.com/search?q=repo%3Aollama%2Follama+telemetry&type=code
+- https://github.com/search?q=repo%3Aollama%2Follama+posthog&type=code
+notes: No telemetry found in the server; the FAQ states prompts are not sent when running locally. Model pulls and optional
+  sign-in go to ollama.com; the desktop apps auto-update.

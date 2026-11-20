@@ -1,0 +1,35 @@
+
+## EnableTelemetry repo:portainer/portainer language:Go 0
+
+## ANALYTICS_URL repo:blakeblackshear/frigate language:Python 2
+ - blakeblackshear/frigate frigate/const.py
+    > DEFAULT_FFMPEG_VERSION = os.environ.get("DEFAULT_FFMPEG_VERSION", "") INCLUDED_FFMPEG_VERSIONS = os.environ.get("INCLUDED_FFMPEG_VERSIONS", "").split(":") ANALYTICS_URL = os.environ.get( "FRIGATE_ANALYTICS_URL", "https://analytics.frigate.video/report" ) LIBAVFORMAT_VERSION_MAJOR = int(os.environ.ge
+ - blakeblackshear/frigate frigate/analytics/reporter.py
+    > from frigate.config.telemetry import TelemetryConfig from frigate.const import ANALYTICS_URL from frigate.notices import raise_notice, resolve_notice
+    > config_path: str | None = None, url: str = ANALYTICS_URL, send: Callable[[str, str], SendOutcome] = send_report,
+
+## usage_collection repo:truenas/middleware path:plugins 0
+
+## is_telemetry repo:coollabsio/coolify 0
+
+## POSTHOG_KEY repo:baptisteArno/typebot.io 11
+ - baptisteArno/typebot.io packages/telemetry/src/mergeIds.ts
+    > userId: string; }) => { if (!env.NEXT_PUBLIC_POSTHOG_KEY || !env.POSTHOG_PERSONAL_API_KEY) return; const client = new PostHog(env.NEXT_PUBLIC_POSTHOG_KEY, { host: env.POSTHOG_API_HOST, });
+ - baptisteArno/typebot.io packages/telemetry/src/trackEvents.ts
+    > export const trackEvents = async (events: TelemetryEvent[]) => { if (!env.NEXT_PUBLIC_POSTHOG_KEY) return; const client = new PostHog(env.NEXT_PUBLIC_POSTHOG_KEY, { host: env.POSTHOG_API_HOST, // Large thresholds since we explicitly shutdown right after. flushAt: 100_000,
+ - baptisteArno/typebot.io packages/env/src/index.ts
+    > client: { NEXT_PUBLIC_POSTHOG_KEY: z.string().min(1).optional(), },
+    > runtimeEnv: { NEXT_PUBLIC_POSTHOG_KEY: getRuntimeVariable("NEXT_PUBLIC_POSTHOG_KEY"), },
+
+## telemetry repo:supabase/supabase path:apps/studio/lib 12
+ - supabase/supabase apps/studio/lib/telemetry.tsx
+    > import { API_URL, IS_PLATFORM } from '@/lib/constants' import { IS_SESSION_REPLAY_ENABLED, SESSION_REPLAY_CONFIG } from '@/lib/session-replay' export function Telemetry() { // Although this is "technically" breaking the rules of hooks // IS_PLATFORM never changes within a session, so this won't caus
+ - supabase/supabase apps/studio/lib/telemetry/track.ts
+    > import { sendTelemetryEvent } from 'common' import { TelemetryEvent, TelemetryGroups } from 'common/telemetry-constants' import { useRouter } from 'next/router'
+    > /** * Hook for type-safe telemetry event tracking with automatic project/org context injection. *
+ - supabase/supabase apps/studio/lib/telemetry/use-track-funnel-error.ts
+    > import { useCallback } from 'react' import { isDashboardErrorSampled } from '@/lib/telemetry/error-sampling' import type { FunnelErrorClassification, FunnelOrigin } from '@/lib/telemetry/funnel-errors' import { useTrack } from '@/lib/telemetry/track' import { registerFunnelErrorToast } from '@/lib/t
+
+## useUpdateCheck repo:TryGhost/Ghost language:JavaScript 0
+
+## telemetry repo:ollama/ollama path:docs 0

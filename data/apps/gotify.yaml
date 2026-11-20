@@ -1,0 +1,13 @@
+id: gotify
+name: Gotify
+category: Notifications
+repo: https://github.com/gotify/server
+images:
+- gotify/server
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/gotify/server/master/README.md
+- https://github.com/search?q=repo%3Agotify%2Fserver+telemetry&type=code
+- https://github.com/search?q=repo%3Agotify%2Fserver+posthog&type=code
+notes: No telemetry found.

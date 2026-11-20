@@ -1,0 +1,60 @@
+
+## EnableTelemetry repo:portainer/portainer 0
+
+## telemetry repo:coollabsio/coolify language:PHP 1
+ - coollabsio/coolify app/Livewire/GlobalSearch.php
+    > 'type' => 'navigation', 'description' => 'Registration, API access, MCP server, DNS validation and telemetry', 'link' => route('settings.advanced'), 'search_text' => 'settings advanced registration api access allowed ips mcp server dns validation custom dns domain connect confirmation telemetry spon
+
+## posthog repo:Dokploy/dokploy language:TypeScript 9
+ - Dokploy/dokploy packages/server/src/utils/tracking/posthog.ts
+    > import { db } from "../../db"; import { deployments, organization } from "../../db/schema"; export const POSTHOG_HOST = "https://us.i.posthog.com"; const POSTHOG_PROJECT_KEY = "phc_v5vhiTaD9Pq92jZihu3xoYAhX6VQL97wt5sCCY5FpYVu"; export const getPostHogKey = () => (IS_CLOUD ? POSTHOG_PROJECT_KEY : nul
+ - Dokploy/dokploy apps/dokploy/lib/auth-client.ts
+    > twoFactorClient, } from "better-auth/client/plugins"; import { createAuthClient } from "better-auth/react"; import posthog from "posthog-js"; export const authClient = createAuthClient({ // baseURL: "http://localhost:3000", // the base url of your auth server
+ - Dokploy/dokploy apps/dokploy/components/dashboard/onboarding/cloud/track.ts
+    > import posthog from "posthog-js"; // posthog-js is only initialised on Dokploy Cloud, so this is a no-op elsewhere. export const trackOnboarding = ( event: string, properties?: Record<string, string>, ) => {
+
+## posthog repo:baptisteArno/typebot.io path:apps/builder/src/lib 0
+
+## updates.ghost.org repo:TryGhost/Ghost 3
+ - TryGhost/Ghost ghost/core/server/services/update-check/update-check-service.js
+    > * @description Entry point to trigger the update check unit. * * Based on a settings value, we check if `next_update_check` is less than now to decide whether * we should request the update check service (http://updates.ghost.org) or not. * * @returns {Promise} */
+ - TryGhost/Ghost ghost/core/shared/config/defaults.json
+    > "maxFreeSockets": 256 }, "updateCheck": { "url": "https://updates.ghost.org", "forceUpdate": false }, "remoteFlags": {
+ - TryGhost/Ghost ghost/test/unit/server/services/update-check.test.js
+    > const scope = nock('https://updates.ghost.org') .get('/')
+    > event: { name: 'update-check.request.start' }, endpoint: 'https://updates.ghost.org', }),
+
+## telemetry repo:supabase/supabase path:docker 1
+ - supabase/supabase docker/CONFIG.md
+    > | `NO_PROXY` / `no_proxy` | string (CSV) | | Comma-separated bypass list for proxy variables. | Read by `vendor/deno_fetch/proxy.rs` | | `NPM_CONFIG_REGISTRY` | URL | | Override the npm registry base URL used to resolve `npm:` specifiers. | Default: `https://registry.npmjs.org` | | `OMP_NUM_THREADS`
+
+## telemetry repo:appwrite/appwrite language:PHP 117
+ - appwrite/appwrite packages/cache/src/Feature/Telemetry.php
+    > use Utopia\Telemetry\Adapter as TelemetryAdapter; interface Telemetry { public function setTelemetry(TelemetryAdapter $telemetry): void; }
+ - appwrite/appwrite packages/storage/src/Device/Telemetry.php
+    > * * @see \Utopia\Storage\Tests\Device\TelemetryTest */ class Telemetry extends Device { private readonly Histogram $telemetry;
+ - appwrite/appwrite packages/telemetry/src/Gauge.php
+    > namespace Utopia\Telemetry;
+    > public static function lazy( Adapter $telemetry, string $name,
+
+## usage_collection repo:truenas/middleware language:Python 10
+ - truenas/middleware src/middlewared/middlewared/api/v27_1_0/system_general.py
+    > ) kbdmap: str = Field(description="System keyboard layout mapping.") timezone: NonEmptyString = Field(description="System timezone identifier.") usage_collection: bool | None = Field(description="Whether usage data collection is enabled. `null` if not set.") wizardshown: bool = Field(description="Wh
+ - truenas/middleware src/middlewared/middlewared/api/v27_0_0/system_general.py
+    > ) kbdmap: str = Field(description="System keyboard layout mapping.") timezone: NonEmptyString = Field(description="System timezone identifier.") usage_collection: bool | None = Field(description="Whether usage data collection is enabled. `null` if not set.") wizardshown: bool = Field(description="Wh
+ - truenas/middleware src/middlewared/middlewared/api/v28_0_0/system_general.py
+    > ) kbdmap: str = Field(description="System keyboard layout mapping.") timezone: NonEmptyString = Field(description="System timezone identifier.") usage_collection: bool | None = Field(description="Whether usage data collection is enabled. `null` if not set.") wizardshown: bool = Field(description="Wh
+
+## telemetry repo:ollama/ollama language:Go 7
+ - ollama/ollama mlxrunner/status_memory.go
+    > type statusMemoryRefreshFunc func() (uint64, error) // statusMemoryCache keeps health checks from depending synchronously on the // serialized MLX worker while still refreshing memory telemetry opportunistically. type statusMemoryCache struct { done <-chan struct{} wait time.Duration
+ - ollama/ollama internal/decisiontest/corpus.go
+    > } // CacheExpectation bounds the fraction of input tokens reused in an ordered run. // Omitted telemetry is an error whenever a case requests a cache assertion. type CacheExpectation struct { Min *float64 `json:"min,omitempty"` Max *float64 `json:"max,omitempty"`
+ - ollama/ollama cmd/launch/claude_desktop.go
+    > } cfg["disableDeploymentModeChooser"] = forceChooser cfg["coworkEgressAllowedHosts"] = claudeDesktopEgressHosts cfg["disableEssentialTelemetry"] = true cfg["disableNonessentialTelemetry"] = true cfg["autoModeEnabled"] = autoMode return writeClaudeDesktopJSON(path, cfg)
+
+## plus repo:blakeblackshear/frigate path:frigate/const.py 0
+
+## telemetry repo:gotify/server language:Go 0
+
+## telemetry repo:Fallenbagel/jellyseerr language:TypeScript 0

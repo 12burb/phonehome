@@ -1,0 +1,31 @@
+id: truenas-scale
+name: TrueNAS SCALE / CE
+category: NAS
+repo: https://github.com/truenas/middleware
+images: []
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: prompt
+  destinations:
+  - usage.truenas.com
+  sends: 'Anonymous usage statistics: system hash, version, pool/dataset capacity, backup stats, installed apps and docker
+    images, services in use'
+  frequency: every 24h when enabled
+  optout:
+    ui: System > General Settings > GUI > Usage collection (off); the first-login dialog also asks
+    config: system.general.update usage_collection=false via midclt
+  sources:
+  - https://raw.githubusercontent.com/truenas/middleware/master/src/middlewared/middlewared/plugins/usage/run.py
+  - https://raw.githubusercontent.com/truenas/middleware/master/src/middlewared/middlewared/plugins/usage/gather.py
+  - https://raw.githubusercontent.com/truenas/middleware/master/src/middlewared/middlewared/plugins/usage/submit.py
+- type: telemetry
+  default: 'on'
+  destinations:
+  - usage.truenas.com
+  sends: One first-boot ping with platform, host id hash and version, sent regardless of the usage-collection setting
+  frequency: once at first boot
+  optout:
+    config: No switch; block usage.truenas.com before first boot
+  sources:
+  - https://raw.githubusercontent.com/truenas/middleware/master/src/middlewared/middlewared/plugins/usage/firstboot.py

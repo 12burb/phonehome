@@ -1,0 +1,36 @@
+id: ghost
+name: Ghost
+category: CMS
+repo: https://github.com/TryGhost/Ghost
+images:
+- ghost
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - updates.ghost.org
+  sends: Ghost version (GET ?ghost_version=) to fetch release and security notifications; the code states no site data is
+    collected
+  frequency: daily
+  optout:
+    config: '"privacy": {"useUpdateCheck": false} in config.*.json'
+    env:
+    - privacy__useUpdateCheck=false
+  sources:
+  - https://raw.githubusercontent.com/TryGhost/Ghost/main/ghost/core/server/services/update-check/update-check-service.js
+  - https://raw.githubusercontent.com/TryGhost/Ghost/main/ghost/core/shared/config/defaults.json
+  - https://docs.ghost.org/config#privacy
+- type: external_asset
+  default: 'on'
+  destinations:
+  - gravatar.com
+  block: false
+  sends: Staff email hashes to fetch Gravatar profile images
+  frequency: on profile load
+  optout:
+    config: '"privacy": {"useGravatar": false}'
+    env:
+    - privacy__useGravatar=false
+  sources:
+  - https://docs.ghost.org/config#privacy

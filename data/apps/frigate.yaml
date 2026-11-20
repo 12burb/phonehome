@@ -1,0 +1,34 @@
+id: frigate
+name: Frigate NVR
+category: Home automation
+repo: https://github.com/blakeblackshear/frigate
+images:
+- ghcr.io/blakeblackshear/frigate
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - analytics.frigate.video
+  sends: One anonymous report a day (install id, hardware, detectors, camera counts, features, health) only after the admin
+    opts in; the UI shows a one-time prompt
+  frequency: every 24h when enabled
+  optout:
+    config: 'telemetry.analytics: false (default)'
+  sources:
+  - https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/config/telemetry.py
+  - https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/analytics/reporter.py
+  - https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/const.py
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.github.com
+  block: false
+  sends: Fetches the latest GitHub release to show an update notice
+  frequency: periodic
+  optout:
+    config: 'telemetry.version_check: false'
+  sources:
+  - https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/config/telemetry.py
+  - https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/stats/util.py
+notes: Frigate+ model API (api.frigate.video) is only contacted when a PLUS_API_KEY is set.

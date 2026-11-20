@@ -1,0 +1,15 @@
+id: typebot
+name: Typebot
+category: Forms
+repo: https://github.com/baptisteArno/typebot.io
+images:
+- baptistearno/typebot-builder
+- baptistearno/typebot-viewer
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/baptisteArno/typebot.io/main/packages/env/src/index.ts
+- https://raw.githubusercontent.com/baptisteArno/typebot.io/main/packages/telemetry/src/trackEvents.ts
+- https://github.com/search?q=repo%3AbaptisteArno%2Ftypebot.io+telemetry&type=code
+- https://github.com/search?q=repo%3AbaptisteArno%2Ftypebot.io+posthog&type=code
+notes: PostHog telemetry runs only if you set NEXT_PUBLIC_POSTHOG_KEY; unset by default.

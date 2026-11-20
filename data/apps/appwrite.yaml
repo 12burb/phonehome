@@ -1,0 +1,15 @@
+id: appwrite
+name: Appwrite
+category: Backend
+repo: https://github.com/appwrite/appwrite
+images:
+- appwrite/appwrite
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/appwrite/appwrite/main/.env
+- https://raw.githubusercontent.com/appwrite/appwrite/main/app/config/variables.php
+- https://github.com/search?q=repo%3Aappwrite%2Fappwrite+telemetry&type=code
+- https://github.com/search?q=repo%3Aappwrite%2Fappwrite+posthog&type=code
+notes: No vendor telemetry found; _APP_USAGE_STATS feeds its own internal usage dashboards (ClickHouse), and the stats queues
+  are disabled for the self-hosted edition.
