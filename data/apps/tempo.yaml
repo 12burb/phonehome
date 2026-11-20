@@ -1,0 +1,26 @@
+id: tempo
+name: Grafana Tempo
+category: Monitoring
+repo: https://github.com/grafana/tempo
+images:
+- grafana/tempo
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - stats.grafana.org
+  block: false
+  sends: 'Anonymous usage report: random cluster id and creation time, version, OS, arch, edition, deployment target, and
+    aggregate metrics'
+  frequency: every 4 hours
+  optout:
+    cli: -reporting.enabled=false
+    config: "usage_report:\n  reporting_enabled: false"
+  sources:
+  - https://raw.githubusercontent.com/grafana/tempo/main/docs/sources/tempo/configuration/anonymous-usage-reporting.md
+  - https://raw.githubusercontent.com/grafana/tempo/main/pkg/usagestats/config.go
+  - https://raw.githubusercontent.com/grafana/tempo/main/pkg/usagestats/stats.go
+  - https://raw.githubusercontent.com/grafana/tempo/main/cmd/tempo/app/config.go
+notes: Reports go to https://stats.grafana.org/tempo-usage-report; the host is shared across Grafana Labs projects, so it
+  is left off the generated blocklists.
