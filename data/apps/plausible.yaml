@@ -1,0 +1,14 @@
+id: plausible
+name: Plausible Community Edition
+category: Analytics
+repo: https://github.com/plausible/analytics
+images:
+- ghcr.io/plausible/community-edition
+- plausible/analytics
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/plausible/community-edition/v3.0.1/README.md
+- https://github.com/search?q=repo%3Aplausible%2Fanalytics+telemetry&type=code
+- https://github.com/search?q=repo%3Aplausible%2Fanalytics+posthog&type=code
+notes: No telemetry found in the server or the CE install guide.

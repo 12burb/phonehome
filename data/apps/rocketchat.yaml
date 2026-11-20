@@ -1,0 +1,34 @@
+id: rocketchat
+name: Rocket.Chat
+category: Chat
+repo: https://github.com/RocketChat/Rocket.Chat
+images:
+- rocket.chat
+- registry.rocket.chat/rocketchat/rocket.chat
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - collector.rocket.chat
+  sends: Server statistics (user/room/message counts, version, OS, enabled features) via the hidden Statistics_reporting setting
+  frequency: periodic
+  optout:
+    env:
+    - OVERWRITE_SETTING_Statistics_reporting=false
+    config: Statistics_reporting setting (hidden; set through the env override above)
+  sources:
+  - https://raw.githubusercontent.com/RocketChat/Rocket.Chat/develop/apps/meteor/server/settings/general.ts
+- type: update_check
+  default: 'on'
+  destinations:
+  - releases.rocket.chat
+  sends: Version for the update checker (only when the server is registered with Rocket.Chat Cloud)
+  frequency: periodic
+  optout:
+    ui: Administration > Settings > General > Update > Enable Update Checker (off)
+    env:
+    - OVERWRITE_SETTING_Update_EnableChecker=false
+  sources:
+  - https://raw.githubusercontent.com/RocketChat/Rocket.Chat/develop/apps/meteor/server/settings/general.ts
+notes: Rocket.Chat 6+ strongly pushes workspace registration with its cloud; an unregistered workspace has reduced features.

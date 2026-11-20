@@ -1,0 +1,36 @@
+name: monthly-recheck
+on:
+  schedule:
+    - cron: "17 6 1 * *"   # 06:17 UTC on the 1st of every month
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - id: recheck
+        run: |
+          set +e
+          python -m phonehome.recheck --update
+          echo "changed=$?" >> "$GITHUB_OUTPUT"
+      - name: Open issue when sources changed
+        if: steps.recheck.outputs.changed != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "Monthly re-check: sources changed ($(date -u +%Y-%m))" \
+            --body-file recheck-report.md --label needs-verification || \
+          gh issue create --title "Monthly re-check: sources changed ($(date -u +%Y-%m))" --body-file recheck-report.md
+      - name: Commit refreshed hashes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/source_hashes.json
+          git diff --cached --quiet || (git commit -m "chore: refresh source fingerprints" && git push)

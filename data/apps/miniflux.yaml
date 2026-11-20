@@ -1,0 +1,14 @@
+id: miniflux
+name: Miniflux
+category: RSS
+repo: https://github.com/miniflux/v2
+images:
+- miniflux/miniflux
+- ghcr.io/miniflux/miniflux
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/miniflux/v2/main/internal/config/options.go
+- https://github.com/search?q=repo%3Aminiflux%2Fv2+telemetry&type=code
+- https://github.com/search?q=repo%3Aminiflux%2Fv2+posthog&type=code
+notes: No telemetry or update check found in the configuration options.

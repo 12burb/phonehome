@@ -1,0 +1,13 @@
+id: harbor
+name: Harbor
+category: Registry
+repo: https://github.com/goharbor/harbor
+images:
+- goharbor/harbor-core
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/goharbor/harbor/main/make/harbor.yml.tmpl
+- https://github.com/search?q=repo%3Agoharbor%2Fharbor+telemetry&type=code
+- https://github.com/search?q=repo%3Agoharbor%2Fharbor+posthog&type=code
+notes: No telemetry found in the installer template.

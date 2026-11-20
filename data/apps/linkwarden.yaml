@@ -1,0 +1,13 @@
+id: linkwarden
+name: Linkwarden
+category: Bookmarks
+repo: https://github.com/linkwarden/linkwarden
+images:
+- ghcr.io/linkwarden/linkwarden
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/linkwarden/linkwarden/main/.env.sample
+- https://github.com/search?q=repo%3Alinkwarden%2Flinkwarden+telemetry&type=code
+- https://github.com/search?q=repo%3Alinkwarden%2Flinkwarden+posthog&type=code
+notes: No telemetry found in .env.sample. Archiving fetches the pages you save.

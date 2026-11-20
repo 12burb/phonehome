@@ -1,0 +1,15 @@
+id: mastodon
+name: Mastodon
+category: Social
+repo: https://github.com/mastodon/mastodon
+images:
+- ghcr.io/mastodon/mastodon
+- tootsuite/mastodon
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/mastodon/mastodon/main/.env.production.sample
+- https://github.com/search?q=repo%3Amastodon%2Fmastodon+telemetry&type=code
+- https://github.com/search?q=repo%3Amastodon%2Fmastodon+posthog&type=code
+notes: No telemetry found; federation traffic goes only to instances you interact with. Optional StatsD/OpenTelemetry export
+  is to endpoints you configure.

@@ -1,0 +1,310 @@
+{
+ "https://coder.com/docs/code-server/FAQ": {
+  "fp": "5901c65619a33ecf",
+  "lines": 18
+ },
+ "https://coder.com/docs/reference/cli/server": {
+  "fp": "12bd6f22c1c1b4d2",
+  "lines": 72
+ },
+ "https://develop.sentry.dev/self-hosted/configuration/": {
+  "fp": "279534dae713a86a",
+  "lines": 1
+ },
+ "https://developers.chatwoot.com/self-hosted/telemetry": {
+  "fp": "4412896aff5b9d6e",
+  "lines": 15
+ },
+ "https://doc.traefik.io/traefik/contributing/data-collection/": {
+  "fp": "1f38163a8fe3be5a",
+  "lines": 23
+ },
+ "https://docs.airbyte.com/platform/operator-guides/telemetry": {
+  "fp": "e757ff49ab89c6c2",
+  "lines": 8
+ },
+ "https://docs.anythingllm.com/configuration": {
+  "fp": "4175d35dd3ef3a3d",
+  "lines": 41
+ },
+ "https://docs.appsmith.com/getting-started/setup/environment-variables": {
+  "fp": "4bd85be4178147a4",
+  "lines": 22
+ },
+ "https://docs.directus.io/self-hosted/config-options.html": {
+  "fp": "ab5b61c3a2e6c1cb",
+  "lines": 3
+ },
+ "https://docs.gitlab.com/administration/settings/usage_statistics/": {
+  "fp": "53adb43baecad267",
+  "lines": 25
+ },
+ "https://docs.goauthentik.io/install-config/configuration/": {
+  "fp": "06c2ae492d4def21",
+  "lines": 29
+ },
+ "https://docs.langflow.org/environment-variables": {
+  "fp": "1570f5f50b3f7931",
+  "lines": 12
+ },
+ "https://docs.mattermost.com/configure/logging-configuration-settings.html": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html": {
+  "fp": "fd8e0b8913f37080",
+  "lines": 76
+ },
+ "https://docs.requarks.io/install/config": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://docs.strapi.io/cms/configurations/environment": {
+  "fp": "6900e6efa5eca1a7",
+  "lines": 4
+ },
+ "https://docs.syncthing.net/users/config.html": {
+  "fp": "384dbd9065c7d8ca",
+  "lines": 35
+ },
+ "https://docs.tooljet.com/docs/setup/env-vars": {
+  "fp": "9dc0949cdd3e3f0c",
+  "lines": 24
+ },
+ "https://github.com/Kareadita/Kavita/blob/develop/Kavita.Common/Configuration.cs": {
+  "fp": "ee24a744ee97e9e0",
+  "lines": 3
+ },
+ "https://github.com/Kareadita/Kavita/blob/develop/Kavita.Database/Seed.cs": {
+  "fp": "b1cda17a937fa34d",
+  "lines": 5
+ },
+ "https://github.com/Kareadita/Kavita/blob/develop/Kavita.Services/StatsService.cs": {
+  "fp": "3f9cfc861d20e9a1",
+  "lines": 10
+ },
+ "https://github.com/SonarSource/sonarqube/blob/master/server/sonar-process/src/main/java/org/sonar/process/ProcessProperties.java": {
+  "fp": "00f52a042e8070db",
+  "lines": 4
+ },
+ "https://github.com/amir20/dozzle/blob/master/docs/guide/analytics.md": {
+  "fp": "489a9d87a84036d0",
+  "lines": 12
+ },
+ "https://github.com/homarr-labs/homarr/blob/dev/packages/analytics/src/client.ts": {
+  "fp": "2853fadf8b6c4303",
+  "lines": 5
+ },
+ "https://github.com/navidrome/navidrome/blob/master/consts/consts.go": {
+  "fp": "61a8391d8bc60065",
+  "lines": 8
+ },
+ "https://github.com/open-webui/open-webui/blob/main/backend/open_webui/config.py": {
+  "fp": "b66e5a241902c1be",
+  "lines": 4
+ },
+ "https://github.com/traefik/traefik/blob/master/docs/content/contributing/data-collection.md": {
+  "fp": "896936865f4a223b",
+  "lines": 22
+ },
+ "https://github.com/twentyhq/twenty/blob/main/packages/twenty-server/src/engine/core-modules/twenty-config/config-variables.ts": {
+  "fp": "cf4ce082cd0fd74b",
+  "lines": 17
+ },
+ "https://github.com/umami-software/umami/blob/master/src/lib/config.ts": {
+  "fp": "71097a7090fe8b55",
+  "lines": 4
+ },
+ "https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/#analytics": {
+  "fp": "c08751091ec9d666",
+  "lines": 80
+ },
+ "https://grafana.com/docs/loki/latest/configure/": {
+  "fp": "398420b221440f1f",
+  "lines": 166
+ },
+ "https://hasura.io/docs/2.0/policies/telemetry/": {
+  "fp": "6cb8f25d0379878c",
+  "lines": 12
+ },
+ "https://help.penpot.app/technical-guide/configuration/": {
+  "fp": "683eab7b7eebb99d",
+  "lines": 44
+ },
+ "https://homarr.dev/docs/management/settings/": {
+  "fp": "58d9c993c8901cf2",
+  "lines": 11
+ },
+ "https://learn.netdata.cloud/docs/netdata-agent/configuration/anonymous-telemetry-events": {
+  "fp": "5951ebe52c7576f0",
+  "lines": 30
+ },
+ "https://payloadcms.com/docs/configuration/overview": {
+  "fp": "8801beb00b43338f",
+  "lines": 4
+ },
+ "https://qdrant.tech/documentation/guides/telemetry/": {
+  "fp": "b1ea6edfa58297db",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/BookStackApp/BookStack/development/.env.example.complete": {
+  "fp": "8349773a850f97f2",
+  "lines": 8
+ },
+ "https://raw.githubusercontent.com/FlowiseAI/Flowise/main/docker/.env.example": {
+  "fp": "d6d58c1559ebd54a",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/docker/.env.example": {
+  "fp": "2723694150c94a7d",
+  "lines": 17
+ },
+ "https://raw.githubusercontent.com/SonarSource/sonarqube/master/sonar-application/src/main/assembly/conf/sonar.properties": {
+  "fp": "005505145889370e",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/app/core/src/main/resources/settings.yml.template": {
+  "fp": "f83b0b2e5b6e5364",
+  "lines": 41
+ },
+ "https://raw.githubusercontent.com/calcom/cal.com/main/.env.example": {
+  "fp": "b0c80e6a26b182b8",
+  "lines": 15
+ },
+ "https://raw.githubusercontent.com/chroma-core/chroma/main/chromadb/config.py": {
+  "fp": "8c757d48085a23ee",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/dagster-io/dagster/master/docs/docs/about/telemetry.md": {
+  "fp": "57ceee4a239bc0ec",
+  "lines": 9
+ },
+ "https://raw.githubusercontent.com/docmost/docmost/main/.env.example": {
+  "fp": "b6d90a76f4bb1655",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/documenso/documenso/main/.env.example": {
+  "fp": "402127e7bba545ec",
+  "lines": 25
+ },
+ "https://raw.githubusercontent.com/element-hq/synapse/develop/docs/usage/configuration/config_documentation.md": {
+  "fp": "69224716243010c2",
+  "lines": 96
+ },
+ "https://raw.githubusercontent.com/formbricks/formbricks/main/.env.example": {
+  "fp": "b03626478f801e16",
+  "lines": 23
+ },
+ "https://raw.githubusercontent.com/getsentry/sentry/master/src/sentry/conf/server.py": {
+  "fp": "51fd6d361b08dc1f",
+  "lines": 62
+ },
+ "https://raw.githubusercontent.com/go-gitea/gitea/main/custom/conf/app.example.ini": {
+  "fp": "9f207b0bd01c405e",
+  "lines": 103
+ },
+ "https://raw.githubusercontent.com/immich-app/immich/main/docs/docs/administration/system-settings.md": {
+  "fp": "0522f99c15a046fe",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/influxdata/docs-v2/master/content/influxdb/v2/reference/config-options.md": {
+  "fp": "6c7aa43282e477c4",
+  "lines": 65
+ },
+ "https://raw.githubusercontent.com/louislam/uptime-kuma/master/server/check-version.js": {
+  "fp": "9548881183e1b358",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/mattermost/mattermost/master/server/public/model/config.go": {
+  "fp": "d71aa52aba46e79f",
+  "lines": 119
+ },
+ "https://raw.githubusercontent.com/navidrome/navidrome/master/conf/configuration.go": {
+  "fp": "49e092ed0fd24d17",
+  "lines": 28
+ },
+ "https://raw.githubusercontent.com/open-webui/open-webui/main/backend/open_webui/env.py": {
+  "fp": "5d409ccfbdeed559",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/outline/outline/main/.env.sample": {
+  "fp": "df1abb52026e5cdd",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/pi-hole/docker-pi-hole/master/README.md": {
+  "fp": "70d72d071f0ea08d",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/pterodactyl/panel/1.0-develop/app/Console/Kernel.php": {
+  "fp": "6d114af2d003e5da",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/pterodactyl/panel/1.0-develop/app/Services/Telemetry/TelemetryCollectionService.php": {
+  "fp": "436104fec12ac5d6",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/pterodactyl/panel/1.0-develop/config/pterodactyl.php": {
+  "fp": "2947ea0caa63331d",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/qdrant/qdrant/master/config/config.yaml": {
+  "fp": "54e178cc72d15043",
+  "lines": 25
+ },
+ "https://raw.githubusercontent.com/timescale/docs/latest/self-hosted/configuration/telemetry.md": {
+  "fp": "2af5dc238040e4a6",
+  "lines": 32
+ },
+ "https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-server/.env.example": {
+  "fp": "b2c9bc72c4b12a21",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/umami-software/umami/master/src/lib/constants.ts": {
+  "fp": "db734bbc8fa51db7",
+  "lines": 1
+ },
+ "https://redash.io/help/open-source/admin-guide/env-vars-settings": {
+  "fp": "5a37d184e10f0d62",
+  "lines": 2
+ },
+ "https://support.getgrist.com/telemetry/": {
+  "fp": "7c16af632dac6094",
+  "lines": 25
+ },
+ "https://weaviate.io/developers/weaviate/config-refs/env-vars": {
+  "fp": "ccd02d2518aaee95",
+  "lines": 6
+ },
+ "https://wiki.servarr.com/sonarr/environment-variables": {
+  "fp": "415cbb07f92f0784",
+  "lines": 4
+ },
+ "https://wiki.servarr.com/sonarr/settings#analytics": {
+  "fp": "dc7e4468347d676e",
+  "lines": 30
+ },
+ "https://www.activepieces.com/docs/install/configuration/environment-variables": {
+  "fp": "e55144f77ece689b",
+  "lines": 11
+ },
+ "https://www.cockroachlabs.com/docs/stable/diagnostics-reporting": {
+  "fp": "75ca1bc3061dffd1",
+  "lines": 19
+ },
+ "https://www.elastic.co/guide/en/kibana/current/telemetry-settings-kbn.html": {
+  "fp": "48a2b6f12600015a",
+  "lines": 205
+ },
+ "https://www.home-assistant.io/integrations/analytics/": {
+  "fp": "0af7b4fec4ca6343",
+  "lines": 27
+ },
+ "https://www.jenkins.io/doc/book/managing/system-configuration/": {
+  "fp": "bae7260a62e169f2",
+  "lines": 2
+ },
+ "https://www.windmill.dev/docs/advanced/instance_settings": {
+  "fp": "ac79d7d250016756",
+  "lines": 32
+ }
+}

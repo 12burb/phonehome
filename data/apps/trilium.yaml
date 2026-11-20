@@ -1,0 +1,14 @@
+id: trilium
+name: Trilium Notes
+category: Notes
+repo: https://github.com/zadam/trilium
+images:
+- zadam/trilium
+- triliumnext/notes
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/zadam/trilium/master/README.md
+- https://github.com/search?q=repo%3Azadam%2Ftrilium+telemetry&type=code
+- https://github.com/search?q=repo%3Azadam%2Ftrilium+posthog&type=code
+notes: No telemetry found.

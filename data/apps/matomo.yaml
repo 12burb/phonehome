@@ -1,0 +1,20 @@
+id: matomo
+name: Matomo
+category: Analytics
+repo: https://github.com/matomo-org/matomo
+images:
+- matomo
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.matomo.org
+  - plugins.matomo.org
+  sends: Version for update notices, marketplace and plugin update checks; GeoIP/referrer-spam definition downloads
+  frequency: periodic
+  optout:
+    config: '[General] enable_internet_features = 0, enable_update_communication = 0, enable_auto_update = 0 in config/config.ini.php'
+  sources:
+  - https://raw.githubusercontent.com/matomo-org/matomo/5.x-dev/config/global.ini.php
+notes: No usage telemetry from the server itself.

@@ -1,0 +1,20 @@
+id: discourse
+name: Discourse
+category: Forum
+repo: https://github.com/discourse/discourse
+images:
+- discourse/base
+- bitnami/discourse
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.discourse.org
+  sends: Installed version and basic install statistics with the version check
+  frequency: daily
+  optout:
+    ui: Admin > Settings > version_checks (off)
+    config: 'version_checks: false'
+  sources:
+  - https://raw.githubusercontent.com/discourse/discourse/main/config/site_settings.yml
