@@ -1,0 +1,21 @@
+id: librenms
+name: LibreNMS
+category: Monitoring
+repo: https://github.com/librenms/librenms
+images:
+- librenms/librenms
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - stats.librenms.org
+  sends: 'Opt-in callback stats: random install UUID, device count/types/OS, port types/speeds/count, BGP peer count, sysDescr/sysObjectID
+    pairs, versions of PHP, MySQL, net-snmp, RRDtool'
+  frequency: daily when enabled
+  optout:
+    ui: About LibreNMS page > disable stats submission / "Clear remote stats"
+  sources:
+  - https://raw.githubusercontent.com/librenms/librenms/master/doc/General/Callback-Stats-and-Privacy.md
+  - https://raw.githubusercontent.com/librenms/librenms/master/LibreNMS/Util/Stats.php
+notes: Off by default; the About page asks you to opt in.
