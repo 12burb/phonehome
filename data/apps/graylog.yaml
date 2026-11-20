@@ -1,0 +1,23 @@
+id: graylog
+name: Graylog Open
+category: Logging
+repo: https://github.com/Graylog2/graylog2-server
+images:
+- graylog/graylog
+- graylog/graylog-enterprise
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.graylog.cloud
+  sends: Cluster id, node/version/OS info and web UI usage events (PostHog); users can also opt out per user in the UI
+  frequency: continuous
+  optout:
+    config: telemetry_enabled = false in server.conf
+    env:
+    - GRAYLOG_TELEMETRY_ENABLED=false
+    ui: User menu > Profile > Telemetry (off, per user)
+  sources:
+  - https://raw.githubusercontent.com/Graylog2/graylog2-server/master/graylog2-server/src/main/java/org/graylog2/configuration/TelemetryConfiguration.java
+  - https://raw.githubusercontent.com/Graylog2/graylog2-server/master/graylog2-server/src/main/java/org/graylog2/telemetry/rest/TelemetryService.java

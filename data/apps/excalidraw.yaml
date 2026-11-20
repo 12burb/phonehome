@@ -1,0 +1,13 @@
+id: excalidraw
+name: Excalidraw (self-hosted)
+category: Diagrams
+repo: https://github.com/excalidraw/excalidraw
+images:
+- excalidraw/excalidraw
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/excalidraw/excalidraw/master/.env.production
+- https://github.com/search?q=repo%3Aexcalidraw%2Fexcalidraw+ENABLE_TRACKING&type=code
+notes: VITE_APP_ENABLE_TRACKING=false in .env.production, so the Docker image ships without analytics; the hosted excalidraw.com
+  build enables it.
