@@ -1,0 +1,24 @@
+id: superset
+name: Apache Superset
+category: Analytics
+repo: https://github.com/apache/superset
+images:
+- apache/superset
+- apachesuperset.docker.scarf.sh/apache/superset
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - static.scarf.sh
+  - apachesuperset.gateway.scarf.sh
+  sends: Scarf tracking pixel loaded by the web UI (browser IP/user agent, Superset version) for anonymous, aggregated install
+    counts; the Docker image can also be pulled through a Scarf gateway
+  frequency: on every UI page load
+  optout:
+    env:
+    - SCARF_ANALYTICS=false
+    config: SCARF_ANALYTICS = False in superset_config.py
+  sources:
+  - https://raw.githubusercontent.com/apache/superset/master/superset/config.py
+  - https://raw.githubusercontent.com/apache/superset/master/superset-frontend/packages/superset-ui-core/src/components/TelemetryPixel/index.tsx

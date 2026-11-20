@@ -1,0 +1,19 @@
+id: clickhouse
+name: ClickHouse
+category: Database
+repo: https://github.com/ClickHouse/ClickHouse
+images:
+- clickhouse/clickhouse-server
+- clickhouse
+verified: '2026-11-20'
+calls:
+- type: crash_report
+  default: 'on'
+  destinations:
+  - crash.clickhouse.com
+  sends: Anonymized crash reports and logical-error reports (stack traces, version, build info) to the ClickHouse developers
+  frequency: on crash / logical error
+  optout:
+    config: <send_crash_reports><enabled>false</enabled></send_crash_reports> in config.xml
+  sources:
+  - https://raw.githubusercontent.com/ClickHouse/ClickHouse/master/programs/server/config.xml
