@@ -7,6 +7,6 @@ images:
 verified: '2026-11-20'
 calls: []
 sources:
-- https://raw.githubusercontent.com/lukevella/rallly/main/.env.example
+- https://raw.githubusercontent.com/lukevella/rallly/main/apps/web/.env.sample
 - https://github.com/search?q=repo%3Alukevella%2Frallly+POSTHOG&type=code
 notes: PostHog analytics only runs when NEXT_PUBLIC_POSTHOG_API_KEY is set; it is unset in the self-hosting example.
