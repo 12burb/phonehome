@@ -1,0 +1,21 @@
+id: sabnzbd
+name: SABnzbd
+category: Downloads
+repo: https://github.com/sabnzbd/sabnzbd
+images:
+- linuxserver/sabnzbd
+- sabnzbd/sabnzbd
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - sabnzbd.org
+  block: false
+  sends: Version for the new-release check
+  frequency: periodic
+  optout:
+    ui: Config > General > Check for new release (off)
+    config: check_new_rel = 0 in sabnzbd.ini
+  sources:
+  - https://raw.githubusercontent.com/sabnzbd/sabnzbd/develop/sabnzbd/cfg.py

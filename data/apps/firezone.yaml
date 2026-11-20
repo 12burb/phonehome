@@ -1,0 +1,15 @@
+id: firezone
+name: Firezone
+category: Networking
+repo: https://github.com/firezone/firezone
+images:
+- ghcr.io/firezone/domain
+- ghcr.io/firezone/web
+- ghcr.io/firezone/api
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/firezone/firezone/main/elixir/config/runtime.exs
+- https://github.com/search?q=repo%3Afirezone%2Ffirezone+telemetry&type=code
+- https://github.com/search?q=repo%3Afirezone%2Ffirezone+posthog&type=code
+notes: PostHog is enabled only when both posthog_project_api_key and posthog_host are set; unset in self-hosted deployments.

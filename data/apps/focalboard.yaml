@@ -1,0 +1,21 @@
+id: focalboard
+name: Focalboard
+category: Kanban
+repo: https://github.com/mattermost/focalboard
+images:
+- mattermost/focalboard
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - rudder.mattermost.com
+  sends: Anonymous telemetry id, version, board/card/user counts
+  frequency: periodic
+  optout:
+    config: '"telemetry": false in config.json'
+    env:
+    - FOCALBOARD_TELEMETRY=false
+  sources:
+  - https://raw.githubusercontent.com/mattermost/focalboard/main/server/services/config/config.go
+notes: Standalone Focalboard is archived upstream; the Mattermost Boards plugin follows Mattermost's telemetry setting.

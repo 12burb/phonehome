@@ -73,3 +73,69 @@
 2240:            this.telemetryConfiguration = new PropTelemetryConfiguration(telemetryEnabled, telemetryQueueCapacity, telemetryHideTables, telemetryTableTTLWeeks, telemetryThrottleInterval);
 8335:        PropTelemetryConfiguration(boolean enabled, int queueCapacity, boolean hideTable, int ttlWeeks, long ThrottleInterval) {
 ## cube
+## https://raw.githubusercontent.com/SigNoz/signoz/main/pkg/analytics/config.go
+13:	Enabled bool    `mapstructure:"enabled"`
+14:	Segment Segment `mapstructure:"segment"`
+17:type Segment struct {
+27:		Enabled: false,
+28:		Segment: Segment{
+## https://raw.githubusercontent.com/apache/airflow/main/airflow-core/src/airflow/config_templates/config.yml
+## https://raw.githubusercontent.com/apache/airflow/main/airflow-core/src/airflow/utils/usage_data_collection.py
+## https://raw.githubusercontent.com/Infisical/infisical/main/backend/src/lib/config/env.ts
+22:const DEFAULT_CLICKHOUSE_AUDIT_LOG_INSERT_SETTINGS: Record<string, string | number | boolean> = {
+101:  defaultValue,
+106:  defaultValue: string;
+124:        const raw = val ?? legacyValue ?? defaultValue;
+146:    defaultValue: "10m",
+## https://raw.githubusercontent.com/Budibase/budibase/master/hosting/.env
+## https://raw.githubusercontent.com/bram2w/baserow/master/backend/src/baserow/config/settings/base.py
+26:from baserow.core.telemetry.utils import otel_is_enabled
+127:    MIDDLEWARE += ["baserow.core.telemetry.middleware.BaserowOTELMiddleware"]
+564:    "[this page](https://baserow.io/docs/apis%2Frest-api).\n\n"
+566:    "[this page](https://baserow.io/docs/apis%2Fdeprecations).",
+567:    "CONTACT": {"url": "https://baserow.io/contact"},
+## https://raw.githubusercontent.com/mattermost/focalboard/main/server/services/config/config.go
+44:	Telemetry                bool              `json:"telemetry" mapstructure:"telemetry"`
+45:	TelemetryID              string            `json:"telemetryid" mapstructure:"telemetryid"`
+94:	viper.SetDefault("Telemetry", true)
+95:	viper.SetDefault("TelemetryID", "")
+## https://raw.githubusercontent.com/gravitational/teleport/master/lib/usagereporter/teleport/usagereporter.go
+37:	prehogv1a "github.com/gravitational/teleport/gen/proto/go/prehog/v1alpha"
+38:	prehogv1ac "github.com/gravitational/teleport/gen/proto/go/prehog/v1alpha/prehogv1alphaconnect"
+66:	// to avoid spamming the prehog instance.
+76:	// AnonymizeAndSubmit submits a usage event. The payload will be
+77:	// anonymized by the reporter implementation.
+## https://raw.githubusercontent.com/mailcow/mailcow-dockerized/master/generate_config.sh
+31:get_docker_version
+33:if [[ $docker_version -lt 24 ]]; then
+34:  echo -e "\e[31mCannot find Docker with a Version higher or equals 24.0.0\e[0m"
+## https://raw.githubusercontent.com/PostHog/posthog/master/posthog/settings/base_variables.py
+56:OPT_OUT_CAPTURE: bool = get_from_env("OPT_OUT_CAPTURE", False, type_cast=str_to_bool)
+## https://raw.githubusercontent.com/mickael-kerjean/filestash/master/server/common/config.go
+## https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/settings/__init__.py
+## https://raw.githubusercontent.com/nocobase/nocobase/main/.env.example
+## https://raw.githubusercontent.com/HaveAGitGat/Tdarr/master/README.md
+2:Audio/Video Library Analytics & Transcode/Remux Automation
+## https://raw.githubusercontent.com/sabnzbd/sabnzbd/develop/sabnzbd/cfg.py
+2:# Copyright 2007-2026 by The SABnzbd-Team (sabnzbd.org)
+376:                "See: https://sabnzbd.org/5-1-vulnerabilities"
+425:version_check = OptionNumber("misc", "check_new_rel", 1)
+## https://raw.githubusercontent.com/pydio/cells/main/common/config/defaults.go
+## https://raw.githubusercontent.com/lightdash/lightdash/main/packages/backend/src/config/parseConfig.ts
+1715:    rudder: RudderConfig;
+2501:export type RudderConfig = {
+2502:    writeKey: string | undefined;
+2503:    dataPlaneUrl: string | undefined;
+## https://raw.githubusercontent.com/firezone/firezone/main/elixir/config/runtime.exs
+461:  posthog_project_api_key = env_var_to_config(:posthog_project_api_key)
+462:  posthog_host = env_var_to_config(:posthog_host)
+463:  posthog_enabled? = not is_nil(posthog_project_api_key) and not is_nil(posthog_host)
+466:    if posthog_enabled? do
+## https://raw.githubusercontent.com/passbolt/passbolt_api/master/config/default.php
+9: * Copyright (c) Passbolt SA (https://www.passbolt.com)
+11: * Licensed under GNU Affero General Public License version 3 of the or any later version.
+15: * @copyright     Copyright (c) Passbolt SA (https://www.passbolt.com)
+17: * @link          https://www.passbolt.com Passbolt(tm)
+105:            // See. https://www.passbolt.com/help/tech/backup
+## https://raw.githubusercontent.com/shlinkio/shlink/develop/config/autoload/update-check.global.php
+## https://raw.githubusercontent.com/monicahq/monica/main/config/monica.php

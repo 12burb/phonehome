@@ -1,0 +1,13 @@
+id: signoz
+name: SigNoz
+category: Monitoring
+repo: https://github.com/SigNoz/signoz
+images:
+- signoz/signoz
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/SigNoz/signoz/main/pkg/analytics/config.go
+- https://github.com/search?q=repo%3ASigNoz%2Fsignoz+telemetry&type=code
+- https://github.com/search?q=repo%3ASigNoz%2Fsignoz+posthog&type=code
+notes: Analytics (Segment) is disabled by default in the analytics config.
