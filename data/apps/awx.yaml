@@ -1,0 +1,14 @@
+id: awx
+name: Ansible AWX
+category: Automation
+repo: https://github.com/ansible/awx
+images:
+- ghcr.io/ansible/awx
+- quay.io/ansible/awx
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/ansible/awx/devel/awx/settings/defaults.py
+- https://github.com/search?q=repo%3Aansible%2Fawx+telemetry&type=code
+- https://github.com/search?q=repo%3Aansible%2Fawx+posthog&type=code
+notes: Insights/Automation Analytics collection is off by default (INSIGHTS_TRACKING_STATE = False) and requires Red Hat credentials.

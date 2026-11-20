@@ -1,0 +1,14 @@
+id: scrutiny
+name: Scrutiny
+category: Monitoring
+repo: https://github.com/AnalogJ/scrutiny
+images:
+- ghcr.io/analogj/scrutiny
+- analogj/scrutiny
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/AnalogJ/scrutiny/master/example.scrutiny.yaml
+- https://github.com/search?q=repo%3AAnalogJ%2Fscrutiny+telemetry&type=code
+- https://github.com/search?q=repo%3AAnalogJ%2Fscrutiny+posthog&type=code
+notes: No telemetry found in the example config.

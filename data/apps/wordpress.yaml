@@ -1,0 +1,23 @@
+id: wordpress
+name: WordPress
+category: CMS
+repo: https://github.com/WordPress/WordPress
+images:
+- wordpress
+- bitnami/wordpress
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.wordpress.org
+  block: false
+  sends: WordPress version, PHP version, locale, MySQL version, multisite flag, site and user counts, initial DB version (plus
+    plugin/theme lists for their update checks)
+  frequency: twice daily
+  optout:
+    config: No built-in switch; block api.wordpress.org or short-circuit via the pre_http_request filter (this also disables
+      core/plugin update notices)
+  sources:
+  - https://raw.githubusercontent.com/WordPress/WordPress/master/wp-includes/update.php
+notes: Update checks are how WordPress learns about security releases; blocking them has a real security cost.

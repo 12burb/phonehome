@@ -1,0 +1,12 @@
+id: pocketbase
+name: PocketBase
+category: Backend
+repo: https://github.com/pocketbase/pocketbase
+images: []
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/pocketbase/pocketbase/master/README.md
+- https://github.com/search?q=repo%3Apocketbase%2Fpocketbase+telemetry&type=code
+- https://github.com/search?q=repo%3Apocketbase%2Fpocketbase+posthog&type=code
+notes: No telemetry found. Single Go binary, usually self-built images.

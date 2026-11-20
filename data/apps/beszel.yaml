@@ -1,0 +1,14 @@
+id: beszel
+name: Beszel
+category: Monitoring
+repo: https://github.com/henrygd/beszel
+images:
+- henrygd/beszel
+- henrygd/beszel-agent
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/henrygd/beszel/main/README.md
+- https://github.com/search?q=repo%3Ahenrygd%2Fbeszel+telemetry&type=code
+- https://github.com/search?q=repo%3Ahenrygd%2Fbeszel+posthog&type=code
+notes: No telemetry found.

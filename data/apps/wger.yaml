@@ -1,0 +1,13 @@
+id: wger
+name: wger
+category: Fitness
+repo: https://github.com/wger-project/wger
+images:
+- wger/server
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/wger-project/wger/master/extras/docker/production/prod.env
+- https://github.com/search?q=repo%3Awger-project%2Fwger+telemetry&type=code
+- https://github.com/search?q=repo%3Awger-project%2Fwger+posthog&type=code
+notes: No telemetry variables found; exercise database sync with wger.de is optional.

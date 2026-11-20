@@ -1,0 +1,14 @@
+id: memos
+name: Memos
+category: Notes
+repo: https://github.com/usememos/memos
+images:
+- neosmemo/memos
+- ghcr.io/usememos/memos
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/usememos/memos/main/README.md
+- https://github.com/search?q=repo%3Ausememos%2Fmemos+telemetry&type=code
+- https://github.com/search?q=repo%3Ausememos%2Fmemos+posthog&type=code
+notes: No telemetry found.

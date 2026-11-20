@@ -1,0 +1,13 @@
+id: ghostfolio
+name: Ghostfolio
+category: Finance
+repo: https://github.com/ghostfolio/ghostfolio
+images:
+- ghostfolio/ghostfolio
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/ghostfolio/ghostfolio/main/.env.example
+- https://github.com/search?q=repo%3Aghostfolio%2Fghostfolio+telemetry&type=code
+- https://github.com/search?q=repo%3Aghostfolio%2Fghostfolio+posthog&type=code
+notes: No telemetry variables found. Market data comes from the providers you enable.

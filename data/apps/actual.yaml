@@ -1,0 +1,14 @@
+id: actual
+name: Actual Budget
+category: Finance
+repo: https://github.com/actualbudget/actual
+images:
+- actualbudget/actual-server
+- ghcr.io/actualbudget/actual
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/actualbudget/actual/master/packages/sync-server/src/load-config.js
+- https://github.com/search?q=repo%3Aactualbudget%2Factual+telemetry&type=code
+- https://github.com/search?q=repo%3Aactualbudget%2Factual+posthog&type=code
+notes: No telemetry found in the sync-server configuration.

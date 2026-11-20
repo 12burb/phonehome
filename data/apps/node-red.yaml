@@ -1,0 +1,21 @@
+id: node-red
+name: Node-RED
+category: Automation
+repo: https://github.com/node-red/node-red
+images:
+- nodered/node-red
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: prompt
+  destinations:
+  - telemetry.nodered.org
+  sends: Anonymous ping with Node-RED/Node.js version, OS, installed node counts and editor metrics; the editor asks for consent
+    on first open
+  frequency: periodic when enabled
+  optout:
+    config: 'telemetry: { enabled: false } in settings.js'
+    ui: Decline the consent prompt or User Settings > Telemetry
+  sources:
+  - https://raw.githubusercontent.com/node-red/node-red/master/packages/node_modules/node-red/settings.js
+  - https://raw.githubusercontent.com/node-red/node-red/master/packages/node_modules/@node-red/runtime/lib/telemetry/index.js

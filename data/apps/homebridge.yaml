@@ -1,0 +1,13 @@
+id: homebridge
+name: Homebridge
+category: Home automation
+repo: https://github.com/homebridge/homebridge
+images:
+- homebridge/homebridge
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/homebridge/homebridge/latest/README.md
+- https://github.com/search?q=repo%3Ahomebridge%2Fhomebridge+telemetry&type=code
+- https://github.com/search?q=repo%3Ahomebridge%2Fhomebridge+posthog&type=code
+notes: No telemetry found in core; the UI checks npm for plugin/core updates.

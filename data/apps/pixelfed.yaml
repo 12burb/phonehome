@@ -1,0 +1,15 @@
+id: pixelfed
+name: Pixelfed
+category: Social
+repo: https://github.com/pixelfed/pixelfed
+images:
+- zknt/pixelfed
+- ghcr.io/pixelfed/pixelfed
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/pixelfed/pixelfed/dev/config/instance.php
+- https://raw.githubusercontent.com/pixelfed/pixelfed/dev/.env.example
+- https://github.com/search?q=repo%3Apixelfed%2Fpixelfed+telemetry&type=code
+- https://github.com/search?q=repo%3Apixelfed%2Fpixelfed+posthog&type=code
+notes: No telemetry found; federation traffic only.

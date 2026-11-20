@@ -1,0 +1,13 @@
+id: karakeep
+name: Karakeep (Hoarder)
+category: Bookmarks
+repo: https://github.com/karakeep-app/karakeep
+images:
+- ghcr.io/karakeep-app/karakeep
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/karakeep-app/karakeep/main/.env.sample
+- https://github.com/search?q=repo%3Akarakeep-app%2Fkarakeep+telemetry&type=code
+- https://github.com/search?q=repo%3Akarakeep-app%2Fkarakeep+posthog&type=code
+notes: No telemetry variables in .env.sample. Optional AI tagging calls the OpenAI/Ollama endpoint you configure.

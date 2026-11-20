@@ -1,0 +1,13 @@
+id: glance
+name: Glance
+category: Dashboard
+repo: https://github.com/glanceapp/glance
+images:
+- glanceapp/glance
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/glanceapp/glance/main/README.md
+- https://github.com/search?q=repo%3Aglanceapp%2Fglance+telemetry&type=code
+- https://github.com/search?q=repo%3Aglanceapp%2Fglance+posthog&type=code
+notes: No telemetry found; widgets fetch only the feeds/APIs you configure.
