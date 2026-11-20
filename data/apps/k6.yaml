@@ -1,0 +1,23 @@
+id: k6
+name: Grafana k6
+category: Testing
+repo: https://github.com/grafana/k6
+images:
+- grafana/k6
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - stats.grafana.org
+  sends: 'Usage report per run: k6 version, OS, arch, CI flag, build origin, test duration, max VUs, iteration count, executor
+    types, public extensions used, installation id'
+  frequency: once per test run
+  optout:
+    env:
+    - K6_NO_USAGE_REPORT=true
+    cli: --no-usage-report
+    config: '"noUsageReport": true in the k6 config file'
+  sources:
+  - https://raw.githubusercontent.com/grafana/k6/master/internal/cmd/report.go
+  - https://raw.githubusercontent.com/grafana/k6/master/internal/cmd/config.go

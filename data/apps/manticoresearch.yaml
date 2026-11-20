@@ -1,0 +1,26 @@
+id: manticoresearch
+name: Manticore Search
+category: Search
+repo: https://github.com/manticoresoftware/manticoresearch
+images:
+- manticoresearch/manticore
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.manticoresearch.com
+  sends: 'Anonymized metrics via Manticore Buddy: launch event, plugin/command usage counters from SHOW STATUS, uptime, worker
+    count, cluster count and size, table counts by type, field-type counts, columnar usage; the backup tool reports its own
+    metrics'
+  frequency: on events and periodically
+  optout:
+    env:
+    - TELEMETRY=0
+    config: telemetry = 0 in the searchd section of manticore.conf
+  sources:
+  - https://raw.githubusercontent.com/manticoresoftware/manticoresearch/master/manual/english/Telemetry.md
+  - https://raw.githubusercontent.com/manticoresoftware/manticoresearch/master/src/searchd.cpp
+  - https://raw.githubusercontent.com/manticoresoftware/manticoresearch-buddy/main/test/Buddy/src/Lib/TelemetryHeadersTest.php
+notes: The daemon source reads MANTICORE_TELEMETRY (default true); the manual documents TELEMETRY=0. Setting telemetry = 0
+  in the config covers both.

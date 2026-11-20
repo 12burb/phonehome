@@ -1,0 +1,23 @@
+id: dragonfly
+name: Dragonfly
+category: Database
+repo: https://github.com/dragonflydb/dragonfly
+images:
+- docker.dragonflydb.io/dragonflydb/dragonfly
+- ghcr.io/dragonflydb/dragonfly
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - version.dragonflydb.io
+  sends: 'Version check that also reports anonymous platform info in request headers: version, thread count, kernel version,
+    deployment environment label, uptime, max memory, master/replica role'
+  frequency: every 24 hours (release builds only)
+  optout:
+    cli: --version_check=false
+    env:
+    - DFLY_version_check=false
+  sources:
+  - https://raw.githubusercontent.com/dragonflydb/dragonfly/main/src/server/version_monitor.cc
+  - https://raw.githubusercontent.com/dragonflydb/dragonfly/main/src/server/dfly_main.cc

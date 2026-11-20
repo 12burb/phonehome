@@ -1,0 +1,21 @@
+id: glpi
+name: GLPI
+category: IT management
+repo: https://github.com/glpi-project/glpi
+images:
+- glpi/glpi
+- diouxx/glpi
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: prompt
+  destinations:
+  - telemetry.glpi-project.org
+  sends: Instance UUID, GLPI version, plugins and versions, language, install mode, average counts (entities, computers, tickets,
+    users, ...), LDAP/mail collector flags, DB engine/version/size, web server, PHP and OS info
+  frequency: scheduled "telemetry" cron task when enabled
+  optout:
+    ui: Untick "Send usage statistics" during install, or disable the "telemetry" automatic action (Setup > Automatic actions)
+  sources:
+  - https://raw.githubusercontent.com/glpi-project/glpi/main/src/Telemetry.php
+  - https://raw.githubusercontent.com/glpi-project/glpi/main/stubs/glpi_constants.php

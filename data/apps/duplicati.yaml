@@ -1,0 +1,25 @@
+id: duplicati
+name: Duplicati
+category: Backup
+repo: https://github.com/duplicati/duplicati
+images:
+- lscr.io/linuxserver/duplicati
+- duplicati/duplicati
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - usage-reporter.duplicati.com
+  sends: 'Usage report sets: random reporter id, OS type and version, CLR version, package type, app name and version, and
+    a list of event items (feature usage, warnings, errors/crashes)'
+  frequency: batched while running
+  optout:
+    env:
+    - USAGEREPORTER_Duplicati_LEVEL=none
+    - DO_NOT_TRACK=1
+    ui: Settings > Usage statistics > None / Disabled
+  sources:
+  - https://raw.githubusercontent.com/duplicati/duplicati/master/Duplicati/Library/UsageReporter/Reporter.cs
+  - https://raw.githubusercontent.com/duplicati/duplicati/master/Duplicati/Library/UsageReporter/ReportSetUploader.cs
+  - https://raw.githubusercontent.com/duplicati/duplicati/master/Duplicati/Library/UsageReporter/ReportSet.cs

@@ -1,0 +1,27 @@
+id: emqx
+name: EMQX
+category: Messaging
+repo: https://github.com/emqx/emqx
+images:
+- emqx/emqx
+- emqx
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.emqx.io
+  sends: EMQX version, OS name and version, OTP version, uptime, node and cluster UUIDs, active plugins, and aggregate usage
+    figures
+  frequency: weekly (604800 s)
+  optout:
+    env:
+    - EMQX_TELEMETRY__ENABLE=false
+    config: telemetry.enable = false in emqx.conf
+    ui: Dashboard > Settings > Telemetry (off)
+  sources:
+  - https://raw.githubusercontent.com/emqx/emqx/master/apps/emqx_telemetry/src/emqx_telemetry.erl
+  - https://raw.githubusercontent.com/emqx/emqx/master/apps/emqx_telemetry/src/emqx_telemetry_config.erl
+  - https://raw.githubusercontent.com/emqx/emqx/master/apps/emqx_license/src/emqx_license_checker.erl
+notes: When telemetry.enable is not set, the default comes from the license type (on for community/evaluation/developer-style
+  licenses on official builds, off for unofficial builds). Setting it explicitly always wins.
