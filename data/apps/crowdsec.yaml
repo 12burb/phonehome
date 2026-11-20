@@ -1,0 +1,20 @@
+id: crowdsec
+name: CrowdSec
+category: Security
+repo: https://github.com/crowdsecurity/crowdsec
+images:
+- crowdsecurity/crowdsec
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - api.crowdsec.net
+  sends: Attack signals (attacker IP, scenario, timestamp) pushed to the Central API, which returns the community blocklist;
+    package installs enroll automatically
+  frequency: continuous
+  optout:
+    config: Remove api.server.online_client from config.yaml (or `cscli capi unregister`); you lose the community blocklist
+  sources:
+  - https://raw.githubusercontent.com/crowdsecurity/crowdsec/master/config/config.yaml
+  - https://docs.crowdsec.net/docs/central_api/intro

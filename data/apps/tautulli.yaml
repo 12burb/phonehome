@@ -1,0 +1,23 @@
+id: tautulli
+name: Tautulli
+category: Media
+repo: https://github.com/Tautulli/Tautulli
+images:
+- tautulli/tautulli
+- ghcr.io/tautulli/tautulli
+- linuxserver/tautulli
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.github.com
+  block: false
+  sends: Checks GitHub for new commits/releases
+  frequency: periodic
+  optout:
+    ui: Settings > General > Check for Updates (off)
+    config: CHECK_GITHUB = 0 in config.ini
+  sources:
+  - https://raw.githubusercontent.com/Tautulli/Tautulli/master/plexpy/config.py
+notes: Also talks to plex.tv for Plex account/server lookups as part of its core function.

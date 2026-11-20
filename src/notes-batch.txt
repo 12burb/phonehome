@@ -1,0 +1,31 @@
+## https://raw.githubusercontent.com/parseablehq/parseable/main/src/cli.rs
+138:    #[arg(long, env = "P_USERNAME", help = "Admin username to be set for this Parseable server", default_value = DEFAULT_USERNAME)]
+141:    #[arg(long, env = "P_PASSWORD", help = "Admin password to be set for this Parseable server", default_value = DEFAULT_PASSWORD)]
+148:        default_value = "0.0.0.0:8000",
+169:        default_value = "5",
+178:        default_value = "5",
+187:        default_value_t = num_cpus::get() as u64,
+## https://raw.githubusercontent.com/fosrl/pangolin/main/server/lib/telemetry.ts
+1:import { PostHog } from "posthog-node";
+33:    private client: PostHog | null = null;
+39:        const enabled = config.getRawConfig().app.telemetry.anonymous_usage;
+52:            this.client = new PostHog(
+## https://raw.githubusercontent.com/kestra-io/kestra/develop/cli/src/main/resources/application.yml
+6:    enabled: false
+42:        enabled: true
+55:  security:
+57:      enabled: false
+59:      enabled: true
+63:        enabled: false
+85:        url: https://api.kestra.io
+107:        enabled: true
+## https://raw.githubusercontent.com/questdb/questdb/master/core/src/main/resources/io/questdb/site/conf/server.conf
+1823:#telemetry.enabled=true
+1824:#telemetry.queue.capacity=512
+1858:### Please visit https://questdb.io/enterprise/ for more information
+## https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-server-core/src/core/agentCollect.ts
+## https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-server-core/src/core/server.ts
+219:    // Wraps the log sink only: the agent and telemetry wrappers installed below
+275:      if (!this.options.telemetry) {
+292:        await track({
+373:      if (this.options.telemetry) {

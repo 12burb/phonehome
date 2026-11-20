@@ -1,0 +1,20 @@
+id: openobserve
+name: OpenObserve
+category: Logging
+repo: https://github.com/openobserve/openobserve
+images:
+- public.ecr.aws/zinclabs/openobserve
+- openobserve/openobserve
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - e1.zinclabs.dev
+  sends: Instance heartbeat with version, OS, stream/ingest counts
+  frequency: every 30 min (ZO_TELEMETRY_HEARTBEAT=1800)
+  optout:
+    env:
+    - ZO_TELEMETRY=false
+  sources:
+  - https://raw.githubusercontent.com/openobserve/openobserve/main/src/config/src/config.rs

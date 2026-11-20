@@ -1,0 +1,21 @@
+id: zulip
+name: Zulip Server
+category: Chat
+repo: https://github.com/zulip/zulip
+images:
+- zulip/docker-zulip
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - push.zulipchat.com
+  sends: Aggregate usage statistics to the Zulip push-notification service, only if the server is registered for mobile push
+    and SUBMIT_USAGE_STATISTICS is left on
+  frequency: daily when enabled
+  optout:
+    config: ZULIP_SERVICE_SUBMIT_USAGE_STATISTICS = False in /etc/zulip/settings.py
+  sources:
+  - https://raw.githubusercontent.com/zulip/zulip/main/zproject/default_settings.py
+  - https://raw.githubusercontent.com/zulip/zulip/main/zproject/prod_settings_template.py
+  - https://zulip.readthedocs.io/en/latest/production/mobile-push-notifications.html
