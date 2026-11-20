@@ -1,0 +1,24 @@
+id: bazarr
+name: Bazarr
+category: Media
+repo: https://github.com/morpheus65535/bazarr
+images:
+- lscr.io/linuxserver/bazarr
+- linuxserver/bazarr
+- hotio/bazarr
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - www.google-analytics.com
+  block: false
+  sends: 'Google Analytics (GA4 Measurement Protocol) events: Bazarr, Sonarr, Radarr, Python and OS versions, plus subtitle
+    provider, action and language for each download and provider throttling errors'
+  frequency: per subtitle event
+  optout:
+    ui: Settings > General > Analytics (off)
+    config: 'analytics.enabled: false in config.yaml'
+  sources:
+  - https://raw.githubusercontent.com/morpheus65535/bazarr/master/bazarr/utilities/analytics.py
+  - https://raw.githubusercontent.com/morpheus65535/bazarr/master/bazarr/app/config.py
