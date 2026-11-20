@@ -1,0 +1,12 @@
+id: wallabag
+name: wallabag
+category: Read-it-later
+repo: https://github.com/wallabag/wallabag
+images:
+- wallabag/wallabag
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Awallabag%2Fwallabag+telemetry&type=code
+- https://github.com/search?q=repo%3Awallabag%2Fwallabag+analytics&type=code
+notes: No telemetry code found.

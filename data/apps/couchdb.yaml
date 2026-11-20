@@ -1,0 +1,14 @@
+id: couchdb
+name: Apache CouchDB
+category: Database
+repo: https://github.com/apache/couchdb
+images:
+- couchdb
+- apache/couchdb
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/apache/couchdb/main/rel/overlay/etc/default.ini
+- https://github.com/search?q=repo%3Aapache%2Fcouchdb+telemetry&type=code
+- https://github.com/search?q=repo%3Aapache%2Fcouchdb+analytics&type=code
+notes: No telemetry or update-check code found.

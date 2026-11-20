@@ -1,0 +1,14 @@
+id: ntfy
+name: ntfy
+category: Notifications
+repo: https://github.com/binwiederhier/ntfy
+images:
+- binwiederhier/ntfy
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/binwiederhier/ntfy/main/server/server.yml
+- https://raw.githubusercontent.com/binwiederhier/ntfy/main/docs/privacy.md
+- https://github.com/search?q=repo%3Abinwiederhier%2Fntfy+telemetry&type=code
+- https://github.com/search?q=repo%3Abinwiederhier%2Fntfy+analytics&type=code
+notes: No telemetry in the server; Stripe telemetry is explicitly disabled and only used when payments are configured.

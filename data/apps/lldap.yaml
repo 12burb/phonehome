@@ -1,0 +1,14 @@
+id: lldap
+name: LLDAP
+category: Auth
+repo: https://github.com/lldap/lldap
+images:
+- lldap/lldap
+- nitnelave/lldap
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/lldap/lldap/main/lldap_config.docker_template.toml
+- https://github.com/search?q=repo%3Alldap%2Flldap+telemetry&type=code
+- https://github.com/search?q=repo%3Alldap%2Flldap+analytics&type=code
+notes: No telemetry or update-check code found.

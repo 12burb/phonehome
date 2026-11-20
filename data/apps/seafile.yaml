@@ -1,0 +1,13 @@
+id: seafile
+name: Seafile
+category: Files
+repo: https://github.com/haiwen/seahub
+images:
+- seafileltd/seafile-mc
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/haiwen/seahub/master/seahub/settings.py
+- https://github.com/search?q=repo%3Ahaiwen%2Fseahub+telemetry&type=code
+- https://github.com/search?q=repo%3Ahaiwen%2Fseahub+analytics&type=code
+notes: No telemetry code found in the web frontend/server repo.

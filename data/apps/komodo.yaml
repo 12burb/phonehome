@@ -1,0 +1,14 @@
+id: komodo
+name: Komodo
+category: Infrastructure
+repo: https://github.com/moghtech/komodo
+images:
+- ghcr.io/moghtech/komodo-core
+- ghcr.io/moghtech/komodo-periphery
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/moghtech/komodo/main/config/core.config.toml
+- https://github.com/search?q=repo%3Amoghtech%2Fkomodo+telemetry&type=code
+- https://github.com/search?q=repo%3Amoghtech%2Fkomodo+posthog&type=code
+notes: Only operator-configured OpenTelemetry exporters; no vendor telemetry found.

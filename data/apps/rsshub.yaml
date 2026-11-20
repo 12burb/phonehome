@@ -1,0 +1,13 @@
+id: rsshub
+name: RSSHub
+category: Feeds
+repo: https://github.com/DIYgod/RSSHub
+images:
+- diygod/rsshub
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/DIYgod/RSSHub/master/lib/config.ts
+- https://github.com/search?q=repo%3ADIYgod%2FRSSHub+telemetry&type=code
+- https://github.com/search?q=repo%3ADIYgod%2FRSSHub+posthog&type=code
+notes: Only operator-configured OpenTelemetry exporters; no vendor telemetry found.

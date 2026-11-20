@@ -1,0 +1,13 @@
+id: linkding
+name: linkding
+category: Bookmarks
+repo: https://github.com/sissbruecker/linkding
+images:
+- sissbruecker/linkding
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/sissbruecker/linkding/master/bookmarks/settings/base.py
+- https://github.com/search?q=repo%3Asissbruecker%2Flinkding+telemetry&type=code
+- https://github.com/search?q=repo%3Asissbruecker%2Flinkding+analytics&type=code
+notes: No telemetry code found (the only match is the docs-site build tool, which is not shipped).

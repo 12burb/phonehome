@@ -1,0 +1,13 @@
+id: searxng
+name: SearXNG
+category: Search
+repo: https://github.com/searxng/searxng
+images:
+- searxng/searxng
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/searxng/searxng/master/searx/settings.yml
+- https://github.com/search?q=repo%3Asearxng%2Fsearxng+telemetry&type=code
+- https://github.com/search?q=repo%3Asearxng%2Fsearxng+analytics&type=code
+notes: No telemetry; the only "telemetry" match is a parameter one upstream engine requires in its own search request.

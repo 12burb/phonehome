@@ -1,0 +1,14 @@
+id: monica
+name: Monica
+category: CRM
+repo: https://github.com/monicahq/monica
+images:
+- monica
+- monicahq/monica
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/monicahq/monica/main/.env.example
+- https://github.com/search?q=repo%3Amonicahq%2Fmonica+telemetry&type=code
+- https://github.com/search?q=repo%3Amonicahq%2Fmonica+sentry&type=code
+notes: No telemetry code found; optional Sentry is off unless SENTRY_SUPPORT=true and a DSN are set.

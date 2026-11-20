@@ -1,0 +1,13 @@
+id: invidious
+name: Invidious
+category: Media
+repo: https://github.com/iv-org/invidious
+images:
+- quay.io/invidious/invidious
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/iv-org/invidious/master/config/config.example.yml
+- https://github.com/search?q=repo%3Aiv-org%2Finvidious+telemetry&type=code
+- https://github.com/search?q=repo%3Aiv-org%2Finvidious+statistics_enabled&type=code
+notes: No telemetry code found; outbound traffic is to YouTube/instance APIs the operator configures.

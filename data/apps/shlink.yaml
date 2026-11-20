@@ -1,0 +1,12 @@
+id: shlink
+name: Shlink
+category: URL shortener
+repo: https://github.com/shlinkio/shlink
+images:
+- shlinkio/shlink
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Ashlinkio%2Fshlink+telemetry&type=code
+- https://github.com/search?q=repo%3Ashlinkio%2Fshlink+analytics&type=code
+notes: No telemetry or update-check code found.

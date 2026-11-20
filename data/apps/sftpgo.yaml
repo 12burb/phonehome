@@ -1,0 +1,13 @@
+id: sftpgo
+name: SFTPGo
+category: Files
+repo: https://github.com/drakkan/sftpgo
+images:
+- drakkan/sftpgo
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/drakkan/sftpgo/main/sftpgo.json
+- https://github.com/search?q=repo%3Adrakkan%2Fsftpgo+telemetry&type=code
+- https://github.com/search?q=repo%3Adrakkan%2Fsftpgo+analytics&type=code
+notes: The "telemetry" package is a local metrics/health HTTP endpoint for the operator, not a phone-home.
