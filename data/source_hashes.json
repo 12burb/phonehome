@@ -71,10 +71,6 @@
   "fp": "fd8e0b8913f37080",
   "lines": 76
  },
- "https://docs.nocodb.com/getting-started/self-hosted/environment-variables/": {
-  "fp": "94a6d6120ef4c3c8",
-  "lines": 18
- },
  "https://docs.prefect.io/v3/develop/settings-ref": {
   "fp": "c2020cb2ade774c0",
   "lines": 38
@@ -135,6 +131,10 @@
   "fp": "487ea2fe91393477",
   "lines": 6
  },
+ "https://gitlab.com/glitchtip/glitchtip-backend/-/raw/master/glitchtip/settings.py": {
+  "fp": "a87aace2c35375e7",
+  "lines": 35
+ },
  "https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/#analytics": {
   "fp": "c08751091ec9d666",
   "lines": 80
@@ -158,6 +158,10 @@
  "https://learn.netdata.cloud/docs/netdata-agent/configuration/anonymous-telemetry-events": {
   "fp": "5951ebe52c7576f0",
   "lines": 30
+ },
+ "https://nocodb.com/docs/self-hosting/environment-variables": {
+  "fp": "94a6d6120ef4c3c8",
+  "lines": 18
  },
  "https://payloadcms.com/docs/configuration/overview": {
   "fp": "8801beb00b43338f",
@@ -926,6 +930,10 @@
  "https://raw.githubusercontent.com/wg-easy/wg-easy/master/README.md": {
   "fp": "72fe69acc239ef70",
   "lines": 4
+ },
+ "https://raw.githubusercontent.com/wger-project/wger/master/settings/settings_global.py": {
+  "fp": "c9cf7869d4111d4a",
+  "lines": 2
  },
  "https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/src/yb/server/call_home.cc": {
   "fp": "1b67d111232e5ec2",
