@@ -1,0 +1,16 @@
+id: portainer
+name: Portainer CE
+category: Infrastructure
+repo: https://github.com/portainer/portainer
+images:
+- portainer/portainer-ce
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/portainer/portainer/develop/api/cli/cli.go
+- https://github.com/search?q=repo%3Aportainer%2Fportainer+telemetry&type=code
+- https://github.com/search?q=repo%3Aportainer%2Fportainer+matomo&type=code
+- https://github.com/search?q=repo%3Aportainer%2Fportainer+analytics&type=code
+notes: Current develop branch contains no analytics/telemetry code; the --no-analytics flag is kept only for config migration
+  from pre-2.0 versions and is logged as deprecated. Based on a code search, not a network capture; Business Edition is not
+  covered.
