@@ -1,0 +1,23 @@
+id: mlflow
+name: MLflow
+category: ML
+repo: https://github.com/mlflow/mlflow
+images:
+- ghcr.io/mlflow/mlflow
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - config.mlflow-telemetry.io
+  sends: Fetches a telemetry config, then batches anonymous usage events (API/feature names, version, platform) to the endpoint
+    it names; automatically off in CI and when DO_NOT_TRACK is set
+  frequency: batched every 10 s while in use
+  optout:
+    env:
+    - MLFLOW_DISABLE_TELEMETRY=true
+    - DO_NOT_TRACK=true
+  sources:
+  - https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/environment_variables.py
+  - https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/telemetry/constant.py
+  - https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/telemetry/utils.py

@@ -1,0 +1,22 @@
+id: unleash
+name: Unleash
+category: Feature flags
+repo: https://github.com/Unleash/unleash
+images:
+- unleashorg/unleash-server
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - version.unleash.run
+  sends: Instance id and version; with SEND_TELEMETRY (default true) also feature-usage counts (toggles, strategies, users,
+    etc.)
+  frequency: periodic
+  optout:
+    env:
+    - CHECK_VERSION=false
+    - SEND_TELEMETRY=false
+  sources:
+  - https://raw.githubusercontent.com/Unleash/unleash/main/src/lib/create-config.ts
+  - https://raw.githubusercontent.com/Unleash/unleash/main/src/lib/services/version-service.ts

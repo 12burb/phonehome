@@ -1,0 +1,14 @@
+id: plane
+name: Plane
+category: Project management
+repo: https://github.com/makeplane/plane
+images:
+- makeplane/plane-backend
+- makeplane/plane-frontend
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/makeplane/plane/preview/apps/api/plane/settings/common.py
+- https://github.com/search?q=repo%3Amakeplane%2Fplane+telemetry&type=code
+- https://github.com/search?q=repo%3Amakeplane%2Fplane+posthog&type=code
+notes: ANALYTICS_SECRET_KEY/ANALYTICS_BASE_API default to False, so no analytics endpoint is configured in Community Edition.

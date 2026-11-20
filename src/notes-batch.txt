@@ -941,3 +941,194 @@ $config['updatecheckperiod'] = 7;
 55:            check_update_url,
 56:            params={"current_version": query.current_version},
 57:            timeout=httpx.Timeout(timeout=10.0, connect=3.0),
+## https://raw.githubusercontent.com/redash/redash/master/redash/settings/__init__.py
+## https://raw.githubusercontent.com/getredash/redash/master/redash/settings/__init__.py
+441:VERSION_CHECK = parse_boolean(os.environ.get("REDASH_VERSION_CHECK", "true"))
+## https://raw.githubusercontent.com/getredash/redash/master/redash/version_check.py
+14:def usage_data():
+55:    data["data_sources"] = {name: value for (name, value) in db.session.execute(text(data_sources_query))}
+56:    data["visualization_types"] = {name: value for (name, value) in db.session.execute(text(visualizations_query))}
+57:    data["destination_types"] = {name: value for (name, value) in db.session.execute(text(destinations_query))}
+69:        data["usage"] = usage_data()
+## https://raw.githubusercontent.com/PrefectHQ/prefect/main/src/prefect/settings/models/server/root.py
+45:    analytics_enabled: bool = Field(
+## https://raw.githubusercontent.com/PrefectHQ/prefect/main/src/prefect/server/services/telemetry.py
+65:    enabled_getter=lambda: get_current_settings().server.analytics_enabled,
+75:    It can be toggled off with the PREFECT_SERVER_ANALYTICS_ENABLED setting.
+105:                "https://sens-o-matic.prefect.io/",
+## https://raw.githubusercontent.com/dagster-io/dagster/master/python_modules/dagster-shared/dagster_shared/telemetry/__init__.py
+## https://raw.githubusercontent.com/temporalio/temporal/main/common/dynamicconfig/constants.go
+998:	EnableServerVersionCheck = NewGlobalBoolSetting(
+999:		"frontend.enableServerVersionCheck",
+1001:		`EnableServerVersionCheck is a flag that controls whether or not periodic version checking is enabled`,
+## https://raw.githubusercontent.com/coder/coder/main/codersdk/deployment.go
+1963:		Env:         "CODER_TELEMETRY_ENABLE",
+3223:			// was renamed to CODER_TELEMETRY_ENABLE in the past, but
+3226:			Env:        "CODER_TELEMETRY",
+3237:			Env:         "CODER_TELEMETRY_URL",
+3239:			Default:     "https://telemetry.coder.com",
+## https://raw.githubusercontent.com/windmill-labs/windmill/main/backend/windmill-common/src/stats_oss.rs
+3:pub use crate::stats_ee::*;
+12:pub async fn get_disable_stats_setting(_db: &DB) -> bool {
+13:    // stats details are closed source
+19:pub async fn schedule_stats(_db: &DB, _http_client: &reqwest::Client) -> () {
+## https://raw.githubusercontent.com/windmill-labs/windmill/main/backend/windmill-common/src/lib.rs
+## https://raw.githubusercontent.com/airbytehq/airbyte-platform/main/.env
+## https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/telemetry/constant.py
+5:BATCH_TIME_INTERVAL_SECONDS = 10
+8:CONFIG_STAGING_URL = "https://config-staging.mlflow-telemetry.io"
+9:CONFIG_URL = "https://config.mlflow-telemetry.io"
+10:UI_CONFIG_STAGING_URL = "https://d34z9x6fp23d2z.cloudfront.net"
+## https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/environment_variables.py
+1666:MLFLOW_DISABLE_TELEMETRY = _BooleanEnvironmentVariable("MLFLOW_DISABLE_TELEMETRY", False)
+## https://raw.githubusercontent.com/HumanSignal/label-studio/develop/label_studio/core/settings/base.py
+576:SENTRY_DSN = get_env('SENTRY_DSN', None)
+580:FRONTEND_SENTRY_DSN = get_env('FRONTEND_SENTRY_DSN', None)
+581:FRONTEND_SENTRY_RATE = get_env('FRONTEND_SENTRY_RATE', 0.01)
+582:FRONTEND_SENTRY_ENVIRONMENT = get_env('FRONTEND_SENTRY_ENVIRONMENT', 'stage.opensource')
+919:COLLECT_ANALYTICS = get_bool_env('COLLECT_ANALYTICS', get_bool_env('collect_analytics', True))
+## https://raw.githubusercontent.com/jupyterhub/jupyterhub/main/README.md
+## https://raw.githubusercontent.com/argoproj/argo-cd/master/README.md
+## https://raw.githubusercontent.com/backstage/backstage/master/README.md
+## https://raw.githubusercontent.com/coder/code-server/main/src/node/cli.ts
+37:  "disable-telemetry"?: boolean
+51:  "disable-update-check"?: boolean
+173:  "disable-telemetry": { type: "boolean", description: "Disable telemetry." },
+174:  "disable-update-check": {
+## https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-server/.env.example
+48:# METER_DRIVER=opentelemetry,console
+92:# ANALYTICS_ENABLED=
+## https://raw.githubusercontent.com/makeplane/plane/preview/apps/api/plane/settings/common.py
+104:    "plane.analytics",
+402:    "plane.license.bgtasks.telemetry_metrics",
+417:# Analytics
+418:ANALYTICS_SECRET_KEY = os.environ.get("ANALYTICS_SECRET_KEY", False)
+419:ANALYTICS_BASE_API = os.environ.get("ANALYTICS_BASE_API", False)
+## https://raw.githubusercontent.com/chatwoot/chatwoot/develop/.env.example
+## https://raw.githubusercontent.com/chatwoot/chatwoot/develop/lib/chatwoot_hub.rb
+3:  DEFAULT_BASE_URL = 'https://hub.2.chatwoot.com'.freeze
+29:  def self.installation_identifier
+30:    identifier = InstallationConfig.find_by(name: 'INSTALLATION_IDENTIFIER')&.value
+31:    identifier ||= InstallationConfig.create!(name: 'INSTALLATION_IDENTIFIER', value: SecureRandom.uuid).value
+36:    "#{billing_base_url}?installation_identifier=#{installation_identifier}"
+59:  def self.instance_config
+61:      installation_identifier: installation_identifier,
+69:  def self.instance_metrics
+71:      accounts_count: fetch_count(Account),
+72:      users_count: fetch_count(User),
+## https://raw.githubusercontent.com/Unleash/unleash/main/src/lib/types/option.ts
+169:    versionCheck?: Partial<IVersionOption>;
+170:    telemetry?: boolean;
+299:    versionCheck: IVersionOption;
+## https://raw.githubusercontent.com/Unleash/unleash/main/src/lib/create-config.ts
+393:    url: process.env.UNLEASH_VERSION_URL || 'https://version.unleash.run',
+394:    enable: parseEnvVarBoolean(process.env.CHECK_VERSION, true),
+632:    const telemetry: boolean =
+633:        options.telemetry ||
+634:        parseEnvVarBoolean(process.env.SEND_TELEMETRY, true);
+## https://raw.githubusercontent.com/growthbook/growthbook/main/packages/back-end/src/util/secrets.ts
+52:export const DISABLE_TELEMETRY = process.env.DISABLE_TELEMETRY;
+55:export function isGrowthBookTelemetryEnabled(): boolean {
+56:  if (DISABLE_TELEMETRY === "debug") return false;
+## https://raw.githubusercontent.com/calcom/cal.com/main/.env.example
+64:CALCOM_TELEMETRY_DISABLED=
+87:# Posthog Config
+88:NEXT_PUBLIC_POSTHOG_KEY=
+90:NEXT_PUBLIC_POSTHOG_HOST=
+## https://raw.githubusercontent.com/zammad/zammad/develop/README.md
+## https://raw.githubusercontent.com/glitchtip/glitchtip-backend/master/glitchtip/settings.py
+## https://raw.githubusercontent.com/getredash/redash/master/redash/version_check.py
+62:def run_version_check():
+72:        response = requests.post(
+73:            "https://version.redash.io/api/report?channel=stable",
+## coder ctx
+7:		Description: "Whether telemetry is enabled or not. Coder collects anonymized usage data to help improve our product.",
+9:		Env:         "CODER_TELEMETRY_ENABLE",
+10:		Default:     strconv.FormatBool(flag.Lookup("test.v") == nil || os.Getenv("CODER_TEST_TELEMETRY_DEFAULT_ENABLE") == "true"),
+## https://raw.githubusercontent.com/Unleash/unleash/main/src/lib/create-config.ts
+632:    const telemetry: boolean =
+633:        options.telemetry ||
+634:        parseEnvVarBoolean(process.env.SEND_TELEMETRY, true);
+898:        telemetry,
+## https://raw.githubusercontent.com/Unleash/unleash/main/src/lib/services/version-service.ts
+18:    instanceId: string;
+28:    instanceId: string;
+79:    private telemetryEnabled: boolean;
+81:    private versionCheckUrl?: string;
+83:    private instanceId?: string;
+95:            versionCheck,
+## https://raw.githubusercontent.com/growthbook/growthbook/main/packages/back-end/src/util/secrets.ts
+52:export const DISABLE_TELEMETRY = process.env.DISABLE_TELEMETRY;
+55:export function isGrowthBookTelemetryEnabled(): boolean {
+56:  if (DISABLE_TELEMETRY === "debug") return false;
+57:  if (DISABLE_TELEMETRY === "enable-with-debug") return true;
+58:  if (DISABLE_TELEMETRY) return false;
+59:  return true;
+## https://raw.githubusercontent.com/growthbook/growthbook/main/packages/back-end/src/services/telemetry.ts
+## chatwoot ctx
+5:  def self.base_url
+9:  def self.ping_url
+13:  def self.registration_url
+17:  def self.push_notification_url
+21:  def self.events_url
+25:  def self.billing_base_url
+29:  def self.instance_config
+32:      installation_version: Chatwoot.config[:version],
+33:      installation_host: URI.parse(ENV.fetch('FRONTEND_URL', '')).host,
+34:      installation_env: ENV.fetch('INSTALLATION_ENV', ''),
+35:      edition: ENV.fetch('CW_EDITION', '')
+39:  def self.instance_metrics
+41:      accounts_count: fetch_count(Account),
+42:      users_count: fetch_count(User),
+43:      inboxes_count: fetch_count(Inbox),
+44:      conversations_count: fetch_count(Conversation),
+45:      incoming_messages_count: fetch_count(Message.incoming),
+46:      outgoing_messages_count: fetch_count(Message.outgoing),
+51:  def self.fetch_count(model)
+55:  def self.sync_with_hub(refresh_billing: false)
+59:      info = info.merge(instance_metrics) unless ENV['DISABLE_TELEMETRY']
+60:      response = RestClient.post(ping_url, info.to_json, { content_type: :json, accept: :json })
+70:  def self.register_instance(company_name, owner_name, owner_email)
+## https://raw.githubusercontent.com/HumanSignal/label-studio/develop/label_studio/core/utils/common.py
+381:    pypi_url = 'https://pypi.org/pypi/%s/json' % label_studio.package_name
+## https://raw.githubusercontent.com/HumanSignal/label-studio/develop/label_studio/core/middleware.py
+## https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/telemetry/utils.py
+13:    MLFLOW_DISABLE_TELEMETRY,
+30:def _is_ci_env_or_testing() -> bool:
+32:    Check if the current environment is a CI environment.
+38:        "CI",  # set by many CI providers
+39:        "CIRCLECI",  # https://circleci.com/docs/variables/#built-in-environment-variables
+40:        "GITLAB_CI",  # https://docs.gitlab.com/ci/variables/predefined_variables/#predefined-variables
+## https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/telemetry/constant.py
+8:CONFIG_STAGING_URL = "https://config-staging.mlflow-telemetry.io"
+9:CONFIG_URL = "https://config.mlflow-telemetry.io"
+10:UI_CONFIG_STAGING_URL = "https://d34z9x6fp23d2z.cloudfront.net"
+11:UI_CONFIG_URL = "https://d139nb52glx00z.cloudfront.net"
+## temporal ctx
+	EnableServerVersionCheck = NewGlobalBoolSetting(
+		"frontend.enableServerVersionCheck",
+		os.Getenv("TEMPORAL_VERSION_CHECK_DISABLED") == "",
+		`EnableServerVersionCheck is a flag that controls whether or not periodic version checking is enabled`,
+	)
+	EnableTokenNamespaceEnforcement = NewGlobalBoolSetting(
+		"frontend.enableTokenNamespaceEnforcement",
+## https://raw.githubusercontent.com/temporalio/temporal/main/service/frontend/version_checker.go
+9:	enumspb "go.temporal.io/api/enums/v1"
+10:	"go.temporal.io/api/serviceerror"
+11:	versionpb "go.temporal.io/api/version/v1"
+## prefect ctx
+    analytics_enabled: bool = Field(
+        default=True,
+        description="""
+        When enabled, Prefect sends anonymous data (e.g. count of flow runs, package version)
+        on server startup to help us improve our product.
+        """,
+    )
+
+## https://raw.githubusercontent.com/dagster-io/dagster/master/python_modules/dagster/dagster/_core/telemetry.py
+2:For more information, check out the docs at https://docs.dagster.io/about/telemetry'.
+88:def telemetry_wrapper(target_fn: T_Callable) -> T_Callable: ...
+92:def telemetry_wrapper(
+98:def telemetry_wrapper(
+110:    def _wraps(f: Callable[P, T]) -> Callable[P, T]:
+## https://raw.githubusercontent.com/coder/code-server/main/src/node/routes/vscode.ts

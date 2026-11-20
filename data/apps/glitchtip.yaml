@@ -1,0 +1,13 @@
+id: glitchtip
+name: GlitchTip
+category: Error tracking
+repo: https://github.com/glitchtip/glitchtip-backend
+images:
+- glitchtip/glitchtip
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/glitchtip/glitchtip-backend/master/glitchtip/settings.py
+- https://github.com/search?q=repo%3Aglitchtip%2Fglitchtip-backend+telemetry&type=code
+- https://github.com/search?q=repo%3Aglitchtip%2Fglitchtip-backend+posthog&type=code
+notes: No telemetry found in settings.
