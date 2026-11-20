@@ -1,0 +1,14 @@
+id: zigbee2mqtt
+name: Zigbee2MQTT
+category: Home automation
+repo: https://github.com/Koenkk/zigbee2mqtt
+images:
+- koenkk/zigbee2mqtt
+- ghcr.io/koenkk/zigbee2mqtt
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.example.yaml
+- https://github.com/search?q=repo%3AKoenkk%2Fzigbee2mqtt+telemetry&type=code
+- https://github.com/search?q=repo%3AKoenkk%2Fzigbee2mqtt+posthog&type=code
+notes: No telemetry found.

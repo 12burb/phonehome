@@ -1,0 +1,29 @@
+id: dashy
+name: Dashy
+category: Dashboard
+repo: https://github.com/Lissy93/dashy
+images:
+- lissy93/dashy
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.github.com
+  block: false
+  sends: Checks the GitHub release for a newer version
+  frequency: on load
+  optout:
+    config: 'appConfig.disableUpdateChecks: true in conf.yml'
+  sources:
+  - https://raw.githubusercontent.com/Lissy93/dashy/master/docs/configuring.md
+- type: crash_report
+  default: 'off'
+  destinations:
+  - sentry.io
+  sends: Error reports only if enableErrorReporting is set (off by default)
+  frequency: on error
+  optout:
+    config: 'appConfig.enableErrorReporting: false'
+  sources:
+  - https://raw.githubusercontent.com/Lissy93/dashy/master/docs/configuring.md

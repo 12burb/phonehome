@@ -1,0 +1,13 @@
+id: filebrowser
+name: File Browser
+category: Files
+repo: https://github.com/filebrowser/filebrowser
+images:
+- filebrowser/filebrowser
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/filebrowser/filebrowser/master/README.md
+- https://github.com/search?q=repo%3Afilebrowser%2Ffilebrowser+telemetry&type=code
+- https://github.com/search?q=repo%3Afilebrowser%2Ffilebrowser+posthog&type=code
+notes: No telemetry found.

@@ -1,0 +1,14 @@
+id: localai
+name: LocalAI
+category: AI
+repo: https://github.com/mudler/LocalAI
+images:
+- localai/localai
+- quay.io/go-skynet/local-ai
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/mudler/LocalAI/master/README.md
+- https://github.com/search?q=repo%3Amudler%2FLocalAI+telemetry&type=code
+- https://github.com/search?q=repo%3Amudler%2FLocalAI+posthog&type=code
+notes: No telemetry found. Model downloads come from the galleries you select.

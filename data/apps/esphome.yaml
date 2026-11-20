@@ -1,0 +1,14 @@
+id: esphome
+name: ESPHome
+category: Home automation
+repo: https://github.com/esphome/esphome
+images:
+- ghcr.io/esphome/esphome
+- esphome/esphome
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/esphome/esphome/dev/esphome/const.py
+- https://github.com/search?q=repo%3Aesphome%2Fesphome+telemetry&type=code
+- https://github.com/search?q=repo%3Aesphome%2Fesphome+posthog&type=code
+notes: No telemetry found in the core constants.

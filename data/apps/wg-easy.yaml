@@ -1,0 +1,13 @@
+id: wg-easy
+name: wg-easy
+category: Networking
+repo: https://github.com/wg-easy/wg-easy
+images:
+- ghcr.io/wg-easy/wg-easy
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/wg-easy/wg-easy/master/README.md
+- https://github.com/search?q=repo%3Awg-easy%2Fwg-easy+telemetry&type=code
+- https://github.com/search?q=repo%3Awg-easy%2Fwg-easy+posthog&type=code
+notes: No telemetry found.

@@ -1,0 +1,13 @@
+id: firefly-iii
+name: Firefly III
+category: Finance
+repo: https://github.com/firefly-iii/firefly-iii
+images:
+- fireflyiii/core
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example
+- https://github.com/search?q=repo%3Afirefly-iii%2Ffirefly-iii+telemetry&type=code
+- https://github.com/search?q=repo%3Afirefly-iii%2Ffirefly-iii+posthog&type=code
+notes: No vendor telemetry; TRACKER_URL/TRACKER_SITE_ID are blank unless you point them at your own analytics.

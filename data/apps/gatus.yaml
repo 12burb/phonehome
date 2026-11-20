@@ -1,0 +1,14 @@
+id: gatus
+name: Gatus
+category: Monitoring
+repo: https://github.com/TwiN/gatus
+images:
+- twinproduction/gatus
+- ghcr.io/twin/gatus
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/TwiN/gatus/master/config.yaml
+- https://github.com/search?q=repo%3ATwiN%2Fgatus+telemetry&type=code
+- https://github.com/search?q=repo%3ATwiN%2Fgatus+posthog&type=code
+notes: No telemetry found; it only probes the endpoints you configure.

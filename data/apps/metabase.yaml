@@ -1,0 +1,31 @@
+id: metabase
+name: Metabase
+category: BI
+repo: https://github.com/metabase/metabase
+images:
+- metabase/metabase
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - sp.metabase.com
+  sends: 'Anonymous usage events (Snowplow): feature usage, counts, version; no query contents per vendor'
+  frequency: continuous
+  optout:
+    env:
+    - MB_ANON_TRACKING_ENABLED=false
+    ui: Admin > Settings > General > Anonymous tracking (off)
+  sources:
+  - https://raw.githubusercontent.com/metabase/metabase/master/docs/configuring-metabase/environment-variables.md
+- type: update_check
+  default: 'on'
+  destinations:
+  - static.metabase.com
+  sends: Version for update notices
+  frequency: periodic
+  optout:
+    env:
+    - MB_CHECK_FOR_UPDATES=false
+  sources:
+  - https://raw.githubusercontent.com/metabase/metabase/master/docs/configuring-metabase/environment-variables.md

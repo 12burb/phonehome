@@ -1,0 +1,13 @@
+id: adguardhome
+name: AdGuard Home
+category: Networking
+repo: https://github.com/AdguardTeam/AdGuardHome
+images:
+- adguard/adguardhome
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/README.md
+- https://github.com/search?q=repo%3AAdguardTeam%2FAdGuardHome+telemetry&type=code
+- https://github.com/search?q=repo%3AAdguardTeam%2FAdGuardHome+posthog&type=code
+notes: No usage telemetry found. It downloads the filter lists you enable and checks its own update channel.

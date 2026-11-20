@@ -1,0 +1,14 @@
+id: changedetection
+name: changedetection.io
+category: Monitoring
+repo: https://github.com/dgtlmoon/changedetection.io
+images:
+- dgtlmoon/changedetection.io
+- ghcr.io/dgtlmoon/changedetection.io
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/dgtlmoon/changedetection.io/master/README.md
+- https://github.com/search?q=repo%3Adgtlmoon%2Fchangedetection.io+telemetry&type=code
+- https://github.com/search?q=repo%3Adgtlmoon%2Fchangedetection.io+posthog&type=code
+notes: No telemetry found; it fetches only the pages you watch.
