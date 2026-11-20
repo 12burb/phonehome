@@ -51,9 +51,21 @@
   "fp": "e3b0c44298fc1c14",
   "lines": 0
  },
+ "https://docs.n8n.io/hosting/configuration/environment-variables/deployment/": {
+  "fp": "0033a5659df98d04",
+  "lines": 1
+ },
  "https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html": {
   "fp": "fd8e0b8913f37080",
   "lines": 76
+ },
+ "https://docs.nocodb.com/getting-started/self-hosted/environment-variables/": {
+  "fp": "94a6d6120ef4c3c8",
+  "lines": 18
+ },
+ "https://docs.prefect.io/v3/develop/settings-ref": {
+  "fp": "c2020cb2ade774c0",
+  "lines": 38
  },
  "https://docs.requarks.io/install/config": {
   "fp": "e3b0c44298fc1c14",
@@ -108,7 +120,7 @@
   "lines": 22
  },
  "https://github.com/twentyhq/twenty/blob/main/packages/twenty-server/src/engine/core-modules/twenty-config/config-variables.ts": {
-  "fp": "cf4ce082cd0fd74b",
+  "fp": "345d3147e8466210",
   "lines": 17
  },
  "https://github.com/umami-software/umami/blob/master/src/lib/config.ts": {
@@ -159,6 +171,10 @@
   "fp": "2723694150c94a7d",
   "lines": 17
  },
+ "https://raw.githubusercontent.com/RocketChat/Rocket.Chat/develop/apps/meteor/server/settings/general.ts": {
+  "fp": "18d8957bb90c8604",
+  "lines": 4
+ },
  "https://raw.githubusercontent.com/SonarSource/sonarqube/master/sonar-application/src/main/assembly/conf/sonar.properties": {
   "fp": "005505145889370e",
   "lines": 7
@@ -178,6 +194,10 @@
  "https://raw.githubusercontent.com/dagster-io/dagster/master/docs/docs/about/telemetry.md": {
   "fp": "57ceee4a239bc0ec",
   "lines": 9
+ },
+ "https://raw.githubusercontent.com/discourse/discourse/main/config/site_settings.yml": {
+  "fp": "6f1f5ac2d1195c69",
+  "lines": 55
  },
  "https://raw.githubusercontent.com/docmost/docmost/main/.env.example": {
   "fp": "b6d90a76f4bb1655",
@@ -203,6 +223,10 @@
   "fp": "9f207b0bd01c405e",
   "lines": 103
  },
+ "https://raw.githubusercontent.com/goharbor/harbor/main/make/harbor.yml.tmpl": {
+  "fp": "b1345afa8b6f6bb9",
+  "lines": 6
+ },
  "https://raw.githubusercontent.com/immich-app/immich/main/docs/docs/administration/system-settings.md": {
   "fp": "0522f99c15a046fe",
   "lines": 6
@@ -211,13 +235,29 @@
   "fp": "6c7aa43282e477c4",
   "lines": 65
  },
+ "https://raw.githubusercontent.com/linkwarden/linkwarden/main/.env.sample": {
+  "fp": "3ad49ce6957c1323",
+  "lines": 3
+ },
  "https://raw.githubusercontent.com/louislam/uptime-kuma/master/server/check-version.js": {
   "fp": "9548881183e1b358",
   "lines": 3
  },
+ "https://raw.githubusercontent.com/mastodon/mastodon/main/.env.production.sample": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/matomo-org/matomo/5.x-dev/config/global.ini.php": {
+  "fp": "d63ea0e5ceb0173f",
+  "lines": 183
+ },
  "https://raw.githubusercontent.com/mattermost/mattermost/master/server/public/model/config.go": {
   "fp": "d71aa52aba46e79f",
   "lines": 119
+ },
+ "https://raw.githubusercontent.com/miniflux/v2/main/internal/config/options.go": {
+  "fp": "b05dd66bec0ddd99",
+  "lines": 20
  },
  "https://raw.githubusercontent.com/navidrome/navidrome/master/conf/configuration.go": {
   "fp": "49e092ed0fd24d17",
@@ -233,6 +273,10 @@
  },
  "https://raw.githubusercontent.com/pi-hole/docker-pi-hole/master/README.md": {
   "fp": "70d72d071f0ea08d",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/plausible/community-edition/v3.0.1/README.md": {
+  "fp": "2fb1a9f2bd13d35c",
   "lines": 2
  },
  "https://raw.githubusercontent.com/pterodactyl/panel/1.0-develop/app/Console/Kernel.php": {
@@ -262,6 +306,10 @@
  "https://raw.githubusercontent.com/umami-software/umami/master/src/lib/constants.ts": {
   "fp": "db734bbc8fa51db7",
   "lines": 1
+ },
+ "https://raw.githubusercontent.com/zadam/trilium/master/README.md": {
+  "fp": "4dda22fdc1574ea1",
+  "lines": 11
  },
  "https://redash.io/help/open-source/admin-guide/env-vars-settings": {
   "fp": "5a37d184e10f0d62",
@@ -302,6 +350,10 @@
  "https://www.jenkins.io/doc/book/managing/system-configuration/": {
   "fp": "bae7260a62e169f2",
   "lines": 2
+ },
+ "https://www.meilisearch.com/docs/learn/resources/telemetry": {
+  "fp": "13db6181182a18f5",
+  "lines": 17
  },
  "https://www.windmill.dev/docs/advanced/instance_settings": {
   "fp": "ac79d7d250016756",
