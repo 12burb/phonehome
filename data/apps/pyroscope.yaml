@@ -1,0 +1,25 @@
+id: pyroscope
+name: Grafana Pyroscope
+category: Monitoring
+repo: https://github.com/grafana/pyroscope
+images:
+- grafana/pyroscope
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - stats.grafana.org
+  block: false
+  sends: 'Anonymous usage report: random cluster id and creation time, version, OS, arch, edition, deployment target/mode,
+    and aggregate metrics about configuration and cluster scale'
+  frequency: every 4 hours
+  optout:
+    cli: -usage-stats.enabled=false
+    config: "usage_stats:\n  enabled: false"
+  sources:
+  - https://raw.githubusercontent.com/grafana/pyroscope/main/docs/sources/configure-server/anonymous-usage-statistics-reporting.md
+  - https://raw.githubusercontent.com/grafana/pyroscope/main/pkg/usagestats/reporter.go
+  - https://raw.githubusercontent.com/grafana/pyroscope/main/pkg/usagestats/stats.go
+notes: Reports go to https://stats.grafana.org/phlare-usage-report. stats.grafana.org is shared by several Grafana Labs projects,
+  so it is left off the generated blocklists.
