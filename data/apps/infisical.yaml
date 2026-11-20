@@ -1,0 +1,20 @@
+id: infisical
+name: Infisical
+category: Secrets
+repo: https://github.com/Infisical/infisical
+images:
+- infisical/infisical
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - app.posthog.com
+  block: false
+  sends: Product usage events sent to PostHog with a built-in project key (exact event fields not audited here)
+  frequency: on usage
+  optout:
+    env:
+    - TELEMETRY_ENABLED=false
+  sources:
+  - https://raw.githubusercontent.com/Infisical/infisical/main/backend/src/lib/config/env.ts

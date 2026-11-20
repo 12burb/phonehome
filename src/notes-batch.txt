@@ -139,3 +139,48 @@
 105:            // See. https://www.passbolt.com/help/tech/backup
 ## https://raw.githubusercontent.com/shlinkio/shlink/develop/config/autoload/update-check.global.php
 ## https://raw.githubusercontent.com/monicahq/monica/main/config/monica.php
+## https://raw.githubusercontent.com/apache/airflow/main/airflow-core/src/airflow/config_templates/config.yml
+## https://raw.githubusercontent.com/apache/airflow/main/airflow-core/src/airflow/utils/usage_data_collection.py
+## https://raw.githubusercontent.com/Infisical/infisical/main/backend/src/lib/config/env.ts
+117:        // the singleton logger is undefined on the first parse, which happens during telemetry setup
+412:    // Telemetry
+413:    TELEMETRY_ENABLED: zodStrBool.default("true"),
+414:    POSTHOG_HOST: zpStr(z.string().optional().default("https://app.posthog.com")),
+415:    POSTHOG_PROJECT_API_KEY: zpStr(z.string().optional().default("phc_swoSUd69FLA4ztGPkBhnNHDVbrssfPkuYEGCquN33FCX")),
+## https://raw.githubusercontent.com/Budibase/budibase/master/packages/backend-core/src/environment.ts
+50:const selfHosted = !!parseInt(process.env.SELF_HOSTED || "")
+193:  SELF_HOSTED: selfHosted,
+196:  POSTHOG_TOKEN: process.env.POSTHOG_TOKEN,
+197:  POSTHOG_PERSONAL_TOKEN: process.env.POSTHOG_PERSONAL_TOKEN,
+198:  POSTHOG_API_HOST: process.env.POSTHOG_API_HOST || "https://us.i.posthog.com",
+## https://raw.githubusercontent.com/bram2w/baserow/master/backend/src/baserow/config/settings/base.py
+179:BASEROW_GROUP_STORAGE_USAGE_QUEUE = os.getenv(
+180:    "BASEROW_GROUP_STORAGE_USAGE_QUEUE", "export"
+182:BASEROW_ROLE_USAGE_QUEUE = os.getenv("BASEROW_GROUP_STORAGE_USAGE_QUEUE", "export")
+192:    "baserow.core.usage.tasks": {"queue": BASEROW_GROUP_STORAGE_USAGE_QUEUE},
+## https://raw.githubusercontent.com/gravitational/teleport/master/lib/service/service.go
+192:	usagereporter "github.com/gravitational/teleport/lib/usagereporter/teleport"
+2593:	// auth extensions can access the UsageReporter via GetAuthServer.
+3126:			if g, ok := authServer.Services.UsageReporter.(usagereporter.GracefulStopper); ok {
+## https://raw.githubusercontent.com/PostHog/posthog/master/posthog/utils.py
+649:    context["opt_out_capture"] = settings.OPT_OUT_CAPTURE
+685:        context["js_posthog_api_key"] = "phc_ex7Mnvi4DqeB6xSQoXU1UVPzAmUIpiciRKQQXGGTYQO"
+## https://raw.githubusercontent.com/mailcow/mailcow-dockerized/master/data/web/inc/functions.inc.php
+548:          'msg' => 'Mailer error (RCPT "' . htmlspecialchars($rcpt) . '"): ' . str_replace('https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting', '', $mail->ErrorInfo)
+979:function update_sogo_static_view($mailbox = null) {
+1027:      ON DUPLICATE KEY UPDATE
+## https://raw.githubusercontent.com/monicahq/monica/main/config/monica.php
+7:    | Version of the application
+10:    | This value returns the current version of the application.
+14:    'app_version' => env('APP_VERSION', readVersion(__DIR__.'/.version', 'git describe --abbrev=0 --tags', '0.0.0')),
+## https://raw.githubusercontent.com/shlinkio/shlink/develop/config/autoload/installer.global.php
+75:            Option\RealTimeUpdates\RealTimeUpdatesTopicsConfigOption::class,
+## https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/usage_statistics/logger.py
+51:    def __init__(
+59:    async def block_create(
+122:    def help_improve_mage(self) -> bool:
+125:    async def chart_impression(self, chart_config: Dict) -> bool:
+134:    async def custom_template_create(
+## https://raw.githubusercontent.com/nocobase/nocobase/main/packages/core/server/src/telemetry/index.ts
+## https://raw.githubusercontent.com/pydio/cells/main/common/config/migrations.go
+## https://raw.githubusercontent.com/mickael-kerjean/filestash/master/server/plugin/plg_starter_telemetry/index.go
