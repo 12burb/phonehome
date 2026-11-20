@@ -29,3 +29,47 @@
 275:      if (!this.options.telemetry) {
 292:        await track({
 373:      if (this.options.telemetry) {
+## pangolin
+4:        const enabled = config.getRawConfig().app.telemetry.anonymous_usage;
+20:                    host: "https://telemetry.fossorial.io/relay-O7yI"
+39:                "Pangolin gathers anonymous usage data to help us better understand how the software is used and guide future improvements and feature development. You can find 
+## parseable
+        help = "Enable/Disable checking for new Parseable release"
+    )]
+    pub check_update: bool,
+
+    #[arg(
+        long,
+        env = "P_SEND_ANONYMOUS_USAGE_DATA",
+        default_value = "true",
+        help = "Enable/Disable anonymous telemetry data collection"
+    )]
+    pub send_analytics: bool,
+
+    #[arg(
+        long,
+        env = "P_MASK_PII",
+## kestra
+    root: DISABLED
+
+  ui-anonymous-usage-report:
+    enabled: true
+
+  ui:
+    charts:
+      default-duration: P30D
+
+  anonymous-usage-report:
+    enabled: true
+    uri: https://api.kestra.io/v1/reports/server-events
+    initial-delay: 5m
+    fixed-delay: 1h
+
+  hidden-labels:
+    prefixes:
+      - system.
+## questdb
+2233:            boolean telemetryEnabled = getBoolean(properties, env, PropertyKey.TELEMETRY_ENABLED, true);
+2240:            this.telemetryConfiguration = new PropTelemetryConfiguration(telemetryEnabled, telemetryQueueCapacity, telemetryHideTables, telemetryTableTTLWeeks, telemetryThrottleInterval);
+8335:        PropTelemetryConfiguration(boolean enabled, int queueCapacity, boolean hideTable, int ttlWeeks, long ThrottleInterval) {
+## cube

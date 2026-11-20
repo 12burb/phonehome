@@ -1,0 +1,21 @@
+id: kestra
+name: Kestra
+category: Workflow
+repo: https://github.com/kestra-io/kestra
+images:
+- kestra/kestra
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - api.kestra.io
+  sends: 'Anonymous server events: instance id, version, host/JVM info, execution and flow counts; the UI sends usage events
+    too'
+  frequency: hourly (initial-delay 5m, fixed-delay 1h)
+  optout:
+    config: 'kestra.anonymous-usage-report.enabled: false and kestra.ui-anonymous-usage-report.enabled: false in application.yml'
+    env:
+    - KESTRA_ANONYMOUS_USAGE_REPORT_ENABLED=false
+  sources:
+  - https://raw.githubusercontent.com/kestra-io/kestra/develop/cli/src/main/resources/application.yml

@@ -1,0 +1,19 @@
+id: pangolin
+name: Pangolin
+category: Networking
+repo: https://github.com/fosrl/pangolin
+images:
+- fosrl/pangolin
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.fossorial.io
+  sends: Anonymous usage events via PostHog (instance id, version, feature usage); the config comment describes it as anonymous
+  frequency: continuous
+  optout:
+    config: 'app.telemetry.anonymous_usage: false in config.yml'
+  sources:
+  - https://raw.githubusercontent.com/fosrl/pangolin/main/server/lib/telemetry.ts
+  - https://raw.githubusercontent.com/fosrl/pangolin/main/config/config.example.yml
