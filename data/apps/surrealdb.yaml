@@ -1,0 +1,13 @@
+id: surrealdb
+name: SurrealDB
+category: Database
+repo: https://github.com/surrealdb/surrealdb
+images:
+- surrealdb/surrealdb
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Asurrealdb%2Fsurrealdb+telemetry&type=code
+- https://github.com/search?q=repo%3Asurrealdb%2Fsurrealdb+version.surrealdb&type=code
+notes: No telemetry or version-check code found in the server. Based on a code search of the upstream repo, not a network
+  capture.

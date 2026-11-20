@@ -1,0 +1,12 @@
+id: typesense
+name: Typesense
+category: Search
+repo: https://github.com/typesense/typesense
+images:
+- typesense/typesense
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Atypesense%2Ftypesense+telemetry&type=code
+- https://github.com/search?q=repo%3Atypesense%2Ftypesense+%22phone+home%22&type=code
+notes: No telemetry, analytics or version-check code found. Based on a code search of the upstream repo, not a network capture.

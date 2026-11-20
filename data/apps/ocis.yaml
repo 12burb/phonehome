@@ -1,0 +1,13 @@
+id: ocis
+name: ownCloud Infinite Scale
+category: Files
+repo: https://github.com/owncloud/ocis
+images:
+- owncloud/ocis
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Aowncloud%2Focis+telemetry&type=code
+- https://github.com/search?q=repo%3Aowncloud%2Focis+update.owncloud&type=code
+notes: Only operator-configured OpenTelemetry tracing; no vendor telemetry or update check found. Based on a code search of
+  the upstream repo, not a network capture.

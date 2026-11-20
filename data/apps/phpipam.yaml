@@ -1,0 +1,22 @@
+id: phpipam
+name: phpIPAM
+category: Networking
+repo: https://github.com/phpipam/phpipam
+images:
+- phpipam/phpipam-www
+- phpipam/phpipam-cron
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - github.com
+  block: false
+  sends: Fetches the GitHub releases Atom feed to compare versions; no instance data in the request
+  frequency: weekly, when an admin loads the admin menu
+  optout:
+    ui: No setting found; the check only runs for logged-in admins. Block outbound access to github.com from the container
+      if needed
+  sources:
+  - https://github.com/phpipam/phpipam/blob/master/functions/classes/class.Tools.php
+  - https://github.com/phpipam/phpipam/blob/master/public/app/sections/menu/menu-tools-admin.php
