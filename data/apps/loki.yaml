@@ -16,5 +16,5 @@ calls:
     cli: -reporting.enabled=false
   sources:
   - https://grafana.com/docs/loki/latest/configure/
-notes: Grafana Tempo and Mimir use the same analytics block.
+notes: Grafana Mimir and Pyroscope have their own entries (usage_stats block); Tempo reports to the same host.
 verified: '2026-11-14'
