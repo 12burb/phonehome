@@ -1,0 +1,12 @@
+id: rabbitmq
+name: RabbitMQ
+category: Messaging
+repo: https://github.com/rabbitmq/rabbitmq-server
+images:
+- rabbitmq
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Arabbitmq%2Frabbitmq-server+telemetry&type=code
+- https://github.com/search?q=repo%3Arabbitmq%2Frabbitmq-server+analytics&type=code
+notes: No phone-home telemetry; "telemetry" matches are local Prometheus scrape metrics.

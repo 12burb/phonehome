@@ -1,0 +1,14 @@
+id: overseerr
+name: Overseerr / Jellyseerr
+category: Media
+repo: https://github.com/sct/overseerr
+images:
+- sctx/overseerr
+- fallenbagel/jellyseerr
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/sct/overseerr/develop/README.md
+- https://github.com/search?q=repo%3Asct%2Foverseerr+telemetry&type=code
+- https://github.com/search?q=repo%3Asct%2Foverseerr+analytics&type=code
+notes: No telemetry or analytics code found; only operator-configured Plex/TMDB/*arr API calls.

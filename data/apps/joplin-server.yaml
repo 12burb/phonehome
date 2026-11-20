@@ -1,0 +1,12 @@
+id: joplin-server
+name: Joplin Server
+category: Notes
+repo: https://github.com/laurent22/joplin
+images:
+- joplin/server
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3Alaurent22%2Fjoplin+telemetry&type=code
+- https://github.com/search?q=repo%3Alaurent22%2Fjoplin+analytics&type=code
+notes: No telemetry code found in the server package (only React Native internals match "telemetry").

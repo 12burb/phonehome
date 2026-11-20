@@ -1,0 +1,14 @@
+id: jupyterhub
+name: JupyterHub
+category: Dev tools
+repo: https://github.com/jupyterhub/jupyterhub
+images:
+- quay.io/jupyterhub/jupyterhub
+- jupyterhub/jupyterhub
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/jupyterhub/jupyterhub/blob/main/docs/source/reference/event-logging.md
+- https://github.com/search?q=repo%3Ajupyterhub%2Fjupyterhub+telemetry&type=code
+- https://github.com/search?q=repo%3Ajupyterhub%2Fjupyterhub+analytics&type=code
+notes: Event logging is local (jupyter-events to operator-configured sinks); no outbound telemetry found.

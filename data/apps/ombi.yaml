@@ -1,0 +1,12 @@
+id: ombi
+name: Ombi
+category: Media
+repo: https://github.com/Ombi-app/Ombi
+images:
+- lscr.io/linuxserver/ombi
+verified: '2026-11-20'
+calls: []
+sources:
+- https://github.com/search?q=repo%3AOmbi-app%2FOmbi+telemetry&type=code
+- https://github.com/search?q=repo%3AOmbi-app%2FOmbi+analytics&type=code
+notes: No telemetry or analytics code found.

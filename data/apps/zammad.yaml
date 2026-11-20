@@ -1,0 +1,14 @@
+id: zammad
+name: Zammad
+category: Helpdesk
+repo: https://github.com/zammad/zammad
+images:
+- zammad/zammad-docker-compose
+- ghcr.io/zammad/zammad
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/zammad/zammad/develop/config/application.rb
+- https://github.com/search?q=repo%3Azammad%2Fzammad+telemetry&type=code
+- https://github.com/search?q=repo%3Azammad%2Fzammad+analytics&type=code
+notes: No telemetry code found; outbound calls are operator-configured channels (email, chat, integrations).

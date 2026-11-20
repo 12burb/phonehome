@@ -1,0 +1,14 @@
+id: jaeger
+name: Jaeger
+category: Observability
+repo: https://github.com/jaegertracing/jaeger
+images:
+- jaegertracing/jaeger
+- jaegertracing/all-in-one
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/jaegertracing/jaeger/main/README.md
+- https://github.com/search?q=repo%3Ajaegertracing%2Fjaeger+telemetry&type=code
+- https://github.com/search?q=repo%3Ajaegertracing%2Fjaeger+analytics&type=code
+notes: No telemetry or analytics code found; Jaeger receives traces, it does not report home.

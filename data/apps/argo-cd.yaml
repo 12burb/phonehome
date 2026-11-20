@@ -1,0 +1,13 @@
+id: argo-cd
+name: Argo CD
+category: CI/CD
+repo: https://github.com/argoproj/argo-cd
+images:
+- quay.io/argoproj/argocd
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/operator-manual/argocd-cmd-params-cm.yaml
+- https://github.com/search?q=repo%3Aargoproj%2Fargo-cd+telemetry&type=code
+- https://github.com/search?q=repo%3Aargoproj%2Fargo-cd+analytics&type=code
+notes: No telemetry found; the only "telemetry" options are operator-configured OpenTelemetry exporters.
