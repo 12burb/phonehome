@@ -1,0 +1,26 @@
+id: langfuse
+name: Langfuse
+category: AI
+repo: https://github.com/langfuse/langfuse
+images:
+- langfuse/langfuse
+- langfuse/langfuse-worker
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - eu.posthog.com
+  block: false
+  sends: Scheduled report to PostHog with an instance client id and aggregate usage counts for the period since the last run
+    (exact fields not audited here)
+  frequency: scheduled job
+  optout:
+    env:
+    - TELEMETRY_ENABLED=false
+  sources:
+  - https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/features/telemetry/index.ts
+  - https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/features/posthog-analytics/ServerPosthog.ts
+  - https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/env.mjs
+notes: The source ignores TELEMETRY_ENABLED=false when LANGFUSE_EE_LICENSE_KEY is set, unless the plan carries the telemetry
+  opt-out entitlement.
