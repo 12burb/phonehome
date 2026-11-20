@@ -1,0 +1,25 @@
+id: taiga
+name: Taiga
+category: Project management
+repo: https://github.com/taigaio/taiga-back
+images:
+- taigaio/taiga-back
+- taigaio/taiga-front
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - telemetry.taiga.io
+  sends: 'RudderStack event keyed by a random instance id with aggregate counts: projects by type (private/public, scrum/kanban,
+    enabled modules), total and active users, and average/median epics, user stories, tasks, issues and wiki pages per project'
+  frequency: periodic background task
+  optout:
+    env:
+    - ENABLE_TELEMETRY=False
+    config: ENABLE_TELEMETRY = False in settings/config.py
+  sources:
+  - https://raw.githubusercontent.com/taigaio/taiga-back/main/settings/common.py
+  - https://raw.githubusercontent.com/taigaio/taiga-back/main/taiga/telemetry/services.py
+  - https://raw.githubusercontent.com/taigaio/taiga-back/main/taiga/telemetry/tasks.py
+  - https://raw.githubusercontent.com/taigaio/taiga-docker/main/.env

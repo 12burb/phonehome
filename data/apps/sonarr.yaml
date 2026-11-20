@@ -17,6 +17,7 @@ calls:
   - radarr.servarr.com
   - lidarr.servarr.com
   - prowlarr.servarr.com
+  - readarr.servarr.com
   sends: Anonymous usage data and Sentry error reports (Send Anonymous Usage Data setting); update requests carry version,
     OS, architecture, runtime version and database type
   frequency: continuous
@@ -36,4 +37,5 @@ calls:
   - https://raw.githubusercontent.com/Radarr/Radarr/develop/src/NzbDrone.Core/Update/UpdatePackageProvider.cs
   - https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/src/NzbDrone.Common/Cloud/ProwlarrCloudRequestBuilder.cs
   - https://raw.githubusercontent.com/Lidarr/Lidarr/develop/src/NzbDrone.Common/Cloud/LidarrCloudRequestBuilder.cs
+  - https://raw.githubusercontent.com/Readarr/Readarr/develop/src/NzbDrone.Common/Cloud/ReadarrCloudRequestBuilder.cs
 verified: '2026-11-20'

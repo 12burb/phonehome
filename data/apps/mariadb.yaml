@@ -1,0 +1,21 @@
+id: mariadb
+name: MariaDB
+category: Database
+repo: https://github.com/MariaDB/server
+images:
+- mariadb
+- lscr.io/linuxserver/mariadb
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - feedback.mariadb.org
+  sends: 'Feedback plugin report: server version, platform, loaded plugins, selected status and system variables, anonymous
+    server id'
+  frequency: shortly after startup, then weekly, when enabled
+  optout:
+    config: Only active when the plugin is installed/enabled (--feedback=ON or plugin_load_add=feedback)
+  sources:
+  - https://raw.githubusercontent.com/MariaDB/server/main/plugin/feedback/feedback.cc
+  - https://mariadb.com/docs/server/reference/plugins/other-plugins/feedback-plugin

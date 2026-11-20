@@ -10,10 +10,13 @@ calls:
   default: 'on'
   destinations:
   - telemetry.leantime.io
-  sends: 'Daily anonymous usage summary: entity counts and versions'
-  frequency: daily
+  sends: Anonymous company GUID, version, language, user count, last login date, 7/30-day active users, and counts of projects
+    (by status), clients, comments, milestones, tickets, booked hours, and boards/items per canvas type
+  frequency: once a day
   optout:
     env:
     - LEAN_ALLOW_TELEMETRY=false
+    ui: Company settings > telemetry toggle (both the env flag and this must allow sending)
   sources:
   - https://raw.githubusercontent.com/Leantime/leantime/master/config/sample.env
+  - https://raw.githubusercontent.com/Leantime/leantime/master/app/Domain/Reports/Services/Reports.php

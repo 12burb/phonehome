@@ -1,0 +1,23 @@
+id: frappe
+name: Frappe / ERPNext
+category: Business
+repo: https://github.com/frappe/frappe
+images:
+- frappe/erpnext
+- frappe/frappe-worker
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - pulse.m.frappe.cloud
+  sends: Pulse usage events (anonymized user, app, event names) when enabled
+  frequency: per event
+  optout:
+    config: Inactive unless pulse_api_key is set in site config; also gated by System Settings > Enable Telemetry and disabled
+      in developer_mode
+  sources:
+  - https://raw.githubusercontent.com/frappe/frappe/develop/frappe/utils/telemetry/__init__.py
+  - https://raw.githubusercontent.com/frappe/frappe/develop/frappe/utils/telemetry/pulse/client.py
+  - https://raw.githubusercontent.com/frappe/frappe/develop/frappe/utils/telemetry/pulse/utils.py
+notes: A plain self-hosted bench has no pulse_api_key, so nothing is sent; Frappe Cloud sites have it set.
