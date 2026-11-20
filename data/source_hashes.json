@@ -115,6 +115,10 @@
   "fp": "f96f08e18da52aab",
   "lines": 1
  },
+ "https://github.com/jupyterhub/jupyterhub/blob/main/docs/source/reference/event-logging.md": {
+  "fp": "c24f719483d1a074",
+  "lines": 2
+ },
  "https://github.com/navidrome/navidrome/blob/master/consts/consts.go": {
   "fp": "e1aea7e0649d8a05",
   "lines": 9
@@ -159,6 +163,10 @@
   "fp": "5951ebe52c7576f0",
   "lines": 30
  },
+ "https://mariadb.com/docs/server/reference/plugins/other-plugins/feedback-plugin": {
+  "fp": "09764417d8112998",
+  "lines": 4
+ },
  "https://nocodb.com/docs/self-hosting/environment-variables": {
   "fp": "94a6d6120ef4c3c8",
   "lines": 18
@@ -194,6 +202,14 @@
  "https://raw.githubusercontent.com/Chocobozzz/PeerTube/develop/config/default.yaml": {
   "fp": "fc9e5c7843621310",
   "lines": 47
+ },
+ "https://raw.githubusercontent.com/ClickHouse/ClickHouse/master/programs/server/config.xml": {
+  "fp": "932e6380dd1b9d7d",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/DIYgod/RSSHub/master/lib/config.ts": {
+  "fp": "3a0fb4c0f5351c67",
+  "lines": 13
  },
  "https://raw.githubusercontent.com/Dokploy/dokploy/canary/packages/server/src/utils/tracking/posthog.ts": {
   "fp": "4a156901ed4408c6",
@@ -231,9 +247,21 @@
   "fp": "e3b0c44298fc1c14",
   "lines": 0
  },
+ "https://raw.githubusercontent.com/Leantime/leantime/master/app/Domain/Reports/Services/Reports.php": {
+  "fp": "1b029715e9f6dfd8",
+  "lines": 79
+ },
+ "https://raw.githubusercontent.com/Leantime/leantime/master/config/sample.env": {
+  "fp": "5b068e438238921a",
+  "lines": 9
+ },
  "https://raw.githubusercontent.com/LemmyNet/lemmy/main/config/defaults.hjson": {
   "fp": "626a54237a3c6d77",
   "lines": 2
+ },
+ "https://raw.githubusercontent.com/Lidarr/Lidarr/develop/src/NzbDrone.Common/Cloud/LidarrCloudRequestBuilder.cs": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
  },
  "https://raw.githubusercontent.com/LimeSurvey/LimeSurvey/master/application/config/config-defaults.php": {
   "fp": "064b9b8aea7d5ace",
@@ -259,6 +287,10 @@
   "fp": "ba164cfe17b07f9d",
   "lines": 15
  },
+ "https://raw.githubusercontent.com/MariaDB/server/main/plugin/feedback/feedback.cc": {
+  "fp": "03494f1349356fa8",
+  "lines": 6
+ },
  "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/docker/.env.example": {
   "fp": "2723694150c94a7d",
   "lines": 17
@@ -270,6 +302,26 @@
  "https://raw.githubusercontent.com/OctoPrint/OctoPrint/master/src/octoprint/plugins/tracking/__init__.py": {
   "fp": "6a0050963866c3bb",
   "lines": 72
+ },
+ "https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/src/NzbDrone.Common/Cloud/ProwlarrCloudRequestBuilder.cs": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/Radarr/Radarr/develop/src/NzbDrone.Common/Cloud/RadarrCloudRequestBuilder.cs": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/Radarr/Radarr/develop/src/NzbDrone.Core/Configuration/ConfigFileProvider.cs": {
+  "fp": "260ed2c1f8a1c645",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/Radarr/Radarr/develop/src/NzbDrone.Core/Update/UpdatePackageProvider.cs": {
+  "fp": "70e239ceee651a40",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/Readarr/Readarr/develop/src/NzbDrone.Common/Cloud/ReadarrCloudRequestBuilder.cs": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
  },
  "https://raw.githubusercontent.com/RocketChat/Rocket.Chat/develop/apps/meteor/server/settings/general.ts": {
   "fp": "18d8957bb90c8604",
@@ -319,6 +371,10 @@
   "fp": "188f8fd293d2ad29",
   "lines": 4
  },
+ "https://raw.githubusercontent.com/YOURLS/YOURLS/master/includes/functions-http.php": {
+  "fp": "369ee50a83a862cd",
+  "lines": 5
+ },
  "https://raw.githubusercontent.com/actualbudget/actual/master/packages/sync-server/src/load-config.js": {
   "fp": "e3b0c44298fc1c14",
   "lines": 0
@@ -335,6 +391,18 @@
   "fp": "0ac190e51c0422e1",
   "lines": 43
  },
+ "https://raw.githubusercontent.com/apache/couchdb/main/rel/overlay/etc/default.ini": {
+  "fp": "4b0a8c9fff243113",
+  "lines": 29
+ },
+ "https://raw.githubusercontent.com/apache/superset/master/superset-frontend/packages/superset-ui-core/src/components/TelemetryPixel/index.tsx": {
+  "fp": "70e8c76c0b884f5b",
+  "lines": 13
+ },
+ "https://raw.githubusercontent.com/apache/superset/master/superset/config.py": {
+  "fp": "dde8e2006e5a2c1f",
+  "lines": 182
+ },
  "https://raw.githubusercontent.com/appwrite/appwrite/main/.env": {
   "fp": "4a62aa1080c3d8ce",
   "lines": 16
@@ -343,9 +411,21 @@
   "fp": "b5618c59f27f3cc8",
   "lines": 60
  },
+ "https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/operator-manual/argocd-cmd-params-cm.yaml": {
+  "fp": "df5afe6c6af0701a",
+  "lines": 30
+ },
  "https://raw.githubusercontent.com/authelia/authelia/master/config.template.yml": {
   "fp": "69ccec4e92046344",
   "lines": 47
+ },
+ "https://raw.githubusercontent.com/automatisch/automatisch/main/packages/backend/src/config/app.js": {
+  "fp": "8a1970a0ea792c11",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/automatisch/automatisch/main/packages/backend/src/helpers/telemetry/index.js": {
+  "fp": "704963e9f18f8e12",
+  "lines": 24
  },
  "https://raw.githubusercontent.com/baptisteArno/typebot.io/main/packages/env/src/index.ts": {
   "fp": "7e9cb54dfd2c5ae4",
@@ -354,6 +434,14 @@
  "https://raw.githubusercontent.com/baptisteArno/typebot.io/main/packages/telemetry/src/trackEvents.ts": {
   "fp": "69ea1ea0016fcd5a",
   "lines": 2
+ },
+ "https://raw.githubusercontent.com/binwiederhier/ntfy/main/docs/privacy.md": {
+  "fp": "4793cdb7c748ac7f",
+  "lines": 12
+ },
+ "https://raw.githubusercontent.com/binwiederhier/ntfy/main/server/server.yml": {
+  "fp": "1b2123bda3226c18",
+  "lines": 12
  },
  "https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/analytics/reporter.py": {
   "fp": "a650687dd0a14994",
@@ -451,9 +539,45 @@
   "fp": "33f8cd2dd4a12617",
   "lines": 1
  },
+ "https://raw.githubusercontent.com/dragonflydb/dragonfly/main/src/server/dfly_main.cc": {
+  "fp": "c45eba3bf040c77a",
+  "lines": 13
+ },
+ "https://raw.githubusercontent.com/dragonflydb/dragonfly/main/src/server/version_monitor.cc": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/drakkan/sftpgo/main/sftpgo.json": {
+  "fp": "3e537723e66e6e42",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/duplicati/duplicati/master/Duplicati/Library/UsageReporter/ReportSet.cs": {
+  "fp": "d62196da6d8c0ccd",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/duplicati/duplicati/master/Duplicati/Library/UsageReporter/ReportSetUploader.cs": {
+  "fp": "f473527f769b6e85",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/duplicati/duplicati/master/Duplicati/Library/UsageReporter/Reporter.cs": {
+  "fp": "69614d348351b539",
+  "lines": 62
+ },
  "https://raw.githubusercontent.com/element-hq/synapse/develop/docs/usage/configuration/config_documentation.md": {
   "fp": "69224716243010c2",
   "lines": 96
+ },
+ "https://raw.githubusercontent.com/emqx/emqx/master/apps/emqx_license/src/emqx_license_checker.erl": {
+  "fp": "22e41d23e1fd162f",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/emqx/emqx/master/apps/emqx_telemetry/src/emqx_telemetry.erl": {
+  "fp": "cc82ee76b1cca036",
+  "lines": 82
+ },
+ "https://raw.githubusercontent.com/emqx/emqx/master/apps/emqx_telemetry/src/emqx_telemetry_config.erl": {
+  "fp": "61d816efd05690c4",
+  "lines": 19
  },
  "https://raw.githubusercontent.com/ente-io/ente/main/server/configurations/local.yaml": {
   "fp": "840e8dd0330d0ffe",
@@ -499,6 +623,18 @@
   "fp": "c2d295b29a0d4c2e",
   "lines": 40
  },
+ "https://raw.githubusercontent.com/frappe/frappe/develop/frappe/utils/telemetry/__init__.py": {
+  "fp": "51479f0d41d8f0fb",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/frappe/frappe/develop/frappe/utils/telemetry/pulse/client.py": {
+  "fp": "20c486cb0d58f3b3",
+  "lines": 10
+ },
+ "https://raw.githubusercontent.com/frappe/frappe/develop/frappe/utils/telemetry/pulse/utils.py": {
+  "fp": "e2882cf90a57fcbb",
+  "lines": 2
+ },
  "https://raw.githubusercontent.com/getsentry/sentry/master/src/sentry/conf/server.py": {
   "fp": "51fd6d361b08dc1f",
   "lines": 62
@@ -510,6 +646,14 @@
  "https://raw.githubusercontent.com/glanceapp/glance/main/README.md": {
   "fp": "4b11ea0529c9c9ac",
   "lines": 2
+ },
+ "https://raw.githubusercontent.com/glpi-project/glpi/main/src/Telemetry.php": {
+  "fp": "e413994376c7e254",
+  "lines": 29
+ },
+ "https://raw.githubusercontent.com/glpi-project/glpi/main/stubs/glpi_constants.php": {
+  "fp": "b8120fd1e2a9f7e1",
+  "lines": 3
  },
  "https://raw.githubusercontent.com/go-gitea/gitea/main/custom/conf/app.example.ini": {
   "fp": "9f207b0bd01c405e",
@@ -531,9 +675,61 @@
   "fp": "7651b0438ffacf03",
   "lines": 1
  },
+ "https://raw.githubusercontent.com/grafana/k6/master/internal/cmd/config.go": {
+  "fp": "be513514d94fcea3",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/grafana/k6/master/internal/cmd/report.go": {
+  "fp": "adeabfa9a2199b1a",
+  "lines": 34
+ },
+ "https://raw.githubusercontent.com/gravitl/netmaker/master/logic/telemetry.go": {
+  "fp": "8644459c2e40948b",
+  "lines": 20
+ },
+ "https://raw.githubusercontent.com/gravitl/netmaker/master/logic/timer.go": {
+  "fp": "9ca69252e4f736f4",
+  "lines": 8
+ },
+ "https://raw.githubusercontent.com/gravitl/netmaker/master/servercfg/serverconf.go": {
+  "fp": "f80f642697f01761",
+  "lines": 19
+ },
  "https://raw.githubusercontent.com/grokability/snipe-it/master/.env.example": {
   "fp": "29653ca5dac6a72f",
   "lines": 2
+ },
+ "https://raw.githubusercontent.com/growthbook/growthbook/main/packages/back-end/src/util/secrets.ts": {
+  "fp": "546930108a2da3fa",
+  "lines": 14
+ },
+ "https://raw.githubusercontent.com/growthbook/growthbook/main/packages/front-end/services/track.ts": {
+  "fp": "ead4241b837cd2f7",
+  "lines": 56
+ },
+ "https://raw.githubusercontent.com/haiwen/seahub/master/seahub/settings.py": {
+  "fp": "14c2f467bc5a0da8",
+  "lines": 17
+ },
+ "https://raw.githubusercontent.com/hashicorp/consul/main/agent/config/builder.go": {
+  "fp": "7ae1e5946c27fc16",
+  "lines": 55
+ },
+ "https://raw.githubusercontent.com/hashicorp/consul/main/agent/config/runtime.go": {
+  "fp": "405cb7b00ff772e5",
+  "lines": 16
+ },
+ "https://raw.githubusercontent.com/hashicorp/go-checkpoint/master/check.go": {
+  "fp": "7005343b350dbf15",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/hashicorp/nomad/main/command/agent/command.go": {
+  "fp": "be89b654ee77cbc4",
+  "lines": 23
+ },
+ "https://raw.githubusercontent.com/hashicorp/nomad/main/command/agent/config.go": {
+  "fp": "c99ac9a3355557a5",
+  "lines": 77
  },
  "https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/config/default.js": {
   "fp": "d5ea877e77374008",
@@ -566,6 +762,14 @@
  "https://raw.githubusercontent.com/invoiceninja/invoiceninja/v5-stable/.env.example": {
   "fp": "e3b0c44298fc1c14",
   "lines": 0
+ },
+ "https://raw.githubusercontent.com/iv-org/invidious/master/config/config.example.yml": {
+  "fp": "eeaf83d1f2474484",
+  "lines": 19
+ },
+ "https://raw.githubusercontent.com/jaegertracing/jaeger/main/README.md": {
+  "fp": "f1e78a7270cdfe15",
+  "lines": 5
  },
  "https://raw.githubusercontent.com/jgraph/docker-drawio/dev/README.md": {
   "fp": "0b0b50f37822b722",
@@ -611,6 +815,14 @@
   "fp": "e3b0c44298fc1c14",
   "lines": 0
  },
+ "https://raw.githubusercontent.com/librenms/librenms/master/LibreNMS/Util/Stats.php": {
+  "fp": "8e93118647666d24",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/librenms/librenms/master/doc/General/Callback-Stats-and-Privacy.md": {
+  "fp": "f2732c1336ec43c5",
+  "lines": 8
+ },
  "https://raw.githubusercontent.com/lightdash/lightdash/main/packages/backend/src/config/parseConfig.ts": {
   "fp": "4917d555c9fe7b63",
   "lines": 48
@@ -618,6 +830,10 @@
  "https://raw.githubusercontent.com/linkwarden/linkwarden/main/.env.sample": {
   "fp": "3ad49ce6957c1323",
   "lines": 3
+ },
+ "https://raw.githubusercontent.com/lldap/lldap/main/lldap_config.docker_template.toml": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
  },
  "https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml": {
   "fp": "e3b0c44298fc1c14",
@@ -646,6 +862,18 @@
  "https://raw.githubusercontent.com/makeplane/plane/preview/apps/api/plane/settings/common.py": {
   "fp": "3da0fad3a1be3418",
   "lines": 1
+ },
+ "https://raw.githubusercontent.com/manticoresoftware/manticoresearch-buddy/main/test/Buddy/src/Lib/TelemetryHeadersTest.php": {
+  "fp": "c52a73e82606dde2",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/manticoresoftware/manticoresearch/master/manual/english/Telemetry.md": {
+  "fp": "89d65c968d2664ea",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/manticoresoftware/manticoresearch/master/src/searchd.cpp": {
+  "fp": "eb98b1c43bd697cb",
+  "lines": 73
  },
  "https://raw.githubusercontent.com/mastodon/mastodon/main/.env.production.sample": {
   "fp": "e3b0c44298fc1c14",
@@ -679,6 +907,18 @@
   "fp": "b05dd66bec0ddd99",
   "lines": 20
  },
+ "https://raw.githubusercontent.com/minio/minio/master/cmd/callhome.go": {
+  "fp": "8ca37e7be1088e04",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/minio/minio/master/internal/config/callhome/callhome.go": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/minio/minio/master/internal/config/subnet/config.go": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
  "https://raw.githubusercontent.com/misskey-dev/misskey/develop/.config/example.yml": {
   "fp": "e0aaa9e053bb6fbf",
   "lines": 11
@@ -695,6 +935,22 @@
   "fp": "0e47dc2e875d344c",
   "lines": 23
  },
+ "https://raw.githubusercontent.com/moghtech/komodo/main/config/core.config.toml": {
+  "fp": "f2131d8f6345fdd7",
+  "lines": 43
+ },
+ "https://raw.githubusercontent.com/monicahq/monica/main/.env.example": {
+  "fp": "cbb782cf215523d6",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/morpheus65535/bazarr/master/bazarr/app/config.py": {
+  "fp": "e26a0a724bfdb914",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/morpheus65535/bazarr/master/bazarr/utilities/analytics.py": {
+  "fp": "d99942d7f7241ce9",
+  "lines": 25
+ },
  "https://raw.githubusercontent.com/mudler/LocalAI/master/README.md": {
   "fp": "19897def42a5183b",
   "lines": 1
@@ -702,6 +958,14 @@
  "https://raw.githubusercontent.com/navidrome/navidrome/master/conf/configuration.go": {
   "fp": "49e092ed0fd24d17",
   "lines": 28
+ },
+ "https://raw.githubusercontent.com/neo4j/neo4j/2026.10/community/configuration/src/main/java/org/neo4j/configuration/GraphDatabaseSettings.java": {
+  "fp": "b8ad73c484754cf7",
+  "lines": 28
+ },
+ "https://raw.githubusercontent.com/neo4j/neo4j/2026.10/community/udc/src/main/java/org/neo4j/udc/UserDataCollector.java": {
+  "fp": "b9f549801181254f",
+  "lines": 23
  },
  "https://raw.githubusercontent.com/netbirdio/netbird/main/management/cmd/management.go": {
   "fp": "c7055049d2d00307",
@@ -859,9 +1123,33 @@
   "fp": "1308b29837ff5cf4",
   "lines": 34
  },
+ "https://raw.githubusercontent.com/redis/redis/unstable/redis.conf": {
+  "fp": "d7c68cd17b1e7e5c",
+  "lines": 95
+ },
  "https://raw.githubusercontent.com/sabnzbd/sabnzbd/develop/sabnzbd/cfg.py": {
   "fp": "a2d5e24252e8bfdb",
   "lines": 2
+ },
+ "https://raw.githubusercontent.com/sct/overseerr/develop/README.md": {
+  "fp": "332a98a4931c8649",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/searxng/searxng/master/searx/settings.yml": {
+  "fp": "daecd5015dc55044",
+  "lines": 10
+ },
+ "https://raw.githubusercontent.com/sissbruecker/linkding/master/bookmarks/settings/base.py": {
+  "fp": "5094046fac9e48fc",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/streamlit/streamlit/develop/frontend/app/src/MetricsManager.ts": {
+  "fp": "dfd0400a9908236c",
+  "lines": 42
+ },
+ "https://raw.githubusercontent.com/streamlit/streamlit/develop/lib/streamlit/config.py": {
+  "fp": "cc60fd6bfb374ec3",
+  "lines": 21
  },
  "https://raw.githubusercontent.com/supabase/supabase/master/apps/studio/lib/constants/index.ts": {
   "fp": "5b335f826a74bca0",
@@ -886,6 +1174,38 @@
  "https://raw.githubusercontent.com/supertokens/supertokens-core/master/src/main/java/io/supertokens/cronjobs/telemetry/Telemetry.java": {
   "fp": "9e7ab5eb3c14faa5",
   "lines": 27
+ },
+ "https://raw.githubusercontent.com/taigaio/taiga-back/main/settings/common.py": {
+  "fp": "b318855db01c57c0",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/taigaio/taiga-back/main/taiga/telemetry/services.py": {
+  "fp": "5748dca261f215c0",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/taigaio/taiga-back/main/taiga/telemetry/tasks.py": {
+  "fp": "4b0c924cb50b2031",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/taigaio/taiga-docker/main/.env": {
+  "fp": "ac4126465820b1ac",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/temporalio/temporal/main/common/dynamicconfig/constants.go": {
+  "fp": "e7737d78f32937cb",
+  "lines": 12
+ },
+ "https://raw.githubusercontent.com/temporalio/temporal/main/common/versioninfo/caller.go": {
+  "fp": "bee3ef7704542281",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/temporalio/temporal/main/common/versioninfo/request.go": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/temporalio/temporal/main/service/frontend/version_checker.go": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
  },
  "https://raw.githubusercontent.com/timescale/docs/latest/self-hosted/configuration/telemetry.md": {
   "fp": "2af5dc238040e4a6",
@@ -935,6 +1255,14 @@
   "fp": "c9cf7869d4111d4a",
   "lines": 2
  },
+ "https://raw.githubusercontent.com/woodpecker-ci/woodpecker/main/cmd/server/flags.go": {
+  "fp": "ff0eae3bbfceacee",
+  "lines": 92
+ },
+ "https://raw.githubusercontent.com/woodpecker-ci/woodpecker/main/web/src/compositions/useVersion.ts": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
  "https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/src/yb/server/call_home.cc": {
   "fp": "1b67d111232e5ec2",
   "lines": 2
@@ -946,6 +1274,10 @@
  "https://raw.githubusercontent.com/zadam/trilium/master/README.md": {
   "fp": "4dda22fdc1574ea1",
   "lines": 11
+ },
+ "https://raw.githubusercontent.com/zammad/zammad/develop/config/application.rb": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
  },
  "https://raw.githubusercontent.com/zitadel/zitadel/main/cmd/defaults.yaml": {
   "fp": "bf31a47c7254c388",
