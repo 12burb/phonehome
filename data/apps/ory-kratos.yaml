@@ -1,0 +1,26 @@
+id: ory-kratos
+name: Ory Kratos
+category: Auth
+repo: https://github.com/ory/kratos
+images:
+- oryd/kratos
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - api.segment.io
+  block: false
+  sends: '"Software quality assurance" usage: hashed deployment id, version/build hash, whitelisted request paths and response
+    codes, sent via Segment with an embedded write key; disabled automatically in dev mode'
+  frequency: continuous
+  optout:
+    cli: --sqa-opt-out
+    env:
+    - SQA_OPT_OUT=true
+    config: 'sqa.opt_out: true in kratos.yml'
+  sources:
+  - https://raw.githubusercontent.com/ory/kratos/master/cmd/daemon/serve.go
+  - https://raw.githubusercontent.com/ory/x/master/metricsx/middleware.go
+  - https://www.ory.com/docs/ecosystem/sqa
+notes: Ory Hydra, Keto and Oathkeeper use the same ory/x metricsx package and flags.

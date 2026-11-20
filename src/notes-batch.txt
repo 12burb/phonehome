@@ -429,3 +429,28 @@ export const analyticsEnabled = async (opts?: {
 166:  allowGravatar: toBooleanConfig(process.env.CMD_ALLOW_GRAVATAR),
 ## https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/web/auth/utils.js
 ## https://api.github.com/repos/duplicati/duplicati/contents/Duplicati/Library/UsageReporter
+## https://raw.githubusercontent.com/ory/x/master/metricsx/middleware.go
+186:		l.Info("Software quality assurance features are enabled. Learn more at: https://www.ory.com/docs/ecosystem/sqa")
+## https://raw.githubusercontent.com/ory/x/master/metricsx/middleware.go
+62:// Hash returns a hashed string of the value.
+63:func Hash(value string) string {
+73:	// DeploymentId represents the cluster id, typically a hash of some unique configuration properties.
+94:	// BuildHash represents the build git hash.
+95:	BuildHash string
+## https://raw.githubusercontent.com/ory/kratos/master/driver/registry_default.go
+## https://raw.githubusercontent.com/ory/kratos/master/cmd/daemon/serve.go
+40:	"github.com/ory/x/metricsx"
+83:	n.Use(sqa(ctx, cmd, r))
+100:	// Disable CSRF for these endpoints
+187:	n.Use(sqa(ctx, cmd, r))
+242:func sqa(ctx context.Context, cmd *cobra.Command, d driver.Registry) *metricsx.Service {
+## https://raw.githubusercontent.com/gravitational/teleport/master/lib/service/service.go
+## https://raw.githubusercontent.com/gravitational/teleport/master/lib/auth/auth.go
+93:	prehogv1a "github.com/gravitational/teleport/gen/proto/go/prehog/v1alpha"
+6615:		ProposedState: prehogProposedStateFromRequestState(params.Review.ProposedState),
+6621:func prehogProposedStateFromRequestState(state types.RequestState) prehogv1a.AccessRequestReviewEvent_ProposedState {
+6624:		return prehogv1a.AccessRequestReviewEvent_PROPOSED_STATE_APPROVED
+## kratos sqa ctx
+1:func sqa(ctx context.Context, cmd *cobra.Command, d driver.Registry) *metricsx.Service {
+28:			IsDevelopment: d.Config().IsInsecureDevMode(ctx),
+29:			WriteKey:      "qQlI6q8Q4WvkzTjKQSor4sHYOikHIvvi",
