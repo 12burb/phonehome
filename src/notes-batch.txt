@@ -860,3 +860,75 @@ traefik umami uptime-kuma ## langfuse ctx
 75:	Telemetry struct {
 78:	} `json:"telemetry"`
 166:// IsTelemetryEnabled returns true if telemetry is enabled.
+## https://raw.githubusercontent.com/percona/pmm/main/managed/services/telemetry/config.default.yml
+## https://raw.githubusercontent.com/percona/pmm/main/managed/services/telemetry/config.go
+61:	SaasHostname string          `yaml:"saas_hostname"`
+92:		Host   string
+193:	if c.SaasHostname == "" {
+194:		host, err := envvars.GetPlatformAddress()
+195:		c.SaasHostname = host
+197:			return fmt.Errorf("failed to get SaaSHost: %w", err)
+## https://raw.githubusercontent.com/percona/pmm/main/managed/utils/envvars/parser.go
+65://   - PMM_ENABLE_TELEMETRY is a boolean flag to enable or disable pmm telemetry;
+146:		case "PERCONA_TELEMETRY_DISABLE":
+147:			// skip the Pillars telemetry environment variable
+159:		case "PMM_ENABLE_TELEMETRY":
+165:			envSettings.EnableTelemetry = &b
+## https://raw.githubusercontent.com/percona/pmm/main/managed/models/settings.go
+32:	UpdatesEnabledDefault              = true
+71:	Updates struct {
+73:	} `json:"updates"`
+166:// IsTelemetryEnabled returns true if telemetry is enabled.
+167:func (s *Settings) IsTelemetryEnabled() bool {
+## https://raw.githubusercontent.com/LimeSurvey/LimeSurvey/master/application/config/config-defaults.php
+532:* $updatecheckperiod - sets how often LimeSurvey checks for updates - the number sets the number of days between updates.
+536:$config['updatecheckperiod'] = 7;
+## https://raw.githubusercontent.com/langgenius/dify/main/api/configs/feature/__init__.py
+947:    CHECK_UPDATE_URL: str = Field(
+949:        default="https://updates.dify.ai",
+## https://raw.githubusercontent.com/langgenius/dify/main/api/controllers/console/version.py
+## https://raw.githubusercontent.com/milvus-io/milvus/master/README.md
+## https://raw.githubusercontent.com/Swetrix/swetrix/main/README.md
+## https://raw.githubusercontent.com/langgenius/dify/main/api/controllers/console/version.py
+## https://raw.githubusercontent.com/langgenius/dify/main/docker/.env.example
+## https://raw.githubusercontent.com/percona/pmm/main/managed/utils/envvars/parser.go
+37:	defaultPlatformAddress    = "https://check-dev.percona.com"
+601:		logrus.Infof("Using default Percona Platform address: %s.", defaultPlatformAddress)
+602:		return defaultPlatformAddress, nil
+## limesurvey ctx
+ * Can be updated via GUI after installation
+ * @var boolean
+ */
+$config['filterxsshtml'] = true;
+/** filterxsshtml_forcedall
+ * Force filterxsshtml to true
+ * Disable update in admin GUI
+ * Enables filtering of suspicious html tags for superadmin too
+ * @var boolean
+ */
+$config['filterxsshtml_forcedall'] = false;
+/** filterxsshtml_allowforcedsuperadmin
+/**
+* $updatecheckperiod - sets how often LimeSurvey checks for updates - the number sets the number of days between updates.
+* Set to 0 to disable any update checks
+* Recommended: 7
+*/
+$config['updatecheckperiod'] = 7;
+/**
+## https://raw.githubusercontent.com/LimeSurvey/LimeSurvey/master/application/helpers/update/updatecheck_helper.php
+## limesurvey search
+
+## repo:LimeSurvey/LimeSurvey comfortupdate.limesurvey.org 2
+ - LimeSurvey/LimeSurvey application/config/updater_version.php
+    > // THIS FILE SHOULD NOT BE CHANGED MANUALLY ! $config['updaterversion'] = 20; $config['comfort_update_server_url'] = 'comfortupdate.limesurvey.org'; $config['comfort_update_server_ssl'] = 1; $co
+ - LimeSurvey/LimeSurvey application/core/plugins/TwoFactorAdminLogin/config.xml
+    > <updater> <stable>1</stable> <type>rest</type> <source>https://comfortupdate.limesurvey.org/index.php?r=limestorerest</source> </updater> </updaters> </config>
+## dify search
+
+## repo:langgenius/dify CHECK_UPDATE_URL 4
+ - langgenius/dify api/controllers/console/system.py
+    > ) def check_version_update(query: VersionQuery) -> VersionResponse: """Check for application version updates.""" check_update_url = dify_config.CHECK_UPDATE_URL result = VersionResponse( version
+ - langgenius/dify api/configs/feature/__init__.py
+    > Configuration for application update checks """ CHECK_UPDATE_URL: str = Field( description="URL to check for application updates", default="https://updates.dify.ai", )
+ - langgenius/dify docker/envs/core-services/api-worker.defaults
+    > # LANG=C.UTF-8 # LC_ALL=C.UTF-8 # PYTHONIOENCODING=utf-8 # CHECK_UPDATE_URL=https://updates.dify.ai # OPENAI_API_BASE=https://api.openai.com/v1 # Nacos remote settings source HTTP timeouts (seco

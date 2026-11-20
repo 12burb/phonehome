@@ -1,0 +1,38 @@
+id: percona-pmm
+name: Percona Monitoring and Management (PMM)
+category: Monitoring
+repo: https://github.com/percona/pmm
+images:
+- percona/pmm-server
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - check.percona.com
+  - check-dev.percona.com
+  sends: Server id, version, OS, enabled features and metrics defined in config.default.yml (monitored node/service counts,
+    feature toggles) to Percona Platform
+  frequency: daily (start delay then interval)
+  optout:
+    env:
+    - PMM_ENABLE_TELEMETRY=false
+    ui: Configuration > Settings > Advanced Settings > Telemetry (off)
+  sources:
+  - https://raw.githubusercontent.com/percona/pmm/main/managed/models/settings.go
+  - https://raw.githubusercontent.com/percona/pmm/main/managed/utils/envvars/parser.go
+  - https://raw.githubusercontent.com/percona/pmm/main/managed/services/telemetry/config.go
+  - https://raw.githubusercontent.com/percona/pmm/main/managed/services/telemetry/config.default.yml
+- type: update_check
+  default: 'on'
+  destinations:
+  - check.percona.com
+  sends: Version for update notifications
+  frequency: periodic
+  optout:
+    env:
+    - PMM_ENABLE_UPDATES=false
+    ui: Settings > Advanced Settings > Check for updates (off)
+  sources:
+  - https://raw.githubusercontent.com/percona/pmm/main/managed/models/settings.go
+notes: The default platform address compiled into the open-source tree is check-dev.percona.com; release builds point at check.percona.com.
