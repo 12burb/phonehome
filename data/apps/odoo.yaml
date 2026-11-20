@@ -10,8 +10,8 @@ calls:
   default: 'on'
   destinations:
   - services.odoo.com
-  sends: '"Publisher warranty" update notification: database UUID, active user count, version, installed modules, company
-    name/email and basic system info'
+  sends: '"Publisher warranty" message: database UUID, database name and creation date, web base URL, version, language, total/active
+    user counts, installed app names, enterprise code, and the company name, email and phone'
   frequency: 'weekly cron (Publisher: Update Notification)'
   optout:
     ui: 'Settings > Technical > Scheduled Actions > "Publisher: Update Notification" (deactivate)'

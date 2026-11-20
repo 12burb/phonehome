@@ -1,0 +1,20 @@
+id: pretix
+name: pretix
+category: Ticketing
+repo: https://github.com/pretix/pretix
+images:
+- pretix/standalone
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - pretix.eu
+  block: false
+  sends: Random installation id, pretix version, total and live event counts, and the name/version of every installed plugin
+  frequency: about once every 23 hours
+  optout:
+    ui: Global settings > Update check > uncheck "Perform update checks"
+  sources:
+  - https://raw.githubusercontent.com/pretix/pretix/master/src/pretix/base/services/update_check.py
+  - https://raw.githubusercontent.com/pretix/pretix/master/src/pretix/base/settings.py
