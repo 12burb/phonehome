@@ -1,4 +1,8 @@
 {
+ "https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/custom/conf/app.example.ini": {
+  "fp": "d1cbb42b42481f4b",
+  "lines": 91
+ },
  "https://coder.com/docs/code-server/FAQ": {
   "fp": "5901c65619a33ecf",
   "lines": 18
@@ -31,9 +35,17 @@
   "fp": "4bd85be4178147a4",
   "lines": 22
  },
+ "https://docs.crowdsec.net/docs/central_api/intro": {
+  "fp": "d220a3073bcece23",
+  "lines": 3
+ },
  "https://docs.directus.io/self-hosted/config-options.html": {
   "fp": "ab5b61c3a2e6c1cb",
   "lines": 3
+ },
+ "https://docs.ghost.org/config#privacy": {
+  "fp": "03d6f91991ca9d68",
+  "lines": 10
  },
  "https://docs.gitlab.com/administration/settings/usage_statistics/": {
   "fp": "53adb43baecad267",
@@ -84,48 +96,48 @@
   "lines": 24
  },
  "https://github.com/Kareadita/Kavita/blob/develop/Kavita.Common/Configuration.cs": {
-  "fp": "ee24a744ee97e9e0",
-  "lines": 3
+  "fp": "910082b58479dcdb",
+  "lines": 2
  },
  "https://github.com/Kareadita/Kavita/blob/develop/Kavita.Database/Seed.cs": {
-  "fp": "b1cda17a937fa34d",
-  "lines": 5
+  "fp": "036389410a69790f",
+  "lines": 3
  },
  "https://github.com/Kareadita/Kavita/blob/develop/Kavita.Services/StatsService.cs": {
-  "fp": "3f9cfc861d20e9a1",
-  "lines": 10
+  "fp": "4396996f49a715f3",
+  "lines": 7
  },
  "https://github.com/SonarSource/sonarqube/blob/master/server/sonar-process/src/main/java/org/sonar/process/ProcessProperties.java": {
-  "fp": "00f52a042e8070db",
-  "lines": 4
+  "fp": "f75251f65d9feace",
+  "lines": 7
  },
  "https://github.com/amir20/dozzle/blob/master/docs/guide/analytics.md": {
-  "fp": "489a9d87a84036d0",
-  "lines": 12
- },
- "https://github.com/homarr-labs/homarr/blob/dev/packages/analytics/src/client.ts": {
-  "fp": "2853fadf8b6c4303",
-  "lines": 5
- },
- "https://github.com/navidrome/navidrome/blob/master/consts/consts.go": {
-  "fp": "61a8391d8bc60065",
+  "fp": "c564a8112926d252",
   "lines": 8
  },
+ "https://github.com/homarr-labs/homarr/blob/dev/packages/analytics/src/client.ts": {
+  "fp": "f96f08e18da52aab",
+  "lines": 1
+ },
+ "https://github.com/navidrome/navidrome/blob/master/consts/consts.go": {
+  "fp": "e1aea7e0649d8a05",
+  "lines": 9
+ },
  "https://github.com/open-webui/open-webui/blob/main/backend/open_webui/config.py": {
-  "fp": "b66e5a241902c1be",
-  "lines": 4
+  "fp": "30cc9e574a6ff17d",
+  "lines": 6
  },
  "https://github.com/traefik/traefik/blob/master/docs/content/contributing/data-collection.md": {
-  "fp": "896936865f4a223b",
-  "lines": 22
+  "fp": "9ac15fb7b95511c9",
+  "lines": 20
  },
  "https://github.com/twentyhq/twenty/blob/main/packages/twenty-server/src/engine/core-modules/twenty-config/config-variables.ts": {
-  "fp": "345d3147e8466210",
-  "lines": 17
+  "fp": "0c00fc78ce9abada",
+  "lines": 47
  },
  "https://github.com/umami-software/umami/blob/master/src/lib/config.ts": {
-  "fp": "71097a7090fe8b55",
-  "lines": 4
+  "fp": "487ea2fe91393477",
+  "lines": 6
  },
  "https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/#analytics": {
   "fp": "c08751091ec9d666",
@@ -159,21 +171,105 @@
   "fp": "b1ea6edfa58297db",
   "lines": 1
  },
+ "https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/README.md": {
+  "fp": "df7551a9c0df4b92",
+  "lines": 12
+ },
+ "https://raw.githubusercontent.com/AnalogJ/scrutiny/master/example.scrutiny.yaml": {
+  "fp": "ba0fac2b166610b5",
+  "lines": 5
+ },
  "https://raw.githubusercontent.com/BookStackApp/BookStack/development/.env.example.complete": {
   "fp": "8349773a850f97f2",
   "lines": 8
+ },
+ "https://raw.githubusercontent.com/Budibase/budibase/master/packages/backend-core/src/configs/configs.ts": {
+  "fp": "1450d936fab55ddd",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/Budibase/budibase/master/packages/backend-core/src/environment.ts": {
+  "fp": "981a1eb9818be11f",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/Chocobozzz/PeerTube/develop/config/default.yaml": {
+  "fp": "fc9e5c7843621310",
+  "lines": 47
+ },
+ "https://raw.githubusercontent.com/Dokploy/dokploy/canary/packages/server/src/utils/tracking/posthog.ts": {
+  "fp": "4a156901ed4408c6",
+  "lines": 1
  },
  "https://raw.githubusercontent.com/FlowiseAI/Flowise/main/docker/.env.example": {
   "fp": "d6d58c1559ebd54a",
   "lines": 7
  },
+ "https://raw.githubusercontent.com/FreshRSS/FreshRSS/edge/config.default.php": {
+  "fp": "b6466b29e6885940",
+  "lines": 12
+ },
+ "https://raw.githubusercontent.com/Graylog2/graylog2-server/master/graylog2-server/src/main/java/org/graylog2/configuration/TelemetryConfiguration.java": {
+  "fp": "3f30666e56aa9a28",
+  "lines": 28
+ },
+ "https://raw.githubusercontent.com/Graylog2/graylog2-server/master/graylog2-server/src/main/java/org/graylog2/telemetry/rest/TelemetryService.java": {
+  "fp": "8937ec48ab38480d",
+  "lines": 60
+ },
+ "https://raw.githubusercontent.com/Infisical/infisical/main/backend/src/lib/config/env.ts": {
+  "fp": "211f9d8e17134d22",
+  "lines": 27
+ },
+ "https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.example.yaml": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/LemmyNet/lemmy/main/config/defaults.hjson": {
+  "fp": "626a54237a3c6d77",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/LimeSurvey/LimeSurvey/master/application/config/config-defaults.php": {
+  "fp": "064b9b8aea7d5ace",
+  "lines": 32
+ },
+ "https://raw.githubusercontent.com/LimeSurvey/LimeSurvey/master/application/config/updater_version.php": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/Lissy93/dashy/master/docs/configuring.md": {
+  "fp": "22a6bb9b5e0ec461",
+  "lines": 14
+ },
+ "https://raw.githubusercontent.com/LycheeOrg/Lychee/master/.env.example": {
+  "fp": "3f2b051b796ceeef",
+  "lines": 30
+ },
+ "https://raw.githubusercontent.com/Mailu/Mailu/master/core/admin/mailu/configuration.py": {
+  "fp": "8abc78b42173b6fa",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/Mailu/Mailu/master/core/admin/mailu/manage.py": {
+  "fp": "ba164cfe17b07f9d",
+  "lines": 15
+ },
  "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/docker/.env.example": {
   "fp": "2723694150c94a7d",
   "lines": 17
  },
+ "https://raw.githubusercontent.com/NginxProxyManager/nginx-proxy-manager/develop/README.md": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/OctoPrint/OctoPrint/master/src/octoprint/plugins/tracking/__init__.py": {
+  "fp": "6a0050963866c3bb",
+  "lines": 72
+ },
  "https://raw.githubusercontent.com/RocketChat/Rocket.Chat/develop/apps/meteor/server/settings/general.ts": {
   "fp": "18d8957bb90c8604",
   "lines": 4
+ },
+ "https://raw.githubusercontent.com/SigNoz/signoz/main/pkg/analytics/config.go": {
+  "fp": "eac04f20c6ccc083",
+  "lines": 2
  },
  "https://raw.githubusercontent.com/SonarSource/sonarqube/master/sonar-application/src/main/assembly/conf/sonar.properties": {
   "fp": "005505145889370e",
@@ -183,6 +279,86 @@
   "fp": "f83b0b2e5b6e5364",
   "lines": 41
  },
+ "https://raw.githubusercontent.com/Tautulli/Tautulli/master/plexpy/config.py": {
+  "fp": "f211d20b713d686e",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/TryGhost/Ghost/main/ghost/core/server/services/update-check/update-check-service.js": {
+  "fp": "ef8253bb3ecf92c9",
+  "lines": 42
+ },
+ "https://raw.githubusercontent.com/TryGhost/Ghost/main/ghost/core/shared/config/defaults.json": {
+  "fp": "c5de3e3618067a58",
+  "lines": 9
+ },
+ "https://raw.githubusercontent.com/TwiN/gatus/master/config.yaml": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/master/README.md": {
+  "fp": "ffd1f8288c4f9b81",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/WordPress/WordPress/master/wp-includes/update.php": {
+  "fp": "188f8fd293d2ad29",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/actualbudget/actual/master/packages/sync-server/src/load-config.js": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/advplyr/audiobookshelf/master/readme.md": {
+  "fp": "28d137a9555028cf",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/akaunting/akaunting/master/.env.example": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/ansible/awx/devel/awx/settings/defaults.py": {
+  "fp": "0ac190e51c0422e1",
+  "lines": 43
+ },
+ "https://raw.githubusercontent.com/appwrite/appwrite/main/.env": {
+  "fp": "4a62aa1080c3d8ce",
+  "lines": 16
+ },
+ "https://raw.githubusercontent.com/appwrite/appwrite/main/app/config/variables.php": {
+  "fp": "b5618c59f27f3cc8",
+  "lines": 60
+ },
+ "https://raw.githubusercontent.com/authelia/authelia/master/config.template.yml": {
+  "fp": "69ccec4e92046344",
+  "lines": 47
+ },
+ "https://raw.githubusercontent.com/baptisteArno/typebot.io/main/packages/env/src/index.ts": {
+  "fp": "7e9cb54dfd2c5ae4",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/baptisteArno/typebot.io/main/packages/telemetry/src/trackEvents.ts": {
+  "fp": "69ea1ea0016fcd5a",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/analytics/reporter.py": {
+  "fp": "a650687dd0a14994",
+  "lines": 29
+ },
+ "https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/config/telemetry.py": {
+  "fp": "cfbd833a5842daed",
+  "lines": 9
+ },
+ "https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/const.py": {
+  "fp": "9431044c5a5e946c",
+  "lines": 10
+ },
+ "https://raw.githubusercontent.com/blakeblackshear/frigate/dev/frigate/stats/util.py": {
+  "fp": "11c6e2f9de5103d6",
+  "lines": 35
+ },
+ "https://raw.githubusercontent.com/caddyserver/caddy/master/README.md": {
+  "fp": "1a041572c397b657",
+  "lines": 1
+ },
  "https://raw.githubusercontent.com/calcom/cal.com/main/.env.example": {
   "fp": "b0c80e6a26b182b8",
   "lines": 15
@@ -191,9 +367,49 @@
   "fp": "8c757d48085a23ee",
   "lines": 5
  },
+ "https://raw.githubusercontent.com/coollabsio/coolify/v4.x/app/Console/Commands/Init.php": {
+  "fp": "fcc4e2a10accbfa0",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/coollabsio/coolify/v4.x/app/Jobs/CheckHelperImageJob.php": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/coollabsio/coolify/v4.x/bootstrap/helpers/versions.php": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/coollabsio/coolify/v4.x/database/migrations/2023_03_20_112814_create_instance_settings_table.php": {
+  "fp": "c624cac51a5ae46b",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/crowdsecurity/crowdsec/master/config/config.yaml": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/cryptpad/cryptpad/main/config/config.example.js": {
+  "fp": "6261bbdcacd1dd50",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-backend-shared/src/env.ts": {
+  "fp": "7741feb179d69f17",
+  "lines": 12
+ },
+ "https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-backend-shared/src/track.ts": {
+  "fp": "2d299efc37a8e777",
+  "lines": 13
+ },
+ "https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-server-core/src/core/server.ts": {
+  "fp": "ea8d4ffe150c6a19",
+  "lines": 10
+ },
  "https://raw.githubusercontent.com/dagster-io/dagster/master/docs/docs/about/telemetry.md": {
   "fp": "57ceee4a239bc0ec",
   "lines": 9
+ },
+ "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/master/README.md": {
+  "fp": "8c162cabf0912510",
+  "lines": 3
  },
  "https://raw.githubusercontent.com/discourse/discourse/main/config/site_settings.yml": {
   "fp": "6f1f5ac2d1195c69",
@@ -207,25 +423,117 @@
   "fp": "402127e7bba545ec",
   "lines": 25
  },
+ "https://raw.githubusercontent.com/dolthub/dolt/main/go/cmd/dolt/commands/send_metrics.go": {
+  "fp": "e96ecbac787fc2d3",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/dolthub/dolt/main/go/cmd/dolt/dolt.go": {
+  "fp": "fa564c522af4fe54",
+  "lines": 24
+ },
+ "https://raw.githubusercontent.com/dolthub/dolt/main/go/libraries/events/emitter.go": {
+  "fp": "33f8cd2dd4a12617",
+  "lines": 1
+ },
  "https://raw.githubusercontent.com/element-hq/synapse/develop/docs/usage/configuration/config_documentation.md": {
   "fp": "69224716243010c2",
   "lines": 96
+ },
+ "https://raw.githubusercontent.com/ente-io/ente/main/server/configurations/local.yaml": {
+  "fp": "840e8dd0330d0ffe",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/esphome/esphome/dev/esphome/const.py": {
+  "fp": "fbc19e48d52d7f13",
+  "lines": 11
+ },
+ "https://raw.githubusercontent.com/ether/etherpad-lite/develop/settings.json.template": {
+  "fp": "f5b798ec429451b7",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/excalidraw/excalidraw/master/.env.production": {
+  "fp": "cd28c360bf12f653",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/fallenbagel/jellyseerr/develop/README.md": {
+  "fp": "4bf2ba3fee7d4330",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/filebrowser/filebrowser/master/README.md": {
+  "fp": "2e35d0a0994f2470",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.env.example": {
+  "fp": "7b096a73d2727c23",
+  "lines": 12
+ },
+ "https://raw.githubusercontent.com/firezone/firezone/main/elixir/config/runtime.exs": {
+  "fp": "06b572b29c173964",
+  "lines": 13
  },
  "https://raw.githubusercontent.com/formbricks/formbricks/main/.env.example": {
   "fp": "b03626478f801e16",
   "lines": 23
  },
+ "https://raw.githubusercontent.com/fosrl/pangolin/main/config/config.example.yml": {
+  "fp": "029de9bc1a2671fa",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/fosrl/pangolin/main/server/lib/telemetry.ts": {
+  "fp": "c2d295b29a0d4c2e",
+  "lines": 40
+ },
  "https://raw.githubusercontent.com/getsentry/sentry/master/src/sentry/conf/server.py": {
   "fp": "51fd6d361b08dc1f",
   "lines": 62
+ },
+ "https://raw.githubusercontent.com/ghostfolio/ghostfolio/main/.env.example": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/glanceapp/glance/main/README.md": {
+  "fp": "4b11ea0529c9c9ac",
+  "lines": 2
  },
  "https://raw.githubusercontent.com/go-gitea/gitea/main/custom/conf/app.example.ini": {
   "fp": "9f207b0bd01c405e",
   "lines": 103
  },
+ "https://raw.githubusercontent.com/go-vikunja/vikunja/main/config-raw.json": {
+  "fp": "d84993653aa31f1d",
+  "lines": 28
+ },
  "https://raw.githubusercontent.com/goharbor/harbor/main/make/harbor.yml.tmpl": {
   "fp": "b1345afa8b6f6bb9",
   "lines": 6
+ },
+ "https://raw.githubusercontent.com/gotify/server/master/README.md": {
+  "fp": "44539203195384f7",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/gotson/komga/master/komga/src/main/resources/application.yml": {
+  "fp": "7651b0438ffacf03",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/grokability/snipe-it/master/.env.example": {
+  "fp": "29653ca5dac6a72f",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/config/default.js": {
+  "fp": "d5ea877e77374008",
+  "lines": 8
+ },
+ "https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/config/environment.js": {
+  "fp": "8647403b4d569be6",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/homebridge/homebridge/latest/README.md": {
+  "fp": "a85c04082fbe928c",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/hoppscotch/hoppscotch/main/.env.example": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
  },
  "https://raw.githubusercontent.com/immich-app/immich/main/docs/docs/administration/system-settings.md": {
   "fp": "0522f99c15a046fe",
@@ -235,13 +543,81 @@
   "fp": "6c7aa43282e477c4",
   "lines": 65
  },
+ "https://raw.githubusercontent.com/invoiceninja/invoiceninja/v5-stable/.env.example": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/jgraph/docker-drawio/dev/README.md": {
+  "fp": "0b0b50f37822b722",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/jitsi/docker-jitsi-meet/master/env.example": {
+  "fp": "26cf325e287cd02e",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/karakeep-app/karakeep/main/.env.sample": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/kestra-io/kestra/develop/cli/src/main/resources/application.yml": {
+  "fp": "b8c0a584f6f93b1e",
+  "lines": 9
+ },
+ "https://raw.githubusercontent.com/kimai/kimai/main/.env.dist": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/kopia/kopia/master/cli/update_check.go": {
+  "fp": "4cc074e75a7b04fb",
+  "lines": 8
+ },
+ "https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/env.mjs": {
+  "fp": "50e30818aa70350f",
+  "lines": 29
+ },
+ "https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/features/posthog-analytics/ServerPosthog.ts": {
+  "fp": "f93090ab2303ab87",
+  "lines": 9
+ },
+ "https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/features/telemetry/index.ts": {
+  "fp": "5cd5577e0dea89b4",
+  "lines": 16
+ },
+ "https://raw.githubusercontent.com/langgenius/dify/main/api/configs/feature/__init__.py": {
+  "fp": "41b39e534cf82a25",
+  "lines": 42
+ },
+ "https://raw.githubusercontent.com/langgenius/dify/main/api/controllers/console/system.py": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/lightdash/lightdash/main/packages/backend/src/config/parseConfig.ts": {
+  "fp": "4917d555c9fe7b63",
+  "lines": 48
+ },
  "https://raw.githubusercontent.com/linkwarden/linkwarden/main/.env.sample": {
   "fp": "3ad49ce6957c1323",
   "lines": 3
  },
+ "https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
  "https://raw.githubusercontent.com/louislam/uptime-kuma/master/server/check-version.js": {
   "fp": "9548881183e1b358",
   "lines": 3
+ },
+ "https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/data_preparation/repo_manager.py": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/usage_statistics/constants.py": {
+  "fp": "49272b31d8f4cfb8",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/usage_statistics/logger.py": {
+  "fp": "6689d7887b8f403e",
+  "lines": 7
  },
  "https://raw.githubusercontent.com/mastodon/mastodon/main/.env.production.sample": {
   "fp": "e3b0c44298fc1c14",
@@ -251,33 +627,173 @@
   "fp": "d63ea0e5ceb0173f",
   "lines": 183
  },
+ "https://raw.githubusercontent.com/mattermost/focalboard/main/server/services/config/config.go": {
+  "fp": "f54850feeddf0d12",
+  "lines": 4
+ },
  "https://raw.githubusercontent.com/mattermost/mattermost/master/server/public/model/config.go": {
   "fp": "d71aa52aba46e79f",
   "lines": 119
+ },
+ "https://raw.githubusercontent.com/mautic/mautic/6.x/app/bundles/CoreBundle/Config/config.php": {
+  "fp": "5df612b85868dd82",
+  "lines": 19
+ },
+ "https://raw.githubusercontent.com/mautic/mautic/6.x/app/bundles/CoreBundle/Helper/UpdateHelper.php": {
+  "fp": "57809584da23a710",
+  "lines": 18
+ },
+ "https://raw.githubusercontent.com/metabase/metabase/master/docs/configuring-metabase/environment-variables.md": {
+  "fp": "2b232efd1ee7decb",
+  "lines": 60
  },
  "https://raw.githubusercontent.com/miniflux/v2/main/internal/config/options.go": {
   "fp": "b05dd66bec0ddd99",
   "lines": 20
  },
+ "https://raw.githubusercontent.com/misskey-dev/misskey/develop/.config/example.yml": {
+  "fp": "e0aaa9e053bb6fbf",
+  "lines": 11
+ },
+ "https://raw.githubusercontent.com/mudler/LocalAI/master/README.md": {
+  "fp": "19897def42a5183b",
+  "lines": 1
+ },
  "https://raw.githubusercontent.com/navidrome/navidrome/master/conf/configuration.go": {
   "fp": "49e092ed0fd24d17",
   "lines": 28
+ },
+ "https://raw.githubusercontent.com/netbirdio/netbird/main/management/cmd/management.go": {
+  "fp": "c7055049d2d00307",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/netbirdio/netbird/main/management/server/telemetry/app_metrics.go": {
+  "fp": "a4f01ce4768a631e",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/netbox-community/netbox/main/netbox/netbox/configuration_example.py": {
+  "fp": "b1d36be5971aef8c",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/node-red/node-red/master/packages/node_modules/@node-red/runtime/lib/telemetry/index.js": {
+  "fp": "ca2bc7daea2176eb",
+  "lines": 16
+ },
+ "https://raw.githubusercontent.com/node-red/node-red/master/packages/node_modules/node-red/settings.js": {
+  "fp": "f78aa329b007ea59",
+  "lines": 29
+ },
+ "https://raw.githubusercontent.com/odoo/odoo/master/addons/mail/data/ir_cron_data.xml": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/odoo/odoo/master/addons/mail/models/update.py": {
+  "fp": "44a7fefc1e3d617a",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/odoo/odoo/master/odoo/tools/config.py": {
+  "fp": "78ee352a57c27716",
+  "lines": 12
+ },
+ "https://raw.githubusercontent.com/ollama/ollama/main/docs/faq.mdx": {
+  "fp": "9b617656f06eb99d",
+  "lines": 14
  },
  "https://raw.githubusercontent.com/open-webui/open-webui/main/backend/open_webui/env.py": {
   "fp": "5d409ccfbdeed559",
   "lines": 5
  },
+ "https://raw.githubusercontent.com/openobserve/openobserve/main/src/config/src/config.rs": {
+  "fp": "fec940408fce5c72",
+  "lines": 123
+ },
+ "https://raw.githubusercontent.com/opf/openproject/dev/config/configuration.yml.example": {
+  "fp": "0caf1a95383ed05e",
+  "lines": 13
+ },
+ "https://raw.githubusercontent.com/ory/kratos/master/cmd/daemon/serve.go": {
+  "fp": "7606baced2e16bba",
+  "lines": 10
+ },
+ "https://raw.githubusercontent.com/ory/x/master/metricsx/middleware.go": {
+  "fp": "a4950008086aebcc",
+  "lines": 13
+ },
  "https://raw.githubusercontent.com/outline/outline/main/.env.sample": {
   "fp": "df1abb52026e5cdd",
   "lines": 3
+ },
+ "https://raw.githubusercontent.com/owncast/owncast/develop/README.md": {
+  "fp": "a904119e4bfe9afe",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/parseablehq/parseable/main/src/analytics.rs": {
+  "fp": "175b5e7b9569f01d",
+  "lines": 20
+ },
+ "https://raw.githubusercontent.com/parseablehq/parseable/main/src/cli.rs": {
+  "fp": "436de8faea1efd75",
+  "lines": 17
+ },
+ "https://raw.githubusercontent.com/percona/pmm/main/managed/models/settings.go": {
+  "fp": "dd6d6a11802de138",
+  "lines": 9
+ },
+ "https://raw.githubusercontent.com/percona/pmm/main/managed/services/telemetry/config.default.yml": {
+  "fp": "7597c5bc057cd07b",
+  "lines": 69
+ },
+ "https://raw.githubusercontent.com/percona/pmm/main/managed/services/telemetry/config.go": {
+  "fp": "fcd3a5947c20ce96",
+  "lines": 42
+ },
+ "https://raw.githubusercontent.com/percona/pmm/main/managed/utils/envvars/parser.go": {
+  "fp": "df9e9dfeed49b7df",
+  "lines": 17
+ },
+ "https://raw.githubusercontent.com/photoprism/photoprism/develop/internal/config/flags.go": {
+  "fp": "db47c906ad22a79a",
+  "lines": 304
  },
  "https://raw.githubusercontent.com/pi-hole/docker-pi-hole/master/README.md": {
   "fp": "70d72d071f0ea08d",
   "lines": 2
  },
+ "https://raw.githubusercontent.com/pingcap/tidb/master/pkg/config/config.go": {
+  "fp": "14a61d804d67db58",
+  "lines": 25
+ },
+ "https://raw.githubusercontent.com/pingcap/tidb/master/pkg/telemetry/telemetry.go": {
+  "fp": "8a0349872510e1c9",
+  "lines": 20
+ },
+ "https://raw.githubusercontent.com/pixelfed/pixelfed/dev/.env.example": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/pixelfed/pixelfed/dev/config/instance.php": {
+  "fp": "00d79966505cc79a",
+  "lines": 8
+ },
+ "https://raw.githubusercontent.com/plankanban/planka/master/docker-compose.yml": {
+  "fp": "ddb84bc793834df0",
+  "lines": 4
+ },
  "https://raw.githubusercontent.com/plausible/community-edition/v3.0.1/README.md": {
   "fp": "2fb1a9f2bd13d35c",
   "lines": 2
+ },
+ "https://raw.githubusercontent.com/pocketbase/pocketbase/master/README.md": {
+  "fp": "7fb7b68f24f239b5",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/pretix/pretix/master/src/pretix/base/services/update_check.py": {
+  "fp": "a1ab13833faab16b",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/pretix/pretix/master/src/pretix/base/settings.py": {
+  "fp": "817fd5f44c4135bb",
+  "lines": 35
  },
  "https://raw.githubusercontent.com/pterodactyl/panel/1.0-develop/app/Console/Kernel.php": {
   "fp": "6d114af2d003e5da",
@@ -295,9 +811,61 @@
   "fp": "54e178cc72d15043",
   "lines": 25
  },
+ "https://raw.githubusercontent.com/questdb/questdb/master/core/src/main/java/io/questdb/TelemetryJob.java": {
+  "fp": "bbebc473d17b36cd",
+  "lines": 8
+ },
+ "https://raw.githubusercontent.com/questdb/questdb/master/core/src/main/resources/io/questdb/site/conf/server.conf": {
+  "fp": "1308b29837ff5cf4",
+  "lines": 34
+ },
+ "https://raw.githubusercontent.com/sabnzbd/sabnzbd/develop/sabnzbd/cfg.py": {
+  "fp": "a2d5e24252e8bfdb",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/supabase/supabase/master/apps/studio/lib/constants/index.ts": {
+  "fp": "5b335f826a74bca0",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/supabase/supabase/master/apps/studio/lib/telemetry.tsx": {
+  "fp": "93b801bb668e0a49",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/supabase/supabase/master/docker/.env.example": {
+  "fp": "7652d77cae33d5f8",
+  "lines": 19
+ },
+ "https://raw.githubusercontent.com/supertokens/supertokens-core/master/config.yaml": {
+  "fp": "cab4846aa43cf48b",
+  "lines": 15
+ },
+ "https://raw.githubusercontent.com/supertokens/supertokens-core/master/src/main/java/io/supertokens/config/CoreConfig.java": {
+  "fp": "dfbb6585e1ddaee1",
+  "lines": 21
+ },
+ "https://raw.githubusercontent.com/supertokens/supertokens-core/master/src/main/java/io/supertokens/cronjobs/telemetry/Telemetry.java": {
+  "fp": "9e7ab5eb3c14faa5",
+  "lines": 27
+ },
  "https://raw.githubusercontent.com/timescale/docs/latest/self-hosted/configuration/telemetry.md": {
   "fp": "2af5dc238040e4a6",
   "lines": 32
+ },
+ "https://raw.githubusercontent.com/truenas/middleware/master/src/middlewared/middlewared/plugins/usage/firstboot.py": {
+  "fp": "ba8a9a58669e7f1b",
+  "lines": 1
+ },
+ "https://raw.githubusercontent.com/truenas/middleware/master/src/middlewared/middlewared/plugins/usage/gather.py": {
+  "fp": "ed71d4f2483a990f",
+  "lines": 12
+ },
+ "https://raw.githubusercontent.com/truenas/middleware/master/src/middlewared/middlewared/plugins/usage/run.py": {
+  "fp": "ba95bb15e59af4a2",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/truenas/middleware/master/src/middlewared/middlewared/plugins/usage/submit.py": {
+  "fp": "9cd7ba3da1215bc4",
+  "lines": 2
  },
  "https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-server/.env.example": {
   "fp": "b2c9bc72c4b12a21",
@@ -307,9 +875,45 @@
   "fp": "db734bbc8fa51db7",
   "lines": 1
  },
+ "https://raw.githubusercontent.com/usebruno/bruno/main/readme.md": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/usememos/memos/main/README.md": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://raw.githubusercontent.com/wekan/wekan/main/docker-compose.yml": {
+  "fp": "00905cb86632f396",
+  "lines": 26
+ },
+ "https://raw.githubusercontent.com/wg-easy/wg-easy/master/README.md": {
+  "fp": "72fe69acc239ef70",
+  "lines": 4
+ },
+ "https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/src/yb/server/call_home.cc": {
+  "fp": "1b67d111232e5ec2",
+  "lines": 2
+ },
+ "https://raw.githubusercontent.com/zabbix/zabbix/master/conf/zabbix_server.conf": {
+  "fp": "0a3a68a2509fa583",
+  "lines": 24
+ },
  "https://raw.githubusercontent.com/zadam/trilium/master/README.md": {
   "fp": "4dda22fdc1574ea1",
   "lines": 11
+ },
+ "https://raw.githubusercontent.com/zitadel/zitadel/main/cmd/defaults.yaml": {
+  "fp": "bf31a47c7254c388",
+  "lines": 71
+ },
+ "https://raw.githubusercontent.com/zulip/zulip/main/zproject/default_settings.py": {
+  "fp": "fe0b949b5205fd4e",
+  "lines": 30
+ },
+ "https://raw.githubusercontent.com/zulip/zulip/main/zproject/prod_settings_template.py": {
+  "fp": "40ede647280bea8f",
+  "lines": 26
  },
  "https://redash.io/help/open-source/admin-guide/env-vars-settings": {
   "fp": "5a37d184e10f0d62",
@@ -358,5 +962,9 @@
  "https://www.windmill.dev/docs/advanced/instance_settings": {
   "fp": "ac79d7d250016756",
   "lines": 32
+ },
+ "https://zulip.readthedocs.io/en/latest/production/mobile-push-notifications.html": {
+  "fp": "0d98dbe4499d08fb",
+  "lines": 43
  }
 }
