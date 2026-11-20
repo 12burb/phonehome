@@ -17,7 +17,14 @@ class _Redirect308(urllib.request.HTTPRedirectHandler):
 _opener = urllib.request.build_opener(_Redirect308())
 
 
+def stable_url(url):
+    """GitHub blob pages are rendered client-side and change constantly; fetch the raw file instead."""
+    m = re.match(r"https://github\.com/([^/]+/[^/]+)/blob/([^/]+)/(.+)", url)
+    return f"https://raw.githubusercontent.com/{m.group(1)}/{m.group(2)}/{m.group(3)}" if m else url
+
+
 def fetch(url):
+    url = stable_url(url)
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; phonehome-recheck/1; +https://github.com/12burb/phonehome)"})
     with _opener.open(req, timeout=40) as r:
         body = r.read().decode("utf-8", "ignore")

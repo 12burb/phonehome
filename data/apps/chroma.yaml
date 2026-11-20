@@ -19,5 +19,4 @@ calls:
     config: Settings(anonymized_telemetry=False)
   sources:
   - https://raw.githubusercontent.com/chroma-core/chroma/main/chromadb/config.py
-  - https://docs.trychroma.com/docs/overview/telemetry
 verified: '2026-11-14'
