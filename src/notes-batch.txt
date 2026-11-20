@@ -243,3 +243,59 @@
 3551:                process.env.RUDDERSTACK_ANALYTICS_DISABLED === 'true'
 3553:                    : process.env.RUDDERSTACK_DATA_PLANE_URL ||
 3554:                      'https://analytics.lightdash.com',
+## https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-server-core/src/core/optionsValidate.ts
+121:  telemetry: Joi.boolean(),
+## https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-server-core/src/core/server.ts
+219:    // Wraps the log sink only: the agent and telemetry wrappers installed below
+275:      if (!this.options.telemetry) {
+373:      if (this.options.telemetry) {
+## https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-backend-shared/src/env.ts
+2261:  telemetry: () => get('CUBEJS_TELEMETRY')
+## cube env ctx
+2259-  instanceId: () => get('CUBEJS_INSTANCE_ID')
+2260-    .asString(),
+2261:  telemetry: () => get('CUBEJS_TELEMETRY')
+2262-    .default('true')
+2263-    .asBool(),
+2264-  // SQL Interface
+2265-  sqlPort: () => {
+2266-    const port = asFalseOrPort(process.env.CUBEJS_SQL_PORT || 'false', 'CUBEJS_SQL_PORT');
+2267-    if (port) {
+## https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/data_preparation/repo_manager.py
+76:        self.help_improve_mage = None
+143:            self.help_improve_mage = repo_config.get('help_improve_mage')
+219:            help_improve_mage=self.help_improve_mage,
+## posthog ctx
+            window.$RefreshSig$ = () => (type) => type
+            window.__vite_plugin_react_preamble_installed__ = true
+        </script>
+        <!-- Vite development server -->
+        <script type="module" src="{js_url}/@vite/client"></script>
+        <script type="module" src="{js_url}/{source_path}"></script>"""
+
+    if settings.E2E_TESTING:
+        context["e2e_testing"] = True
+        context["js_posthog_api_key"] = "phc_ex7Mnvi4DqeB6xSQoXU1UVPzAmUIpiciRKQQXGGTYQO"
+        context["js_posthog_host"] = "https://internal-cf.posthog.com"
+        context["js_posthog_ui_host"] = "https://us.posthog.com"
+
+    elif settings.SELF_CAPTURE:
+        # posthog-js uses this token to evaluate PostHog's own gating flags, so it must point at the
+## https://raw.githubusercontent.com/Budibase/budibase/master/packages/backend-core/src/configs/configs.ts
+136:  config.config.analyticsEnabled = await analyticsEnabled({
+154:  if (!env.SELF_HOSTED && env.MULTI_TENANCY && opts.tenantAware) {
+160:  } else if (env.SELF_HOSTED) {
+173:export const analyticsEnabled = async (opts?: {
+177:  if (!env.SELF_HOSTED) {
+178:    return !!env.ENABLE_ANALYTICS
+193:      if (config?.analyticsEnabled === false) {
+195:      } else if (config?.analyticsEnabled === true) {
+## https://raw.githubusercontent.com/questdb/questdb/master/core/src/main/java/io/questdb/TelemetryJob.java
+36:import io.questdb.tasks.AbstractTelemetryTask;
+40:public class TelemetryJob extends SynchronizedJob implements Closeable {
+41:    private static final Log LOG = LogFactory.getLog(TelemetryJob.class);
+43:    private final ObjList<Telemetry<? extends AbstractTelemetryTask>> telemetries;
+44:    private final TelemetryConfigLogger telemetryConfigLogger;
+46:    public TelemetryJob(CairoEngine engine) throws SqlException {
+52:            telemetryConfigLogger = new TelemetryConfigLogger(engine);
+70:                telemetryConfigLogger.init(engine, compiler, sqlExecutionContext);
