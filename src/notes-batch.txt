@@ -335,3 +335,97 @@ export const analyticsEnabled = async (opts?: {
   // fallback to the environment variable
 ## questdb outbound
 15: *  http://www.apache.org/licenses/LICENSE-2.0
+## https://raw.githubusercontent.com/gravitational/teleport/master/lib/auth/init.go
+80:	usagereporter "github.com/gravitational/teleport/lib/usagereporter/teleport"
+302:	// UsageReporter is a service that forwards cluster usage events.
+303:	UsageReporter usagereporter.UsageReporter
+## https://raw.githubusercontent.com/gravitational/teleport/master/lib/usagereporter/teleport/usagereporter.go
+76:	// AnonymizeAndSubmit submits a usage event. The payload will be
+77:	// anonymized by the reporter implementation.
+78:	AnonymizeAndSubmit(event ...Anonymizable)
+95:// StreamingUsageReporter submits all Teleport usage events anonymized with the
+## https://raw.githubusercontent.com/monicahq/monica/main/config/monica.php
+## https://raw.githubusercontent.com/monicahq/monica/main/.env.example
+12:# development version. Use production otherwise.
+## https://raw.githubusercontent.com/shlinkio/shlink/develop/module/Core/config/update-check.config.php
+## https://raw.githubusercontent.com/shlinkio/shlink/develop/config/autoload/installer.global.php
+13:            Option\Server\RuntimeConfigOption::class,
+14:            Option\Server\MemoryLimitConfigOption::class,
+## https://raw.githubusercontent.com/passbolt/passbolt_api/master/config/default.php
+9: * Copyright (c) Passbolt SA (https://www.passbolt.com)
+11: * Licensed under GNU Affero General Public License version 3 of the or any later version.
+15: * @copyright     Copyright (c) Passbolt SA (https://www.passbolt.com)
+17: * @link          https://www.passbolt.com Passbolt(tm)
+## https://raw.githubusercontent.com/nocobase/nocobase/main/packages/core/server/src/telemetry/telemetry.ts
+## https://raw.githubusercontent.com/nocobase/nocobase/main/.env.example
+## https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/config/default.js
+178:  allowGravatar: true,
+## https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/config/index.js
+## https://raw.githubusercontent.com/go-vikunja/vikunja/main/config.yml.sample
+## https://raw.githubusercontent.com/go-vikunja/vikunja/main/config-raw.json
+174:            "key": "sentry",
+179:                    "comment": "If set to true, enables anonymous error tracking of api errors via Sentry. This allows us to gather more\ninformation about errors in order to debug and f
+183:                    "default_value": "https://440eedc957d545a795c17bbaf477497c@o1047380.ingest.sentry.io/4504254983634944",
+## https://raw.githubusercontent.com/mautic/mautic/6.x/app/config/config.php
+## https://raw.githubusercontent.com/mautic/mautic/6.x/app/bundles/CoreBundle/Helper/UpdateHelper.php
+96:        $this->sendStats();
+198:    private function sendStats(): void
+200:        if (!$statUrl = $this->coreParametersHelper->get('stats_update_url')) {
+## https://raw.githubusercontent.com/wallabag/wallabag/master/app/config/config.yml
+## https://raw.githubusercontent.com/superseriousbusiness/gotosocial/main/example/config.yaml
+## https://raw.githubusercontent.com/pixelfed/pixelfed/dev/.env.example
+## https://raw.githubusercontent.com/logto-io/logto/master/.env.example
+## https://raw.githubusercontent.com/logto-io/logto/master/packages/core/src/env-set/GlobalValues.ts
+## https://raw.githubusercontent.com/ory/kratos/master/internal/driver/config/config.go
+## https://raw.githubusercontent.com/ory/x/master/metricsx/middleware.go
+85:	// WriteKey is the segment API key.
+88:	// WhitelistedPaths represents a list of paths that can be transmitted in clear text to segment.
+158:	segment, err := analytics.NewWithConfig(o.WriteKey, *o.Config)
+164:	optOut, err := cmd.Flags().GetBool("sqa-opt-out")
+## https://raw.githubusercontent.com/haiwen/seahub/master/seahub/settings.py
+405:ENCRYPTED_LIBRARY_VERSION = 2
+634:# used before version 6.3: the relative path of css file under seahub-data (e.g. custom/custom.css)
+662:        'version': 1,
+## https://raw.githubusercontent.com/owncloud/ocis/master/ocis-pkg/config/config.go
+65:	Tracing           *shared.Tracing           `yaml:"tracing"`
+## https://raw.githubusercontent.com/duplicati/duplicati/master/Duplicati/Library/UsageReporter/UsageReporter.cs
+## https://raw.githubusercontent.com/element-hq/element-web/develop/config.sample.json
+## vikunja ctx
+1:            "key": "sentry",
+4:                    "key": "enabled",
+5:                    "default_value": "false",
+9:                    "key": "dsn",
+10:                    "default_value": "https://440eedc957d545a795c17bbaf477497c@o1047380.ingest.sentry.io/4504254983634944",
+14:                    "key": "frontendenabled",
+15:                    "default_value": "false",
+19:                    "key": "frontenddsn",
+20:                    "default_value": "https://85694a2d757547cbbc90cd4b55c5a18d@o1047380.ingest.sentry.io/6024480",
+26:            "key": "database",
+## https://raw.githubusercontent.com/mautic/mautic/6.x/app/bundles/CoreBundle/Config/config.php
+1355:        'stats_update_url'                    => 'https://updates.mautic.org/stats/send', // set to empty in config file to disable
+1357:        'system_update_url'                   => 'https://api.github.com/repos/mautic/mautic/releases',
+## mautic sendStats ctx
+3:        if (!$statUrl = $this->coreParametersHelper->get('stats_update_url')) {
+11:            $dbDriver      = $this->coreParametersHelper->get('db_driver');
+15:            $instanceId = hash('sha1', $key.$installSource.$dbDriver);
+20:                    'application'   => 'Mautic',
+21:                    'version'       => $this->mauticVersion,
+22:                    'phpVersion'    => $this->phpVersion,
+23:                    'dbDriver'      => $dbDriver,
+24:                    'serverOs'      => $this->getServerOs(),
+25:                    'instanceId'    => $instanceId,
+26:                    'installSource' => $installSource,
+31:                \GuzzleHttp\RequestOptions::FORM_PARAMS     => $data,
+32:                \GuzzleHttp\RequestOptions::CONNECT_TIMEOUT => 10,
+## https://raw.githubusercontent.com/ory/x/master/metricsx/middleware.go
+51:	optOut     bool
+164:	optOut, err := cmd.Flags().GetBool("sqa-opt-out")
+169:	if !optOut {
+170:		optOut = c.Bool("sqa.opt_out")
+173:	if !optOut {
+174:		optOut = c.Bool("sqa_opt_out")
+## https://raw.githubusercontent.com/ory/kratos/master/cmd/serve.go
+## https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/config/environment.js
+166:  allowGravatar: toBooleanConfig(process.env.CMD_ALLOW_GRAVATAR),
+## https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/web/auth/utils.js
+## https://api.github.com/repos/duplicati/duplicati/contents/Duplicati/Library/UsageReporter

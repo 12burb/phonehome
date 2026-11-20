@@ -1,0 +1,23 @@
+id: hedgedoc
+name: HedgeDoc
+category: Collaboration
+repo: https://github.com/hedgedoc/hedgedoc
+images:
+- quay.io/hedgedoc/hedgedoc
+- linuxserver/hedgedoc
+verified: '2026-11-20'
+calls:
+- type: external_asset
+  default: 'on'
+  destinations:
+  - gravatar.com
+  block: false
+  sends: Hashed user emails for avatar lookups
+  frequency: on avatar load
+  optout:
+    env:
+    - CMD_ALLOW_GRAVATAR=false
+    config: 'allowGravatar: false in config.json'
+  sources:
+  - https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/config/default.js
+  - https://raw.githubusercontent.com/hedgedoc/hedgedoc/master/lib/config/environment.js

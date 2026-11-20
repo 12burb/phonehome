@@ -1,0 +1,13 @@
+id: vikunja
+name: Vikunja
+category: Tasks
+repo: https://github.com/go-vikunja/vikunja
+images:
+- vikunja/vikunja
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/go-vikunja/vikunja/main/config-raw.json
+- https://github.com/search?q=repo%3Ago-vikunja%2Fvikunja+telemetry&type=code
+notes: Sentry error reporting (API and frontend) ships with upstream DSNs but is disabled by default (sentry.enabled / sentry.frontendenabled
+  = false).

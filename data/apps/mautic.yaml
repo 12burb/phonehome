@@ -1,0 +1,31 @@
+id: mautic
+name: Mautic
+category: Marketing
+repo: https://github.com/mautic/mautic
+images:
+- mautic/mautic
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - updates.mautic.org
+  sends: Version, PHP version, DB driver, server OS, install source and a hashed instance id, posted whenever the update check
+    runs
+  frequency: with each update check
+  optout:
+    config: '''stats_update_url'' => '''' in config/local.php'
+  sources:
+  - https://raw.githubusercontent.com/mautic/mautic/6.x/app/bundles/CoreBundle/Config/config.php
+  - https://raw.githubusercontent.com/mautic/mautic/6.x/app/bundles/CoreBundle/Helper/UpdateHelper.php
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.github.com
+  block: false
+  sends: Fetches GitHub releases to compare versions
+  frequency: periodic
+  optout:
+    config: '''system_update_url'' => '''' in config/local.php'
+  sources:
+  - https://raw.githubusercontent.com/mautic/mautic/6.x/app/bundles/CoreBundle/Config/config.php
