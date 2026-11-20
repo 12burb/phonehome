@@ -606,3 +606,100 @@ export const analyticsEnabled = async (opts?: {
 97:		cli.Println(color.CyanString("Sending metrics is currently disabled\n"))
 ## https://raw.githubusercontent.com/dolthub/dolt/main/go/libraries/doltcore/env/dolt_env.go
 ## https://raw.githubusercontent.com/dolthub/dolt/main/go/libraries/doltcore/env/config.go
+## https://raw.githubusercontent.com/jenkinsci/jenkins/master/core/src/main/java/hudson/model/UsageStatistics.java
+130:        return Jenkins.get().isUsageStatisticsCollected() && !DISABLED && !FIPS140.useCompliantAlgorithms();
+174:        List<JSONObject> plugins = new ArrayList<>();
+175:        for (PluginWrapper pw : j.getPluginManager().getPlugins()) {
+176:            if (!pw.isActive())  continue;   // treat disabled plugins as if they are uninstalled
+180:            plugins.add(p);
+182:        o.put("plugins", plugins);
+## https://raw.githubusercontent.com/SonarSource/sonarqube/master/server/sonar-webserver-core/src/main/java/org/sonar/server/platform/telemetry/TelemetryDaemon.java
+## https://raw.githubusercontent.com/SonarSource/sonarqube/master/sonar-core/src/main/java/org/sonar/core/config/TelemetryProperties.java
+## https://raw.githubusercontent.com/cockroachdb/cockroach/master/pkg/server/diagnostics/reporter.go
+## https://raw.githubusercontent.com/cockroachdb/cockroach/master/pkg/server/diagnostics/diagnostics.go
+36:const defaultUpdatesURL = `https://register.cockroachdb.com/api/clusters/updates`
+42:const defaultReportingURL = `https://register.cockroachdb.com/api/clusters/report`
+## https://raw.githubusercontent.com/odoo/odoo/master/odoo/addons/base/models/ir_module.py
+## https://raw.githubusercontent.com/odoo/odoo/master/odoo/addons/mail/models/update.py
+## https://raw.githubusercontent.com/odoo/odoo/master/addons/mail/models/update.py
+28:        dbuuid = IrParamSudo.get_str('database.uuid')
+31:        nbr_users = Users.search_count([('active', '=', True)])
+50:            "dbuuid": dbuuid,
+51:            "nbr_users": nbr_users,
+## https://raw.githubusercontent.com/weaviate/weaviate/main/usecases/telemetry/telemetry.go
+43:	DefaultTelemetryPushInterval = 24 * time.Hour
+64:	pushInterval       time.Duration
+81:	// PushInterval defaults to DefaultTelemetryPushInterval if zero.
+82:	PushInterval time.Duration
+## https://raw.githubusercontent.com/qdrant/qdrant/master/lib/collection/src/telemetry.rs
+18:use crate::shards::telemetry::{
+19:    LocalShardTelemetry, PartialSnapshotTelemetry, ReplicaSetTelemetry,
+## https://raw.githubusercontent.com/qdrant/qdrant/master/config/config.yaml
+524:# Read more: https://qdrant.tech/documentation/guides/telemetry
+525:telemetry_disabled: false
+## https://raw.githubusercontent.com/qdrant/qdrant/master/src/common/telemetry_reporting.rs
+2:use std::time::Duration;
+19:const REPORTING_INTERVAL: Duration = Duration::from_secs(60 * 60); // One hour
+39:            "https://staging-telemetry.qdrant.io".to_string()
+41:            "https://telemetry.qdrant.io".to_string()
+## https://raw.githubusercontent.com/activepieces/activepieces/main/.env.example
+27:AP_TELEMETRY_ENABLED=true
+## https://raw.githubusercontent.com/activepieces/activepieces/main/packages/server/api/src/app/helper/telemetry.utils.ts
+2:import { apVersionUtil, POSTHOG_HOST, POSTHOG_PROJECT_TOKEN } from '@activepieces/server-utils'
+5:import { instrument } from '@posthog/mcp'
+7:import { PostHog } from 'posthog-node'
+14:let posthogInstance: PostHog | null = null
+## https://raw.githubusercontent.com/FlowiseAI/Flowise/main/packages/server/.env.example
+87:# DISABLE_FLOWISE_TELEMETRY=true
+148:# POSTHOG_PUBLIC_API_KEY=your_posthog_public_api_key
+151:# METRICS_PROVIDER=prometheus # prometheus | open_telemetry
+## https://raw.githubusercontent.com/FlowiseAI/Flowise/main/packages/server/src/utils/telemetry.ts
+2:import { PostHog } from 'posthog-node'
+15:    postHog?: PostHog
+18:        if (process.env.POSTHOG_PUBLIC_API_KEY) {
+19:            this.postHog = new PostHog(process.env.POSTHOG_PUBLIC_API_KEY)
+## https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/server/.env.example
+## https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/server/utils/telemetry/index.js
+5:// DISABLE_TELEMETRY=true in the `.env` of however you setup. Telemetry helps us determine use
+9:  if (process.env.DISABLE_TELEMETRY === "true") {
+## https://raw.githubusercontent.com/pretix/pretix/master/src/pretix/base/services/update_check.py
+13:# this file, see <https://pretix.eu/about/en/license>.
+20:# <https://www.gnu.org/licenses/>.
+44:def run_update_check(sender, **kwargs):
+46:    if not gs.settings.update_check_perform:
+49:    if not gs.settings.update_check_last or now() - gs.settings.update_check_last > timedelta(hours=23):
+## https://raw.githubusercontent.com/lukevella/rallly/main/.env.example
+## https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/src/yb/server/call_home.cc
+44:DEFINE_RUNTIME_bool(callhome_enabled, true,
+45:    "Enables callhome feature that sends analytics data to yugabyte");
+47:DEFINE_RUNTIME_int32(callhome_interval_secs, 3600, "How often to run callhome");
+48:DEFINE_RUNTIME_string(callhome_url, "https://diagnostics.yugabyte.com", "URL of callhome server");
+## https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/src/yb/server/call_home.cc
+44:DEFINE_RUNTIME_bool(callhome_enabled, true,
+48:DEFINE_RUNTIME_string(callhome_url, "https://diagnostics.yugabyte.com", "URL of callhome server");
+52:    "Tag to be inserted in the json sent to FLAGS_callhome_url. "
+## https://raw.githubusercontent.com/odoo/odoo/master/addons/mail/models/update.py
+24:    def _get_message(self):
+71:    def _get_sys_logs(self):
+78:        url = config.get("publisher_warranty_url")
+85:    def _post_publisher_messages(self, messages):
+88:    def update_notification(self, cron_mode=True):
+## https://raw.githubusercontent.com/odoo/odoo/master/odoo/tools/config.py
+238:        parser.add_option(FileOnlyOption(dest='publisher_warranty_url', my_default='http://services.odoo.com/publisher-warranty/', file_exportable=False))
+## https://raw.githubusercontent.com/odoo/odoo/master/addons/mail/data/ir_cron_data.xml
+10:            <field name="interval_number">1</field>
+11:            <field name="interval_type">hours</field>
+16:            <field name="name">Publisher: Update Notification</field>
+17:            <field name="model_id" ref="model_publisher_warranty_contract"/>
+## pretix ctx
+9:    if not gs.settings.update_check_id:
+10:        gs.settings.set('update_check_id', uuid.uuid4().hex)
+12:    if not gs.settings.update_check_perform:
+16:        gs.settings.set('update_check_last', now())
+17:        gs.settings.set('update_check_result', {
+23:        'id': gs.settings.get('update_check_id'),
+24:        'version': __version__,
+25:        'events': {
+## https://raw.githubusercontent.com/pretix/pretix/master/src/pretix/base/settings.py
+3532:    'update_check_email': {
+3536:    'update_check_perform': {
