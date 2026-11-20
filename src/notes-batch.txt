@@ -299,3 +299,39 @@
 46:    public TelemetryJob(CairoEngine engine) throws SqlException {
 52:            telemetryConfigLogger = new TelemetryConfigLogger(engine);
 70:                telemetryConfigLogger.init(engine, compiler, sqlExecutionContext);
+## budibase ctx
+export const analyticsEnabled = async (opts?: {
+  config?: SettingsInnerConfig
+}) => {
+  // cloud - always use the environment variable
+  if (!env.SELF_HOSTED) {
+    return !!env.ENABLE_ANALYTICS
+  }
+
+  // self host - prefer the settings doc
+  // use cache as events have high throughput
+  const enabledInDB = await withCache(
+    CacheKey.ANALYTICS_ENABLED,
+    TTL.ONE_DAY,
+    async () => {
+      const config = opts?.config
+        ? opts.config
+        : // direct to db to prevent infinite loop
+          (await getConfig<SettingsConfig>(ConfigType.SETTINGS))?.config
+
+      // need to do explicit checks in case the field is not set
+      if (config?.analyticsEnabled === false) {
+        return false
+      } else if (config?.analyticsEnabled === true) {
+        return true
+      }
+    }
+  )
+
+  if (enabledInDB !== undefined) {
+    return enabledInDB
+  }
+
+  // fallback to the environment variable
+## questdb outbound
+15: *  http://www.apache.org/licenses/LICENSE-2.0

@@ -1,0 +1,25 @@
+id: budibase
+name: Budibase
+category: Low-code
+repo: https://github.com/Budibase/budibase
+images:
+- budibase/budibase
+- budibase/apps
+- budibase/worker
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'off'
+  destinations:
+  - us.i.posthog.com
+  block: false
+  sends: Product usage events via PostHog, only when analytics is enabled in Settings or ENABLE_ANALYTICS is set (self-hosted
+    falls back to the env var, unset by default)
+  frequency: on usage
+  optout:
+    ui: Settings > Organisation > Analytics (off)
+    env:
+    - ENABLE_ANALYTICS=0
+  sources:
+  - https://raw.githubusercontent.com/Budibase/budibase/master/packages/backend-core/src/configs/configs.ts
+  - https://raw.githubusercontent.com/Budibase/budibase/master/packages/backend-core/src/environment.ts

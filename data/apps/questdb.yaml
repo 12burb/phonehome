@@ -1,0 +1,13 @@
+id: questdb
+name: QuestDB
+category: Database
+repo: https://github.com/questdb/questdb
+images:
+- questdb/questdb
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/questdb/questdb/master/core/src/main/resources/io/questdb/site/conf/server.conf
+- https://raw.githubusercontent.com/questdb/questdb/master/core/src/main/java/io/questdb/TelemetryJob.java
+notes: telemetry.enabled=true writes usage events to local `telemetry` tables; no outbound endpoint was found in the open-source
+  server code. Set telemetry.enabled=false to stop local collection.

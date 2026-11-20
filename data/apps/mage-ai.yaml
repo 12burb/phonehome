@@ -1,0 +1,22 @@
+id: mage-ai
+name: Mage
+category: Data pipelines
+repo: https://github.com/mage-ai/mage-ai
+images:
+- mageai/mageai
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: prompt
+  destinations:
+  - api.mage.ai
+  sends: Usage statistics (feature events, project/pipeline counts, platform) when "help improve Mage" is accepted; an Amplitude
+    key is embedded too
+  frequency: on events
+  optout:
+    config: 'help_improve_mage: false in the project metadata.yaml'
+    ui: Decline the "Help improve Mage" prompt / project settings
+  sources:
+  - https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/usage_statistics/logger.py
+  - https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/usage_statistics/constants.py
+  - https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/data_preparation/repo_manager.py

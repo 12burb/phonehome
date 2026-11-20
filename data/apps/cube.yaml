@@ -1,0 +1,22 @@
+id: cube
+name: Cube (Cube.js)
+category: Analytics
+repo: https://github.com/cube-js/cube
+images:
+- cubejs/cube
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - track.cube.dev
+  sends: Anonymous machine id, version, platform and server/agent events
+  frequency: on events
+  optout:
+    env:
+    - CUBEJS_TELEMETRY=false
+    config: 'telemetry: false in cube.js config'
+  sources:
+  - https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-backend-shared/src/env.ts
+  - https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-backend-shared/src/track.ts
+  - https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-server-core/src/core/server.ts
