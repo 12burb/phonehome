@@ -103,6 +103,14 @@
   "fp": "4396996f49a715f3",
   "lines": 7
  },
+ "https://github.com/Piwigo/Piwigo/blob/master/admin/include/updates.class.php": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
+ "https://github.com/Piwigo/Piwigo/blob/master/include/page_tail.php": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
  "https://github.com/SonarSource/sonarqube/blob/master/server/sonar-process/src/main/java/org/sonar/process/ProcessProperties.java": {
   "fp": "f75251f65d9feace",
   "lines": 7
@@ -302,6 +310,10 @@
  "https://raw.githubusercontent.com/OctoPrint/OctoPrint/master/src/octoprint/plugins/tracking/__init__.py": {
   "fp": "6a0050963866c3bb",
   "lines": 72
+ },
+ "https://raw.githubusercontent.com/Piwigo/Piwigo/master/include/config_default.inc.php": {
+  "fp": "06091f221006ab87",
+  "lines": 14
  },
  "https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/src/NzbDrone.Common/Cloud/ProwlarrCloudRequestBuilder.cs": {
   "fp": "e3b0c44298fc1c14",
@@ -563,6 +575,14 @@
   "fp": "69614d348351b539",
   "lines": 62
  },
+ "https://raw.githubusercontent.com/element-hq/element-web/develop/apps/web/config.sample.json": {
+  "fp": "f8dbf8c05662c55d",
+  "lines": 5
+ },
+ "https://raw.githubusercontent.com/element-hq/element-web/develop/docs/config.md": {
+  "fp": "849c1623852c17da",
+  "lines": 28
+ },
  "https://raw.githubusercontent.com/element-hq/synapse/develop/docs/usage/configuration/config_documentation.md": {
   "fp": "69224716243010c2",
   "lines": 96
@@ -682,6 +702,46 @@
  "https://raw.githubusercontent.com/grafana/k6/master/internal/cmd/report.go": {
   "fp": "adeabfa9a2199b1a",
   "lines": 34
+ },
+ "https://raw.githubusercontent.com/grafana/mimir/main/docs/sources/mimir/configure/about-anonymous-usage-statistics-reporting.md": {
+  "fp": "4d6db7f4900476a6",
+  "lines": 20
+ },
+ "https://raw.githubusercontent.com/grafana/mimir/main/pkg/usagestats/report.go": {
+  "fp": "636f218378e47476",
+  "lines": 14
+ },
+ "https://raw.githubusercontent.com/grafana/mimir/main/pkg/usagestats/reporter.go": {
+  "fp": "c86605723d69a150",
+  "lines": 53
+ },
+ "https://raw.githubusercontent.com/grafana/pyroscope/main/docs/sources/configure-server/anonymous-usage-statistics-reporting.md": {
+  "fp": "a1ba1635e166b35c",
+  "lines": 19
+ },
+ "https://raw.githubusercontent.com/grafana/pyroscope/main/pkg/usagestats/reporter.go": {
+  "fp": "b03da55231b7adb9",
+  "lines": 17
+ },
+ "https://raw.githubusercontent.com/grafana/pyroscope/main/pkg/usagestats/stats.go": {
+  "fp": "051286ad0956fd9a",
+  "lines": 50
+ },
+ "https://raw.githubusercontent.com/grafana/tempo/main/cmd/tempo/app/config.go": {
+  "fp": "091e2f0df39c14da",
+  "lines": 6
+ },
+ "https://raw.githubusercontent.com/grafana/tempo/main/docs/sources/tempo/configuration/anonymous-usage-reporting.md": {
+  "fp": "92f277652383f3b2",
+  "lines": 21
+ },
+ "https://raw.githubusercontent.com/grafana/tempo/main/pkg/usagestats/config.go": {
+  "fp": "6ea15bbdb7dc434b",
+  "lines": 3
+ },
+ "https://raw.githubusercontent.com/grafana/tempo/main/pkg/usagestats/stats.go": {
+  "fp": "d2a0b575eaa54f6b",
+  "lines": 36
  },
  "https://raw.githubusercontent.com/gravitl/netmaker/master/logic/telemetry.go": {
   "fp": "8644459c2e40948b",
