@@ -131,10 +131,6 @@
   "fp": "9ac15fb7b95511c9",
   "lines": 20
  },
- "https://github.com/twentyhq/twenty/blob/main/packages/twenty-server/src/engine/core-modules/twenty-config/config-variables.ts": {
-  "fp": "0c00fc78ce9abada",
-  "lines": 47
- },
  "https://github.com/umami-software/umami/blob/master/src/lib/config.ts": {
   "fp": "487ea2fe91393477",
   "lines": 6
@@ -215,6 +211,14 @@
   "fp": "8937ec48ab38480d",
   "lines": 60
  },
+ "https://raw.githubusercontent.com/HumanSignal/label-studio/develop/label_studio/core/settings/base.py": {
+  "fp": "4ec92a5eddad7d75",
+  "lines": 18
+ },
+ "https://raw.githubusercontent.com/HumanSignal/label-studio/develop/label_studio/core/utils/contextlog.py": {
+  "fp": "201fe80506366655",
+  "lines": 1
+ },
  "https://raw.githubusercontent.com/Infisical/infisical/main/backend/src/lib/config/env.ts": {
   "fp": "211f9d8e17134d22",
   "lines": 27
@@ -294,6 +298,14 @@
  "https://raw.githubusercontent.com/TwiN/gatus/master/config.yaml": {
   "fp": "e3b0c44298fc1c14",
   "lines": 0
+ },
+ "https://raw.githubusercontent.com/Unleash/unleash/main/src/lib/create-config.ts": {
+  "fp": "ff43a86b5a3ad61a",
+  "lines": 13
+ },
+ "https://raw.githubusercontent.com/Unleash/unleash/main/src/lib/services/version-service.ts": {
+  "fp": "ba6c02ec6bc06106",
+  "lines": 9
  },
  "https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/master/README.md": {
   "fp": "ffd1f8288c4f9b81",
@@ -527,6 +539,10 @@
   "fp": "8647403b4d569be6",
   "lines": 7
  },
+ "https://raw.githubusercontent.com/henrygd/beszel/main/readme.md": {
+  "fp": "6c9daa7b55733583",
+  "lines": 11
+ },
  "https://raw.githubusercontent.com/homebridge/homebridge/latest/README.md": {
   "fp": "a85c04082fbe928c",
   "lines": 1
@@ -607,6 +623,10 @@
   "fp": "9548881183e1b358",
   "lines": 3
  },
+ "https://raw.githubusercontent.com/lukevella/rallly/main/apps/web/.env.sample": {
+  "fp": "e3b0c44298fc1c14",
+  "lines": 0
+ },
  "https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/data_preparation/repo_manager.py": {
   "fp": "e3b0c44298fc1c14",
   "lines": 0
@@ -618,6 +638,10 @@
  "https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/usage_statistics/logger.py": {
   "fp": "6689d7887b8f403e",
   "lines": 7
+ },
+ "https://raw.githubusercontent.com/makeplane/plane/preview/apps/api/plane/settings/common.py": {
+  "fp": "3da0fad3a1be3418",
+  "lines": 1
  },
  "https://raw.githubusercontent.com/mastodon/mastodon/main/.env.production.sample": {
   "fp": "e3b0c44298fc1c14",
@@ -654,6 +678,18 @@
  "https://raw.githubusercontent.com/misskey-dev/misskey/develop/.config/example.yml": {
   "fp": "e0aaa9e053bb6fbf",
   "lines": 11
+ },
+ "https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/environment_variables.py": {
+  "fp": "83fc006046af7a5a",
+  "lines": 105
+ },
+ "https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/telemetry/constant.py": {
+  "fp": "e7679fa2d69b1dc7",
+  "lines": 7
+ },
+ "https://raw.githubusercontent.com/mlflow/mlflow/master/mlflow/telemetry/utils.py": {
+  "fp": "0e47dc2e875d344c",
+  "lines": 23
  },
  "https://raw.githubusercontent.com/mudler/LocalAI/master/README.md": {
   "fp": "19897def42a5183b",
@@ -958,6 +994,10 @@
  "https://www.meilisearch.com/docs/learn/resources/telemetry": {
   "fp": "13db6181182a18f5",
   "lines": 17
+ },
+ "https://www.ory.com/docs/ecosystem/sqa": {
+  "fp": "c3e498c60c4e0b5a",
+  "lines": 19
  },
  "https://www.windmill.dev/docs/advanced/instance_settings": {
   "fp": "ac79d7d250016756",
