@@ -1,0 +1,23 @@
+id: neo4j
+name: Neo4j
+category: Database
+repo: https://github.com/neo4j/neo4j
+images:
+- neo4j
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - udc.neo4j.com
+  sends: 'Usage Data Collector report: store id (uuid), edition, version, packaging, CPU count, total memory and heap, counts
+    of nodes, relationships, labels, indexes, constraints and databases, store size, queries per minute, Cypher feature usage
+    counters, report counter'
+  frequency: periodic (recurring job)
+  optout:
+    config: dbms.usage_report.enabled=false in neo4j.conf
+    env:
+    - NEO4J_dbms_usage__report_enabled=false
+  sources:
+  - https://raw.githubusercontent.com/neo4j/neo4j/2026.10/community/udc/src/main/java/org/neo4j/udc/UserDataCollector.java
+  - https://raw.githubusercontent.com/neo4j/neo4j/2026.10/community/configuration/src/main/java/org/neo4j/configuration/GraphDatabaseSettings.java

@@ -1,0 +1,19 @@
+id: yourls
+name: YOURLS
+category: URL shortener
+repo: https://github.com/YOURLS/YOURLS
+images:
+- yourls
+verified: '2026-11-20'
+calls:
+- type: update_check
+  default: 'on'
+  destinations:
+  - api.yourls.org
+  sends: Version check posting an md5 of site URL + install path, the YOURLS site URL, YOURLS/PHP/MySQL versions, locale,
+    DB driver and extensions, failed-attempt count
+  frequency: at most once per 24 h when an admin page loads
+  optout:
+    config: 'Plugin hook: yourls_add_filter(''shunt_maybe_check_core_version'', ''__return_true''); no built-in setting'
+  sources:
+  - https://raw.githubusercontent.com/YOURLS/YOURLS/master/includes/functions-http.php
