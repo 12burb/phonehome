@@ -13,10 +13,11 @@ calls:
   block: false
   sends: PostHog event (embedded public key) with counts of nodes, hosts, servers, external clients, users and networks, node
     OS/Docker/K8s breakdown, version, Pro/trial status
-  frequency: periodic background job
+  frequency: once a day
   optout:
     env:
     - TELEMETRY=off
   sources:
   - https://raw.githubusercontent.com/gravitl/netmaker/master/servercfg/serverconf.go
   - https://raw.githubusercontent.com/gravitl/netmaker/master/logic/telemetry.go
+  - https://raw.githubusercontent.com/gravitl/netmaker/master/logic/timer.go
