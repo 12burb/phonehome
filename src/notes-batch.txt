@@ -184,3 +184,62 @@
 ## https://raw.githubusercontent.com/nocobase/nocobase/main/packages/core/server/src/telemetry/index.ts
 ## https://raw.githubusercontent.com/pydio/cells/main/common/config/migrations.go
 ## https://raw.githubusercontent.com/mickael-kerjean/filestash/master/server/plugin/plg_starter_telemetry/index.go
+## https://raw.githubusercontent.com/Budibase/budibase/master/packages/backend-core/src/events/analytics.ts
+4:export const enabled = async () => {
+5:  return configs.analyticsEnabled()
+## https://raw.githubusercontent.com/Budibase/budibase/master/packages/backend-core/src/environment.ts
+192:  DISABLE_ACCOUNT_PORTAL: process.env.DISABLE_ACCOUNT_PORTAL,
+202:  ENABLE_ANALYTICS: process.env.ENABLE_ANALYTICS,
+238:  DISABLE_JWT_WARNING: process.env.DISABLE_JWT_WARNING,
+257:  DISABLE_PINO_LOGGER: process.env.DISABLE_PINO_LOGGER,
+271:  DISABLE_CONTENT_SECURITY_POLICY: process.env.DISABLE_CONTENT_SECURITY_POLICY,
+## https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/usage_statistics/logger.py
+47:AMPLITUDE_API_KEY = 'KwnbpKJNe6gOjC2X5ilxafFvxbNppiIfGejB2hlY'
+122:    def help_improve_mage(self) -> bool:
+123:        return self.project.help_improve_mage
+212:        if not self.help_improve_mage:
+220:        if self.project.repo_config.openai_api_key and \
+221:                len(self.project.repo_config.openai_api_key) >= 1:
+## https://raw.githubusercontent.com/mage-ai/mage-ai/master/mage_ai/usage_statistics/constants.py
+3:API_ENDPOINT = 'https://api.mage.ai/v1/usage_statistics'
+## https://raw.githubusercontent.com/PostHog/posthog/master/posthog/utils.py
+56:from posthog.cloud_utils import get_cached_instance_license, is_cloud
+631:    non_cloud = not is_cloud()
+649:    context["opt_out_capture"] = settings.OPT_OUT_CAPTURE
+650:    context["self_capture"] = settings.SELF_CAPTURE
+685:        context["js_posthog_api_key"] = "phc_ex7Mnvi4DqeB6xSQoXU1UVPzAmUIpiciRKQQXGGTYQO"
+686:        context["js_posthog_host"] = "https://internal-cf.posthog.com"
+689:    elif settings.SELF_CAPTURE:
+699:            context["js_posthog_api_key"] = self_flags_team.api_token
+700:            context["js_posthog_host"] = ""  # Becomes location.origin in the frontend
+704:            context["js_posthog_api_key"] = posthoganalytics.api_key
+## https://raw.githubusercontent.com/gravitational/teleport/master/lib/usagereporter/teleport/usagereporter.go
+102:	// clusterName is the cluster's name, used for anonymization and as an event
+158:func NewPrehogSubmitter(ctx context.Context, prehogEndpoint string, clientCert *tls.Certificate, caCertPEM []byte) (SubmitFunc, error) {
+194:	client := prehogv1ac.NewTeleportReportingServiceClient(httpClient, prehogEndpoint)
+## https://raw.githubusercontent.com/apache/airflow/main/airflow-core/src/airflow/config_templates/config.yml
+1357:        Enables sending Airflow metrics to an OpenTelemetry Collector. This option only affects
+1365:        Specifies the hostname or IP address of the OpenTelemetry Collector to which Airflow sends
+1370:        According to the OpenTelemetry specification, configuration is expected to happen through
+1371:        the standard OpenTelemetry environment variables rather than project-specific settings.
+1374:        and deployments that use OpenTelemetry.
+## https://raw.githubusercontent.com/apache/airflow/v2-10-stable/airflow/utils/usage_data_collection.py
+## https://raw.githubusercontent.com/apache/airflow/v2-10-stable/airflow/config_templates/config.yml
+## https://raw.githubusercontent.com/questdb/questdb/master/core/src/main/java/io/questdb/TelemetryJob.java
+9: *  Copyright (c) 2019-2026 QuestDB
+15: *  http://www.apache.org/licenses/LICENSE-2.0
+25:package io.questdb;
+27:import io.questdb.cairo.CairoEngine;
+28:import io.questdb.griffin.SqlCompiler;
+## https://raw.githubusercontent.com/cube-js/cube/master/packages/cubejs-backend-shared/src/track.ts
+16:  anonymousId: string,
+38:    const result = await fetch('https://track.cube.dev/track', {
+64:let anonymousId: string = 'unknown';
+67:  anonymousId = machineIdSync();
+72:export function getAnonymousId() {
+## https://raw.githubusercontent.com/lightdash/lightdash/main/packages/backend/src/config/parseConfig.ts
+3546:                process.env.RUDDERSTACK_ANALYTICS_DISABLED === 'true'
+3548:                    : process.env.RUDDERSTACK_WRITE_KEY ||
+3551:                process.env.RUDDERSTACK_ANALYTICS_DISABLED === 'true'
+3553:                    : process.env.RUDDERSTACK_DATA_PLANE_URL ||
+3554:                      'https://analytics.lightdash.com',

@@ -1,0 +1,19 @@
+id: lightdash
+name: Lightdash
+category: Analytics
+repo: https://github.com/lightdash/lightdash
+images:
+- lightdash/lightdash
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - analytics.lightdash.com
+  sends: Product usage events via RudderStack (exact event fields not audited here)
+  frequency: on usage
+  optout:
+    env:
+    - RUDDERSTACK_ANALYTICS_DISABLED=true
+  sources:
+  - https://raw.githubusercontent.com/lightdash/lightdash/main/packages/backend/src/config/parseConfig.ts
