@@ -732,3 +732,131 @@ export const analyticsEnabled = async (opts?: {
 119:                'https://pretix.eu/about/en/blog/'
 13:# this file, see <https://pretix.eu/about/en/license>.
 796:    ('pretix.base.services.update_check.*', {'queue': 'background'}),
+## https://raw.githubusercontent.com/langfuse/langfuse/main/.env.prod.example
+63:# Opentelemetry, optional
+69:# Comma-separated project IDs classified as large in backend telemetry.
+695:# Unset, the budget is 60% of the cgroup memory limit minus the telemetry buffer,
+## https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/features/telemetry/index.ts
+2:import { ServerPosthog } from "@/src/features/posthog-analytics/ServerPosthog";
+40:      env.TELEMETRY_ENABLED === "false" &&
+54:      await posthogTelemetry({
+200:async function posthogTelemetry({
+210:    const posthog = new ServerPosthog();
+## https://raw.githubusercontent.com/langgenius/dify/main/docker/.env.example
+## https://raw.githubusercontent.com/danny-avila/LibreChat/main/.env.example
+160:# CSP_CONNECT_SRC_EXTRA="https://telemetry.example.com wss://stream.example.com"
+391:# OpenTelemetry #
+394:# Enables backend OpenTelemetry tracing. General backend visibility only;
+## https://raw.githubusercontent.com/milvus-io/milvus/master/configs/milvus.yaml
+281:    skipRangeRefreshInterval: 10s # Minimum interval between background refreshes of operator-declared skip ranges when stalled readers ask. Reads use the cached copy; reader report tick
+307:      # Stop taking on new compactions once a logstore node's memory usage passes this fraction of its
+314:      # while a flush is in flight, so this bounds concurrent syncs, not CPU usage. Tune it from the
+## https://raw.githubusercontent.com/pingcap/tidb/master/pkg/config/config.go
+287:	// EnableTelemetry enables the usage data print to log.
+288:	EnableTelemetry bool `toml:"enable-telemetry" json:"enable-telemetry"`
+1305:	EnableTelemetry:            false,
+## https://raw.githubusercontent.com/pingcap/tidb/master/pkg/telemetry/telemetry.go
+31:	// ReportInterval is the interval of the report.
+32:	ReportInterval = 6 * time.Hour
+78:	Logger().Info("Telemetry configuration", zap.Duration("report_interval", ReportInterval), zap.Bool("enabled", enabled))
+## https://raw.githubusercontent.com/semaphoreui/semaphore/develop/util/config.go
+2235:func CheckUpdate() (updateAvailable *github.RepositoryRelease, err error) {
+## https://raw.githubusercontent.com/semaphoreui/semaphore/develop/api/router.go
+## https://raw.githubusercontent.com/Swetrix/swetrix/main/.env.example
+## https://raw.githubusercontent.com/LimeSurvey/LimeSurvey/master/application/config/config-defaults.php
+79:$config['maxdbsizeforbackup']        = 0; // The maximum database size in MB that is backed up up by ComfortUpdate - 0 means that the default will be determined by the ComfortUpdate serve
+235:    'surveys' => array('create' => true, 'read' => true, 'update' => true, 'delete' => true)
+262: * Can be updated via GUI after installation
+269: * Disable update in admin GUI
+283: * Allow update of script in question
+## https://raw.githubusercontent.com/percona/pmm/main/managed/services/telemetry/config.default.yml
+3:  - id: PMMServerAlertingEnabled
+5:    query: (CASE WHEN alerting->'enabled' = 'false' THEN '0' ELSE '1' END) AS alerting_enabled FROM settings s, jsonb_extract_path(s.settings, 'alerting') AS alerting
+6:    summary: "PMM Server Integration Alerting feature enabled/disabled"
+8:      - metric_name: "pmm_server_alerting_enabled"
+9:        column: "alerting_enabled"
+27:  - id: PMMServerAdvisorsEnabled
+## https://raw.githubusercontent.com/umami-software/umami/master/src/lib/telemetry.ts
+## https://raw.githubusercontent.com/umami-software/umami/master/.env.example
+## https://raw.githubusercontent.com/louislam/uptime-kuma/master/server/check-version.js
+11:const UPDATE_CHECKER_LATEST_VERSION_URL = "https://uptime.kuma.pet/version";
+17:        if ((await setting("checkUpdate")) === false) {
+57:exports.enableCheckUpdate = async (value) => {
+58:    await setSetting("checkUpdate", value);
+## https://raw.githubusercontent.com/traefik/traefik/master/pkg/config/static/static_configuration.go
+traefik umami uptime-kuma ## langfuse ctx
+    // Plans with the telemetry opt-out entitlement never send telemetry
+    if (
+      hasEntitlementBasedOnPlan({
+        plan: getSelfHostedInstancePlanServerSide(),
+        entitlement: "self-host-telemetry-opt-out",
+      })
+    )
+      return;
+    // Check if telemetry is not disabled, except for EE
+    if (
+      env.TELEMETRY_ENABLED === "false" &&
+      env.LANGFUSE_EE_LICENSE_KEY === undefined
+    )
+      return;
+    // Do not run in CI
+    if (process.env.CI) return;
+
+    // Check via db cron_jobs table if it is time to run job
+    const job = await jobScheduler();
+
+    if (job.shouldRunJob) {
+      const { jobStartedAt, lastRun, clientId } = job;
+
+      // Run telemetry job
+      await posthogTelemetry({
+        startTimeframe: lastRun,
+        endTimeframe: jobStartedAt,
+        clientId,
+      });
+
+      // Update cron_jobs table
+## langfuse payload
+6:  startTimeframe: Date | null;
+7:  endTimeframe: Date;
+8:  clientId: string;
+14:      where: {
+15:        deletedAt: null,
+25:        start: startTimeframe ?? new Date(0),
+26:        end: endTimeframe,
+32:        start: startTimeframe ?? new Date(0),
+33:        end: endTimeframe,
+42:      where: {
+43:        createdAt: {
+44:          gte: startTimeframe?.toISOString(),
+45:          lt: endTimeframe.toISOString(),
+52:      where: {
+53:        createdAt: {
+54:          gte: startTimeframe?.toISOString(),
+55:          lt: endTimeframe.toISOString(),
+## https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/features/posthog-analytics/ServerPosthog.ts
+5:const FALLBACK_POSTHOG_KEY = "phc_zkMwFajk8ehObUlMth0D7DtPItFnxETi3lmSvyQDrwB";
+6:const FALLBACK_POSTHOG_HOST = "https://eu.posthog.com";
+13:    const telemetryEnabled = env.TELEMETRY_ENABLED !== "false";
+17:      (telemetryEnabled ? FALLBACK_POSTHOG_KEY : null);
+18:    const host =
+## https://raw.githubusercontent.com/langfuse/langfuse/main/web/src/env.mjs
+142:    TELEMETRY_ENABLED: z.enum(["true", "false"]).optional(),
+914:    NEXT_PUBLIC_POSTHOG_KEY: z.string().optional(),
+915:    NEXT_PUBLIC_POSTHOG_HOST: z.string().optional(),
+994:    TELEMETRY_ENABLED: process.env.TELEMETRY_ENABLED,
+1232:    NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
+## https://raw.githubusercontent.com/percona/pmm/main/managed/services/telemetry/config.go
+14:// along with this program. If not, see <https://www.gnu.org/licenses/>.
+32:	envDisableSend           = "PMM_DEV_TELEMETRY_DISABLE_SEND"
+33:	envConfigFile            = "PMM_DEV_TELEMETRY_FILE"
+34:	envDisableStartDelay     = "PMM_DEV_TELEMETRY_DISABLE_START_DELAY"
+35:	envReportingInterval     = "PMM_DEV_TELEMETRY_INTERVAL"
+36:	envReportingRetryBackoff = "PMM_DEV_TELEMETRY_RETRY_BACKOFF"
+161:	Interval     time.Duration `yaml:"interval"`
+182:	d, err := time.ParseDuration(os.Getenv(envReportingInterval))
+## https://raw.githubusercontent.com/percona/pmm/main/managed/models/settings.go
+31:	TelemetryEnabledDefault            = true
+75:	Telemetry struct {
+78:	} `json:"telemetry"`
+166:// IsTelemetryEnabled returns true if telemetry is enabled.

@@ -1,0 +1,13 @@
+id: tidb
+name: TiDB
+category: Database
+repo: https://github.com/pingcap/tidb
+images:
+- pingcap/tidb
+verified: '2026-11-20'
+calls: []
+sources:
+- https://raw.githubusercontent.com/pingcap/tidb/master/pkg/config/config.go
+- https://raw.githubusercontent.com/pingcap/tidb/master/pkg/telemetry/telemetry.go
+notes: enable-telemetry defaults to false, and the config comment says that when enabled it only prints usage data to the
+  local log. Older releases reported to PingCAP; check the version you run.
