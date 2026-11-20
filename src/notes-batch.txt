@@ -703,3 +703,32 @@ export const analyticsEnabled = async (opts?: {
 ## https://raw.githubusercontent.com/pretix/pretix/master/src/pretix/base/settings.py
 3532:    'update_check_email': {
 3536:    'update_check_perform': {
+## pretix settings ctx
+2:        'default': '',
+3:        'type': str
+6:        'default': 'True',
+7:        'type': bool
+10:        'default': None,
+11:        'type': dict
+14:        'default': 'False',
+## pretix url
+13:# this file, see <https://pretix.eu/about/en/license>.
+35:from pretix.base.plugins import get_all_plugins
+72:        'id': gs.settings.get('update_check_id'),
+78:        'plugins': [
+## odoo cron ctx
+3:            <field name="name">Publisher: Update Notification</field>
+4:            <field name="model_id" ref="model_publisher_warranty_contract"/>
+5:            <field name="state">code</field>
+6:            <field name="code">model.update_notification(None)</field>
+7:            <field name="user_id" ref="base.user_root" />
+8:            <field name="interval_number">1</field>
+9:            <field name="interval_type">weeks</field>
+10:            <field name="nextcall" eval="(DateTime.now() + timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')" />
+11:            <field name="priority">1000</field>
+## pretix post
+13:# this file, see <https://pretix.eu/about/en/license>.
+86:        r = requests.post('https://pretix.eu/.update_check/', json=check_payload)
+119:                'https://pretix.eu/about/en/blog/'
+13:# this file, see <https://pretix.eu/about/en/license>.
+796:    ('pretix.base.services.update_check.*', {'queue': 'background'}),

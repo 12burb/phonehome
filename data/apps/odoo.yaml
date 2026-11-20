@@ -1,0 +1,23 @@
+id: odoo
+name: Odoo Community
+category: ERP
+repo: https://github.com/odoo/odoo
+images:
+- odoo
+verified: '2026-11-20'
+calls:
+- type: telemetry
+  default: 'on'
+  destinations:
+  - services.odoo.com
+  sends: '"Publisher warranty" update notification: database UUID, active user count, version, installed modules, company
+    name/email and basic system info'
+  frequency: 'weekly cron (Publisher: Update Notification)'
+  optout:
+    ui: 'Settings > Technical > Scheduled Actions > "Publisher: Update Notification" (deactivate)'
+    config: publisher_warranty_url = (empty) in odoo.conf
+  sources:
+  - https://raw.githubusercontent.com/odoo/odoo/master/addons/mail/models/update.py
+  - https://raw.githubusercontent.com/odoo/odoo/master/addons/mail/data/ir_cron_data.xml
+  - https://raw.githubusercontent.com/odoo/odoo/master/odoo/tools/config.py
+notes: The same call delivers Odoo's enterprise-expiry and announcement messages, so disabling it also silences those.
