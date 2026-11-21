@@ -68,27 +68,39 @@ curl -s https://12burb.github.io/phonehome/api/v1/apps/meilisearch.json | jq '.e
 audit a compose file you paste, or explain a domain from your Pi-hole log. Tools: `lookup_app`, `search_apps`, `lookup_host`,
 `audit_compose`, `blocklist`, `registry_summary`, `refresh_registry`.
 
-Claude Desktop / Claude Code / Cursor / Windsurf (stdio, needs [uv](https://docs.astral.sh/uv/)):
+**Hosted (nothing to install):** `https://phonehome-12burbs-projects.vercel.app/mcp` — streamable HTTP, no auth, redeployed from `main` on every push.
+
+```bash
+claude mcp add --transport http phonehome https://phonehome-12burbs-projects.vercel.app/mcp
+```
+
+```json
+{ "mcpServers": { "phonehome": { "url": "https://phonehome-12burbs-projects.vercel.app/mcp" } } }
+```
+
+The same host also mirrors the site, the JSON API (`/api/v1/`) and the blocklists (`/blocklists/`).
+
+**Local (stdio)** for Claude Desktop / Claude Code / Cursor / Windsurf, needs [uv](https://docs.astral.sh/uv/):
 
 ```json
 {
   "mcpServers": {
     "phonehome": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/12burb/phonehome#egg=phonehome[mcp]", "phonehome-mcp"]
+      "args": ["--from", "git+https://github.com/12burb/phonehome", "phonehome-mcp"]
     }
   }
 }
 ```
 
-Claude Code one-liner: `claude mcp add phonehome -- uvx --from "git+https://github.com/12burb/phonehome#egg=phonehome[mcp]" phonehome-mcp`
+Claude Code one-liner: `claude mcp add phonehome -- uvx --from "git+https://github.com/12burb/phonehome" phonehome-mcp`
 
-Remote / shared (streamable HTTP) — run it once for your team or homelab and point clients at `http://host:8787/mcp`:
+**Self-hosted remote** (streamable HTTP) — run it once for your team or homelab and point clients at `http://host:8787/mcp`:
 
 ```bash
 docker build -t phonehome-mcp https://github.com/12burb/phonehome.git && docker run -d -p 8787:8787 phonehome-mcp
 # or without Docker:
-uvx --from "git+https://github.com/12burb/phonehome#egg=phonehome[mcp]" phonehome-mcp --transport streamable-http --host 0.0.0.0 --port 8787
+uvx --from "git+https://github.com/12burb/phonehome" phonehome-mcp --transport streamable-http --host 0.0.0.0 --port 8787
 ```
 
 ## How entries are classified
