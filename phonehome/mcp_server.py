@@ -159,6 +159,18 @@ def refresh_registry() -> dict:
     return {"app_count": len(apps())}
 
 
+def asgi_app(path="/mcp"):
+    """Stateless streamable-HTTP ASGI app for serverless hosts (Vercel, Lambda); each request is self-contained."""
+    from mcp.server.transport_security import TransportSecuritySettings
+    sec = TransportSecuritySettings(enable_dns_rebinding_protection=False)
+    try:  # mcp 2.x
+        return mcp.streamable_http_app(streamable_http_path=path, stateless_http=True, json_response=True, transport_security=sec)
+    except TypeError:  # mcp 1.x
+        mcp.settings.streamable_http_path, mcp.settings.stateless_http, mcp.settings.json_response = path, True, True
+        mcp.settings.transport_security = sec
+        return mcp.streamable_http_app()
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="phonehome-mcp", description="MCP server for the phonehome registry")
     p.add_argument("--transport", choices=["stdio", "streamable-http", "sse"], default="stdio")

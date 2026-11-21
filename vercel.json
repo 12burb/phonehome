@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "pip install pyyaml && python3 -m phonehome.build dist",
+  "outputDirectory": "dist",
+  "framework": null,
+  "functions": {
+    "api/mcp.py": {
+      "includeFiles": "{phonehome,data}/**",
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/mcp", "destination": "/api/mcp" },
+    { "source": "/mcp/(.*)", "destination": "/api/mcp" }
+  ],
+  "headers": [
+    { "source": "/api/v1/(.*)", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }, { "key": "Cache-Control", "value": "public, max-age=3600" }] },
+    { "source": "/blocklists/(.*)", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }, { "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }
+  ]
+}
