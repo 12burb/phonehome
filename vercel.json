@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pip install pyyaml && python3 -m phonehome.build dist",
+  "buildCommand": "python3 -m phonehome.build dist",
   "outputDirectory": "dist",
   "framework": null,
   "functions": {
