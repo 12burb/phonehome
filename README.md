@@ -6,6 +6,8 @@ It ships as:
 
 - **Website** — searchable list with per-app opt-outs (built from `data/apps/`, published with GitHub Pages).
 - **Blocklists** — `dist/blocklists/telemetry.{hosts,adguard.txt,domains.txt}` for Pi-hole, AdGuard Home, Blocky, Technitium, uBlock, `/etc/hosts`. A second set also blocks update-check hosts.
+- **JSON API** — `https://12burb.github.io/phonehome/api/v1/` (static, CORS-open, OpenAPI described) for scripts, dashboards and bots.
+- **MCP server** — `phonehome-mcp` gives Claude Desktop / Cursor / any MCP client tools to look up apps, audit a compose file and identify hosts.
 - **CLI** — `phonehome audit docker-compose.yml` matches your service images against the registry and prints the opt-out variables you are missing.
 - **Data** — `dist/apps.json`, one JSON array for anyone to reuse.
 
@@ -14,10 +16,14 @@ Why: self-hosting is about control, yet many popular apps ship with analytics on
 ## Quick start
 
 ```bash
-pipx run phonehome audit docker-compose.yml     # or: pip install phonehome
+# no PyPI needed: install straight from GitHub (uvx or pipx)
+uvx --from git+https://github.com/12burb/phonehome phonehome audit docker-compose.yml
+# or: pipx install git+https://github.com/12burb/phonehome
 phonehome list
 phonehome show grafana
 ```
+
+Installed without the `data/` directory (e.g. via uvx/pipx) the CLI and MCP server read the published API, so they are always as current as the site.
 
 Example output:
 
@@ -35,6 +41,55 @@ meili  (Meilisearch, Telemetry on by default)
 Exit code `2` means at least one default-on call has no opt-out in your compose file, so it works as a CI gate.
 
 Blocklists: point your DNS filter at `blocklists/telemetry.domains.txt` (plain domains) or `telemetry.adguard.txt`. Only dedicated telemetry hostnames are listed; shared hosts like `sentry.io` or `api.github.com` are never included unless an entry explicitly marks them blockable. Prefer the opt-out switch — some apps log errors or retry when DNS is blocked.
+
+## JSON API
+
+Everything the site shows is also plain JSON on GitHub Pages — no key, no rate limit beyond GitHub's, CORS `*`:
+
+| URL | Contents |
+|---|---|
+| `/api/v1/index.json` | counts, endpoint list, and id/name/status for every app |
+| `/api/v1/apps.json` | all apps with calls, destinations, payloads, opt-outs, sources |
+| `/api/v1/apps/<id>.json` | one app, e.g. [`apps/grafana.json`](https://12burb.github.io/phonehome/api/v1/apps/grafana.json) |
+| `/api/v1/hosts.json` | destination host → which apps contact it and why |
+| `/api/v1/images.json` | container image → app id (for your own compose audits) |
+| `/api/v1/blocklist.json` | safe-to-block hosts as JSON (text lists live under `/blocklists/`) |
+| `/api/v1/openapi.json` | OpenAPI 3.1 description of the above |
+
+Base URL: `https://12burb.github.io/phonehome/api/v1`. Files are regenerated on every push to `main` and after the monthly re-check.
+
+```bash
+curl -s https://12burb.github.io/phonehome/api/v1/apps/meilisearch.json | jq '.env_optouts'
+```
+
+## MCP server (for AI assistants)
+
+`phonehome-mcp` exposes the registry over the Model Context Protocol so an assistant can answer "does X phone home?",
+audit a compose file you paste, or explain a domain from your Pi-hole log. Tools: `lookup_app`, `search_apps`, `lookup_host`,
+`audit_compose`, `blocklist`, `registry_summary`, `refresh_registry`.
+
+Claude Desktop / Claude Code / Cursor / Windsurf (stdio, needs [uv](https://docs.astral.sh/uv/)):
+
+```json
+{
+  "mcpServers": {
+    "phonehome": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/12burb/phonehome#egg=phonehome[mcp]", "phonehome-mcp"]
+    }
+  }
+}
+```
+
+Claude Code one-liner: `claude mcp add phonehome -- uvx --from "git+https://github.com/12burb/phonehome#egg=phonehome[mcp]" phonehome-mcp`
+
+Remote / shared (streamable HTTP) — run it once for your team or homelab and point clients at `http://host:8787/mcp`:
+
+```bash
+docker build -t phonehome-mcp https://github.com/12burb/phonehome.git && docker run -d -p 8787:8787 phonehome-mcp
+# or without Docker:
+uvx --from "git+https://github.com/12burb/phonehome#egg=phonehome[mcp]" phonehome-mcp --transport streamable-http --host 0.0.0.0 --port 8787
+```
 
 ## How entries are classified
 

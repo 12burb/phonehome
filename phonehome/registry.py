@@ -15,11 +15,24 @@ HOST_RE = re.compile(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0
 
 
 def data_dir():
-    return os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "apps")
+    return os.environ.get("PHONEHOME_DATA") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "apps")
 
+API_URL = os.environ.get("PHONEHOME_API", "https://12burb.github.io/phonehome/api/v1/apps.json")
+
+def load_remote(url=None):
+    """Fetch the published registry (same records as the YAML, plus status/env_optouts) from the static API."""
+    import json, urllib.request
+    with urllib.request.urlopen(urllib.request.Request(url or API_URL, headers={"User-Agent": "phonehome"}), timeout=30) as r:
+        apps = json.load(r)
+    for a in apps:
+        a["_file"] = a["id"] + ".yaml"
+    return apps
 
 def load_apps(path=None):
+    """Load the YAML registry; when installed without data/ (e.g. pipx/uvx from git) fall back to the published API."""
     path = path or data_dir()
+    if not os.path.isdir(path):
+        return load_remote()
     apps = []
     for f in sorted(glob.glob(os.path.join(path, "*.yaml"))):
         with open(f, encoding="utf-8") as fh:

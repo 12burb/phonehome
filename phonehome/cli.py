@@ -62,11 +62,9 @@ def same_value(actual, wanted):
         return True
     return False
 
-def audit(path, apps, as_json=False):
-    with open(path, encoding="utf-8") as fh:
-        compose = yaml.safe_load(fh) or {}
-    services = compose.get("services") or {}
-    compose_dir = os.path.dirname(os.path.abspath(path))
+def audit_compose(compose, apps, compose_dir="."):
+    """Audit a parsed docker-compose mapping; returns a JSON-able report (one entry per service with an image)."""
+    services = (compose or {}).get("services") or {}
     report = []
     for sname, svc in services.items():
         image = (svc or {}).get("image")
@@ -97,29 +95,40 @@ def audit(path, apps, as_json=False):
                 findings.append({"type": call["type"], "default": call["default"], "destinations": call.get("destinations") or [],
                                  "fixed": None, "fix_config": oo.get("config"), "fix_ui": oo.get("ui"), "fix_cli": oo.get("cli")})
         report.append({"service": sname, "image": image, "app": app["id"], "name": app["name"], "status": status_of(app), "findings": findings})
-    if as_json:
-        print(json.dumps(report, indent=1))
-        return 0
-    exit_code = 0
+    return report
+
+def format_report(report):
+    """Human-readable audit text and exit code (2 = a default-on call has no opt-out set)."""
+    exit_code, lines = 0, []
     for r in report:
         if not r["app"]:
-            print(f"  {r['service']:<22} {r['image']}  (not in registry)")
+            lines.append(f"  {r['service']:<22} {r['image']}  (not in registry)")
             continue
-        print(f"\n{r['service']}  ({r['name']}, {STATUS_LABEL[r['status']]})")
+        lines.append(f"\n{r['service']}  ({r['name']}, {STATUS_LABEL[r['status']]})")
         if not r["findings"]:
-            print("   no default-on outbound calls recorded")
+            lines.append("   no default-on outbound calls recorded")
         for f in r["findings"]:
             dest = ", ".join(f["destinations"]) or "-"
             if f["fixed"] is True:
-                print(f"   [ok]   {f['type']:<14} -> {dest}  (opt-out env present)")
+                lines.append(f"   [ok]   {f['type']:<14} -> {dest}  (opt-out env present)")
             elif f["fixed"] is False:
                 exit_code = 2
-                print(f"   [MISS] {f['type']:<14} -> {dest}")
-                print(f"          add: {' or '.join(f['fix_env'])}")
+                lines.append(f"   [MISS] {f['type']:<14} -> {dest}")
+                lines.append(f"          add: {' or '.join(f['fix_env'])}")
             else:
-                print(f"   [info] {f['type']:<14} -> {dest}  (no env switch; " + "; ".join(x for x in (f.get('fix_config'), f.get('fix_ui'), f.get('fix_cli')) if x) + ")")
-    print()
-    return exit_code
+                lines.append(f"   [info] {f['type']:<14} -> {dest}  (no env switch; " + "; ".join(x for x in (f.get('fix_config'), f.get('fix_ui'), f.get('fix_cli')) if x) + ")")
+    return "\n".join(lines) + "\n", exit_code
+
+def audit(path, apps, as_json=False):
+    with open(path, encoding="utf-8") as fh:
+        compose = yaml.safe_load(fh) or {}
+    report = audit_compose(compose, apps, os.path.dirname(os.path.abspath(path)))
+    if as_json:
+        print(json.dumps(report, indent=1))
+        return 0
+    text, code = format_report(report)
+    print(text)
+    return code
 
 def main(argv=None):
     p = argparse.ArgumentParser(prog="phonehome", description="Does your self-hosted stack phone home?")

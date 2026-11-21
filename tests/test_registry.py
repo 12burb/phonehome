@@ -1,4 +1,5 @@
-import os, sys, subprocess, textwrap
+import os, sys, json, subprocess, textwrap
+import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from phonehome.registry import load_apps, validate, status_of, env_optouts, block_hosts, blockable
 from phonehome.cli import norm_image, match_app, audit
@@ -75,3 +76,48 @@ def test_build_runs(tmp_path):
     assert r.returncode == 0, r.stdout + r.stderr
     assert (tmp_path / "index.html").exists() and (tmp_path / "apps.json").exists()
     assert (tmp_path / "blocklists" / "telemetry.hosts").exists()
+
+
+def test_build_writes_api(tmp_path):
+    from phonehome import build
+    build.main(str(tmp_path))
+    api = tmp_path / "api" / "v1"
+    idx = json.loads((api / "index.json").read_text())
+    assert idx["app_count"] == len(json.loads((api / "apps.json").read_text()))
+    assert (api / "apps" / "grafana.json").exists()
+    assert "stats.grafana.org" in json.loads((api / "hosts.json").read_text())
+    assert json.loads((api / "openapi.json").read_text())["openapi"].startswith("3.")
+    bl = json.loads((api / "blocklist.json").read_text())
+    assert set(bl["telemetry"]) <= set(bl["telemetry_and_updates"])
+
+
+def test_audit_compose_dict():
+    from phonehome.cli import audit_compose, format_report
+    apps = load_apps()
+    compose = {"services": {"m": {"image": "getmeili/meilisearch:v1.10"}, "x": {"image": "nobody/unknown"}}}
+    report = audit_compose(compose, apps)
+    assert report[1]["app"] is None
+    text, code = format_report(report)
+    assert code == 2 and "MEILI_NO_ANALYTICS=true" in text
+    compose["services"]["m"]["environment"] = {"MEILI_NO_ANALYTICS": "true"}
+    assert format_report(audit_compose(compose, apps))[1] == 0
+
+
+def test_load_apps_falls_back_to_api(tmp_path, monkeypatch):
+    from phonehome import registry, build
+    build.main(str(tmp_path))
+    monkeypatch.setattr(registry, "API_URL", (tmp_path / "api" / "v1" / "apps.json").as_uri())
+    apps = registry.load_apps(str(tmp_path / "missing"))
+    assert len(apps) == len(load_apps()) and apps[0]["_file"].endswith(".yaml")
+
+
+def test_mcp_tools():
+    pytest.importorskip("mcp")
+    from phonehome import mcp_server as m
+    assert m.lookup_app("grafana/grafana")["id"] == "grafana"
+    assert m.lookup_app("nope-nope").get("error")
+    assert m.search_apps(status="clean")["count"] > 50
+    assert m.lookup_host("udc.neo4j.com")["matches"][0]["app"] == "neo4j"
+    assert "api.github.com" not in m.blocklist(include_update_checks=True)["by_host"]
+    assert m.audit_compose("services:\n  g:\n    image: grafana/grafana\n")["exit_code"] == 2
+    assert m.audit_compose("services: [")["error"]
